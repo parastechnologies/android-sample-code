@@ -1,0 +1,569 @@
+<resources>
+    <string name="default_notification_channel_id">Muselink</string>
+
+    <string name="facebook_app_id">762883647949899</string>
+    <string name="fb_login_protocol_scheme">fb762883647949899</string>
+    <!--<string name="facebook_app_id">797353140840531</string>-->
+    <string name="internal_storage">internalstorage</string>
+    <string name="APP_KEY">o9xgaqule1za9hg</string>
+    <string name="app_name">Muselink</string>
+    <string name="facebook_client_token">61752ad9c32b300be90269ab551bec70</string>
+    <string name="music_is_silent_until_right_people_nhear_it">Music is silent until right people discover it.</string>
+    <string name="match">Match</string>
+    <string name="collaborate">Collaborate</string>
+    <string name="discover_sound_files">Discover anonymous sound files and user profiles</string>
+    <string name="direct_cross"><![CDATA[Direct & cross match]]></string>
+    <string name="share_with_world">Share with the world</string>
+    <string name="next">Next</string>
+    <string name="match_sonically_or_based_upon_personal_interests">Match sonically or based upon\npersonal interests</string>
+    <string name="muselink">- Muselink</string>
+    <string name="start">START</string>
+    <string name="discover">Discover</string>
+    <string name="sound_files">Sound files</string>
+    <string name="user_profiles">User profiles</string>
+
+    <!-- signup bottomsheet-->
+    <string name="signup">Sign Up</string>
+    <string name="mail_signup">Sign up with Phone/Email</string>
+    <string name="mail_login">Log in with Phone/Email</string>
+    <string name="tiktok_signup">Sign up with TikTok</string>
+    <string name="tiktok_login">Log in with TikTok</string>
+    <string name="facebook_signup">Sign up with Facebook</string>
+    <string name="facebook_login">Log in with Facebook</string>
+    <string name="Instagram_signup">Sign up with Instagram</string>
+    <string name="Instagram_login">Log in with Instagram</string>
+    <string name="soundcloud_signup">Sign up with Dropbox</string>
+    <string name="soundcloud_login">Log in with Dropbox</string>
+    <string name="appleid_signup">Sign up with Apple id</string>
+    <string name="appleid_login">Log in with Apple id</string>
+    <string name="login">Log In</string>
+    <string name="alreadyacc"><u>Already have an account?</u></string>
+    <string name="termsof_use">By continuing,You agree to Muselink Terms of Use and Confirm that you have read Muselink Privacy Policy</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="signup_detail">Create a Profile,upload sound files,match and collaborate with users + more...</string>
+    <string name="sound_file_pro">Sound file PRO</string>
+    <string name="soundfile">Sound files</string>
+    <string name="soundfiles"><u>Soundfiles</u></string>
+    <string name="aboutme">About Me</string>
+    <string name="description">Description</string>
+
+    <!--Email phone signup-->
+    <string name="Phonesignup_detail">Please Verify your Phone number.\n We will end you 4-digit code on your registered  mobile number.</string>
+    <string name="phone_verification">Your Phone number Verification has been done Successfully.</string>
+    <string name="phone">Phone</string>
+    <string name="success">Success!</string>
+    <string name="phone_no">Phone Number</string>
+    <string name="pswd">Password</string>
+    <string name="dummy_email">abc@gmail.com</string>
+    <string name="send_code">Send Code</string>
+    <string name="continue_click">Continue</string>
+    <string name="email">Email</string>
+
+
+    <string name="viewalll"><u>View All</u></string>
+
+
+    <!--Phone Verification with otp-->
+    <string name="phone_verify">Phone Verification</string>
+    <string name="dont_recieve">Did\'nt you Recieved any code?</string>
+    <string name="resend_code"><u> Resend Code</u></string>
+    <string name="verify_code">Verify Code</string>
+    <string name="detail_otp">Enter your one time password send to your mobile number</string>
+
+
+    <!--Comment section-->
+    <string name="add_comment">Add a comment...</string>
+    <string name="user_name">Jack Hardy</string>
+    <string name="american_idt">American Idiot</string>
+    <string name="green_day">Green Day</string>
+    <string name="good_job">Very Good Job</string>
+
+
+    <string name="dummytext">it works perfectly thanks! You help me a lot! But why in this case you change RelativeLayout with LinearLayout? Wasn\'t the set margins related to the relativeLayout in my starter code? </string>
+    <string name="project_roles">Project Roles</string>
+    <string name="instrumentalist">Instrumentalist</string>
+    <string name="producer">Producer</string>
+    <string name="vocalist">Vocalist</string>
+    <string name="top_liner">Top Liner</string>
+    <string name="song_writer">Song Writer</string>
+    <string name="view_all">View all</string>
+    <string name="project_goals">Project Goals</string>
+    <string name="finish_my_album">Finish my album</string>
+    <string name="find_a_songwriter">Find a songwriter</string>
+    <string name="finish_this_demo">Finish this demo</string>
+    <string name="finish_a_topliner">Finish a topliner</string>
+    <string name="finish_a_vocalist">Fnish a vocalist</string>
+    <string name="notifications">Notifications</string>
+    <string name="unread_messages">Messages</string>
+    <string name="online">Online</string>
+    <string name="you_have_a_unread_message_from_warner_music_norway">You have a unread message from</string>
+    <string name="offline">Offline</string>
+    <string name="recent_active">Recent Active</string>
+    <string name="type_message">Type Message...</string>
+    <!--    Profile About me-->
+    <string name="prsnl_intrst">Personal Interests</string>
+    <string name="edit">Edit</string>
+    <string name="slct_edtintrst">(1/5 selected)</string>
+    <string name="hiphop">HipHop</string>
+    <string name="fashion">Fashion </string>
+    <string name="txt_here">Type here.... </string>
+    <string name="ok">ok</string>
+    <string name="mixing">Mixing</string>
+    <string name="vegetarrian">Vegetarianen</string>
+    <string name="marketing">Marketing</string>
+    <string name="pop_culture">Pop Culture</string>
+    <string name="crrer_goals">Carrer Goals</string>
+    <string name="biography">Biography</string>
+    <string name="edt_intrst">Edit Interest</string>
+    <string name="edt_goals">Edit Goals</string>
+    <string name="edt_biography">Edit Biography</string>
+    <string name="fnsh_album">Finish my Album</string>
+    <string name="goals">Goals</string>
+    <string name="grow_follow">Grow my following</string>
+    <string name="itensive">Intensiverelising</string>
+    <string name="bio_set">Hey, so my name is Bruno Mars and i\'m a musician from Chicago.I enjoy playing the clarinent and meditating during my free time.I am also a vegan chef on the weekends!</string>
+    <string name="upload_a_soundfile">Upload a Soundfile</string>
+    <string name="camera">Camera</string>
+    <string name="record">Record</string>
+    <string name="soundcloud">Soundcloud</string>
+    <string name="dropbox">Dropbox</string>
+    <string name="library">Library</string>
+    <string name="navigate">Navigate</string>
+
+
+    <!--Settings-->
+    <string name="settings">Settings</string>
+    <string name="account">Account</string>
+    <string name="push_notif">Push Notification</string>
+    <string name="support">Support</string>
+    <string name="invt_frnd">Invite a Friend</string>
+    <string name="term_use">Term of Use</string>
+    <string name="privacy_policys">Privacy Policy</string>
+    <string name="abt_us">About us</string>
+    <string name="cntct_us">Contact us</string>
+    <string name="rate_us">Rate us</string>
+    <string name="clr_cache">Clear cache</string>
+    <string name="dlt_account">Delete Account</string>
+    <string name="logout">Logout</string>
+    <string name="personal_interests">Personal Interests</string>
+    <string name="username">Username</string>
+    <string name="manage_my_account">Manage My Account</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="hide_show">Hide/Show</string>
+    <string name="show_my_account_in_explorer">Show my account in explorer</string>
+    <string name="allow_other_users_to_share_your_sound_files">Allow other users to share your sound files</string>
+    <string name="no_yes">No/Yes</string>
+    <string name="who_can_send_you_direct_message">Who can send you direct message</string>
+    <string name="blocked_accounts">Blocked accounts</string>
+    <string name="list_of_blocked_account">List of blocked account</string>
+    <string name="share_profile_account">Share profile account</string>
+    <string name="share_account">Share Account</string>
+    <string name="everyone">Everyone</string>
+    <string name="premium_users">Premium users</string>
+    <string name="users_that_i_ve_previously_nmatched_with">Users that I\'ve previously\nmatched with</string>
+    <string name="unblock">Unblock</string>
+    <string name="new_admirer">New admirer</string>
+    <string name="turn_off_on">Turn Off/On</string>
+    <string name="new_match">New Match</string>
+    <string name="new_massage">New Message</string>
+    <string name="when_a_user_that_you_have_matched_with_uploads_a_new_file">When a user that you have matched with uploads a new file</string>
+    <string name="report_a_problem">Report a problem</string>
+    <string name="submit_an_idea">Submit an idea</string>
+    <string name="explain_the_issue">Explain the issue</string>
+    <string name="write_issue">Write issue...</string>
+    <string name="upload_a_file">Upload a File</string>
+    <string name="we_love_creative_initiatives_submit_your_ideas_for_a_review">We love creative initiatives, submit your ideas for a review.</string>
+    <string name="submit">Submit</string>
+    <string name="write_review">Write review...</string>
+    <string name="shoot">Shoot</string>
+    <string name="select_5_15_seconds">Select 5-15 Seconds</string>
+    <string name="highlight_5_15_seconds">Highlight 5-15 Seconds</string>
+
+    <string name="label_a_r"><![CDATA[Label/ A&R]]></string>
+    <string name="more">More</string>
+    <string name="highlight_5_15_seconds_of_the_sound_file">Highlight 5-15 seconds of\nthe sound file.</string>
+    <string name="select_your_role">Select your Role(s)</string>
+    <string name="select_at_least_1_out_of_9_roles_that_describe_your_contribution_for_this_sound_file">Select at least 1 out of 9 roles that describe your contribution for this sound file.</string>
+    <string name="what_goals_do_you_have_for_this_sound_file">What goals do you have\nfor this sound file?</string>
+    <string name="project_description">Project Description</string>
+    <string name="describe_the_sound_file_you_can_use_hastag_and_location">Describe the sound file you can use #hastag and @location</string>
+    <string name="upload">Upload</string>
+    <string name="select_your_goals">Select your Goal(s)</string>
+    <string name="mix_the_song">Mix the song</string>
+    <string name="write_description_here">Write Description here…</string>
+    <string name="write_message_here">Write message here…</string>
+    <string name="background_color">Background Color</string>
+    <string name="report">Report</string>
+    <string name="block">Block</string>
+    <string name="remove_match">Remove Match</string>
+    <string name="close">Close</string>
+    <string name="edit_interets">Edit Interests</string>
+    <string name="OK">OK</string>
+    <string name="interest">Interest</string>
+    <string name="edit_goals">Edit Goals</string>
+    <string name="copy_link">Copy link</string>
+    <string name="sms">SMS</string>
+    <string name="messenger">Messenger</string>
+    <string name="facebook">Facebook</string>
+    <string name="search">Search...</string>
+    <string name="all">All</string>
+    <string name="location">Location</string>
+    <string name="full_name">Full Name</string>
+    <string name="clear_history">Clear History</string>
+    <string name="comment">Comment</string>
+    <string name="please_verify_your_phone_number_we_will_send_you_4_digit_code_on_your_registered_mobile_number">Please Verify your phone number. We will send you 4-digit code on your registered mobile number.</string>
+    <string name="password">Password</string>
+    <string name="thank_you_for_the_support">Thank you for the support</string>
+    <string name="unlimited_likes">Unlimited Likes</string>
+    <string name="unlimited_swipes">Unlimited Swipes</string>
+    <string name="unlimited_rewinds">Unlimited Rewinds</string>
+    <string name="search_pro">Search PRO</string>
+    <string name="five_daily_direct_messages">5 daily Direct Messages</string>
+    <string name="six_upload_pro">6 Uploads PRO</string>
+    <string name="sound_pro">Soundfile PRO</string>
+    <string name="set_five_extra_carrer_goals">Set 5 extra Career Goals</string>
+    <string name="set_two_extra_ways_you_opt_to">Set 2 extra ways you opt to collaborate</string>
+    <string name="set_five_extra_interests">Set 5 extra interests</string>
+    <string name="biography_pro">Biography PRO</string>
+    <string name="change_your_username_twice_a_day">Change Your Username twice a Year</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="just_enter_the_email_address">Enter the email address that you\'ve used to register, and we will send you the password reset instructions</string>
+    <string name="get_muselink_pro">Get Muselink PRO</string>
+    <string name="out_of_likes">Out of Likes</string>
+    <string name="for_1_month">for 1 month</string>
+    <string name="for_12_months">for 12 months</string>
+    <string name="upload_new_content">Upload New Content</string>
+    <string name="uploading">Uploading…</string>
+    <string name="daily_tip">Daily Tip</string>
+    <string name="remember_to_share_your_ncontent_across_other_platforms">Remember to share your\ncontent across other platforms</string>
+    <string name="remove">Remove</string>
+    <string name="share_to">Share To..</string>
+    <string name="notification_off">Notification Off</string>
+    <string name="notification_on">Notification On</string>
+    <string name="turn_off_notifications_for_this_soundfile">Turn off notifications for this soundfile</string>
+    <string name="turn_on_notifications_for_this_soundfile">Turn On notifications for this soundfile</string>
+    <string name="american_idiot">American Idiot</string>
+
+
+    <!--Validations-->
+    <string name="please_enter_valid_email">Please Enter Valid Email</string>
+    <string name="please_enter_username">Please Enter Username</string>
+    <string name="please_enter_message">Please Enter Message</string>
+    <string name="please_enter_email">Please Enter Email</string>
+    <string name="please_enter_review">Please Enter Review</string>
+    <string name="please_enter_issue">Please Enter Issue</string>
+    <string name="please_enter_biography">Please Enter Biography</string>
+    <string name="please_select_goals">Please Select Goals</string>
+    <string name="please_select_interests">Please Select Interests</string>
+    <string name="please_enter_phone">Please Enter Phone Number</string>
+    <string name="phone_invalid">Please Enter Valid Phone Number</string>
+    <string name="please_enter_password">Please Enter Password</string>
+    <string name="passinvalid">Password Must Be Atleast 6 Digits</string>
+    <string name="password_not_matched">Password Not Matched with New Password</string>
+    <string name="password_invalid">Please Enter Valid Password</string>
+    <string name="please_enter_old_password">Please Enter Old Password</string>
+    <string name="please_enter_new_password">Please Enter New Password</string>
+    <string name="please_enter_confirm_password">Please Enter Confirm Password</string>
+    <string name="otp_sent_successfully">Otp Sent Successfully!</string>
+    <string name="please_wait_song_is_loading">Please wait Song is loading</string>
+
+
+    <string name="select_goal">Select goal</string>
+    <string name="enter_description">Enter description</string>
+    <string name="select_role">Select role</string>
+    <string name="audio_player_service">audio_player_service!</string>
+    <string name="upload_completed">Upload Completed</string>
+    <string name="cross_promote_your_sound_and_help_us_grow_the_community">Cross-promote your sound and help us grow the community.</string>
+    <string name="skip">Skip</string>
+    <string name="copy">Copy</string>
+    <string name="https_www_museboxapp_com_uploads">https://www.museboxapp.com/uploads</string>
+    <string name="instagram">Instagram</string>
+    <string name="tiktok">TikTok</string>
+    <string name="other">Other</string>
+    <string name="triller">Triller</string>
+    <string name="alert">Alert!</string>
+    <string name="are_you_sure_you_want_to_logout">Are you sure. You want to logout?</string>
+    <string name="are_you_sure_you_want_to_delete_account">Are you sure. You want to Delete Account?</string>
+    <string name="are_you_sure_you_want_to_clear_cache">Are you sure. You want to Clear Cache?</string>
+    <string name="cache_cleared_successfully">Cache Cleared Successfully</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_interests_found">No Interests Found</string>
+    <string name="no_goals_found">No Goals Found</string>
+    <string name="no_bio_found">No Biography Found</string>
+    <string name="selected">selected</string>
+    <string name="change_your_password">Change Your Password</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="please_login_again_to_continue">Password Changed SuccessFully!</string>
+    <string name="change_email">Change Email</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="change_username">Change Username</string>
+    <string name="no_audios_found">No Audio\'s Found</string>
+    <string name="no_more_song_available">No More Songs Available</string>
+    <string name="updated_successfully">Updated SuccessFully!</string>
+    <string name="invite_a_friend_and_get_1_week_of_free_premium_features_for_every_firend_that_jopins_with_your_invitation_link">Invite a friend and get 1 week of free premium features for every firend that jopins with your invitation link.</string>
+    <string name="access_muselink_premium_features_for_free">Access Muselink Premium Features for Free!</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="muselink_needs_to_restart">Muselink needs to restart.</string>
+    <string name="when_you_tap_okay_the_app_will_close">When you tap Okay\n ,the app will close.</string>
+    <string name="cancel">Cancel</string>
+    <string name="when_you_tap_okay_nthe_app_will_close">When you tap \"Okay\",\nthe app will close.</string>
+    <string name="save">Save</string>
+    <string name="choose_photo">Choose Photo</string>
+    <string name="please_enter_comment">Please Enter Comment</string>
+    <string name="interests">Interests</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="already_added_to_favourite">Already Added To Favourite</string>
+    <string name="we_got_a_match">We Got A Match!</string>
+    <string name="malin_simon">Malin Simon</string>
+    <string name="you_connected_with">You connected with</string>
+    <string name="start_chatting">Start Chatting</string>
+    <string name="_0">0</string>
+    <string name="project_roles_text">Project roles is a list that describes users contribution roles for this sound file</string>
+    <string name="milestone_text">Milestones are set by users for a successful collaboration</string>
+    <string name="premium_subscription_text">With premium subscription you gain access to full sound files, and not just highlights of 5–15 seconds</string>
+    <string name="purchased_successfully">Purchased Successfully</string>
+    <string name="direct_message">Direct Message</string>
+    <string name="access_the_search_library">Access the search library</string>
+    <string name="double_upload_limit">Double upload limit</string>
+    <string name="hear_full_sound_file">Hear full sound file</string>
+    <string name="nothing_to_see_here">Nothing to see here.</string>
+    <string name="upload_sound_file">Upload sound file</string>
+    <string name="loading">Loading...</string>
+    <string name="login_to_continue">Login To Continue</string>
+
+    <string-array name="Countries">
+        <item>A</item>
+        <item>Afghanistan</item>
+        <item>Albania</item>
+        <item>Algeria</item>
+        <item>Andorra</item>
+        <item>Angola</item>
+        <item>Antigua and Barbuda</item>
+        <item>Argentina</item>
+        <item>Armenia</item>
+        <item>Australia</item>
+        <item>Austria</item>
+        <item>Azerbaijan</item>
+        <item>B</item>
+        <item>Bahamas</item>
+        <item>Bahrain</item>
+        <item>Bangladesh</item>
+        <item>Barbados</item>
+        <item>Belarus</item>
+        <item>Belgium</item>
+        <item>Belize</item>
+        <item>Benin</item>
+        <item>Bhutan</item>
+        <item>Bolivia</item>
+        <item>Bosnia and Herzegovina</item>
+        <item>Botswana</item>
+        <item>Brazil</item>
+        <item>Brunei</item>
+        <item>Bulgaria</item>
+        <item>Burkina Faso</item>
+        <item>Burundi</item>
+        <item>C</item>
+        <item>Cabo Verde</item>
+        <item>Cambodia</item>
+        <item>Cameroon</item>
+        <item>Canada</item>
+        <item>Central African Republic</item>
+        <item>Chad</item>
+        <item>Chile</item>
+        <item>China</item>
+        <item>Colombia</item>
+        <item>Comoros</item>
+        <item>Congo</item>
+        <item>Costa Rica</item>
+        <item>Cote d\'Ivoire</item>
+        <item>Croatia</item>
+        <item>Cuba</item>
+        <item>Cyprus</item>
+        <item>Czech Republic</item>
+        <item>D</item>
+        <item>Denmark</item>
+        <item>Djibouti</item>
+        <item>Dominica</item>
+        <item>Dominican Republic</item>
+        <item>E</item>
+        <item>Ecuador</item>
+        <item>Egypt</item>
+        <item>El Salvador</item>
+        <item>Equatorial Guinea</item>
+        <item>Eritrea</item>
+        <item>Estonia</item>
+        <item>Ethiopia</item>
+        <item>F</item>
+        <item>Fiji</item>
+        <item>Finland</item>
+        <item>France</item>
+        <item>G</item>
+        <item>Gabon</item>
+        <item>Gambia</item>
+        <item>Georgia</item>
+        <item>Germany</item>
+        <item>Ghana</item>
+        <item>Greece</item>
+        <item>Grenada</item>
+        <item>Guatemala</item>
+        <item>Guinea</item>
+        <item>Guinea-Bissau</item>
+        <item>Guyana</item>
+        <item>H</item>
+        <item>Haiti</item>
+        <item>Honduras</item>
+        <item>Hungary</item>
+        <item>I</item>
+        <item>Iceland</item>
+        <item>India</item>
+        <item>Indonesia</item>
+        <item>Iran</item>
+        <item>Iraq</item>
+        <item>Ireland</item>
+        <item>Israel</item>
+        <item>Italy</item>
+        <item>J</item>
+        <item>Jamaica</item>
+        <item>Japan</item>
+        <item>Jordan</item>
+        <item>K</item>
+        <item>Kazakhstan</item>
+        <item>Kenya</item>
+        <item>Kiribati</item>
+        <item>Kosovo</item>
+        <item>Kuwait</item>
+        <item>Kyrgyzstan</item>
+        <item>L</item>
+        <item>Laos</item>
+        <item>Latvia</item>
+        <item>Lebanon</item>
+        <item>Lesotho</item>
+        <item>Liberia</item>
+        <item>Libya</item>
+        <item>Liechtenstein</item>
+        <item>Lithuania</item>
+        <item>Luxembourg</item>
+        <item>M</item>
+        <item>Macedonia</item>
+        <item>Madagascar</item>
+        <item>Malawi</item>
+        <item>Malaysia</item>
+        <item>Maldives</item>
+        <item>Mali</item>
+        <item>Malta</item>
+        <item>Marshall Islands</item>
+        <item>Mauritania</item>
+        <item>Mauritius</item>
+        <item>Mexico</item>
+        <item>Micronesia</item>
+        <item>Moldova</item>
+        <item>Monaco</item>
+        <item>Mongolia</item>
+        <item>Montenegro</item>
+        <item>Morocco</item>
+        <item>Mozambique</item>
+        <item>Myanmar</item>
+        <item>N</item>
+        <item>Namibia</item>
+        <item>Nauru</item>
+        <item>Nepal</item>
+        <item>Netherlands</item>
+        <item>New Zealand</item>
+        <item>Nicaragua</item>
+        <item>Niger</item>
+        <item>Nigeria</item>
+        <item>North Korea</item>
+        <item>Norway</item>
+        <item>O</item>
+        <item>Oman</item>
+        <item>P</item>
+        <item>Pakistan</item>
+        <item>Palau</item>
+        <item>Palestine</item>
+        <item>Panama</item>
+        <item>Papua New Guinea</item>
+        <item>Paraguay</item>
+        <item>Peru</item>
+        <item>Philippines</item>
+        <item>Poland</item>
+        <item>Portugal</item>
+
+        <item>Q</item>
+        <item>Qatar</item>
+        <item>R</item>
+        <item>Romania</item>
+        <item>Russia</item>
+        <item>Rwanda</item>
+        <item>S</item>
+        <item>Saint Kitts and Nevis</item>
+        <item>Saint Lucia</item>
+        <item>Saint Vincent and the Grenadines</item>
+        <item>Samoa</item>
+        <item>San Marino</item>
+        <item>Sao Tome and Principe</item>
+        <item>Saudi Arabia</item>
+        <item>Senegal</item>
+        <item>Serbia</item>
+        <item>Seychelles</item>
+        <item>Sierra Leone</item>
+        <item>Singapore</item>
+        <item>Slovakia</item>
+        <item>Slovenia</item>
+        <item>Solomon Islands</item>
+        <item>Somalia</item>
+        <item>South Africa</item>
+        <item>South Korea</item>
+        <item>South Sudan</item>
+        <item>Spain</item>
+        <item>Sri Lanka</item>
+        <item>Sudan</item>
+        <item>Suriname</item>
+        <item>Swaziland</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>Syria</item>
+        <item>T</item>
+        <item>Taiwan</item>
+        <item>Tajikistan</item>
+        <item>Tanzania</item>
+        <item>Thailand</item>
+        <item>Timor-Leste</item>
+        <item>Togo</item>
+        <item>Tonga</item>
+        <item>Trinidad and Tobago</item>
+        <item>Tunisia</item>
+        <item>Turkey</item>
+        <item>Turkmenistan</item>
+        <item>Tuvalu</item>
+        <item>U</item>
+        <item>Uganda</item>
+        <item>Ukraine</item>
+        <item>United Arab Emirates</item>
+        <item>United Kingdom</item>
+        <item>United States of America</item>
+        <item>Uruguay</item>
+        <item>Uzbekistan</item>
+        <item>V</item>
+        <item>Vanuatu</item>
+        <item>Vatican City</item>
+        <item>Venezuela</item>
+        <item>Vietnam</item>
+        <item>Y</item>
+        <item>Yemen</item>
+        <item>Z</item>
+        <item>Zambia</item>
+        <item>Zimbabwe</item>
+
+
+    </string-array>
+
+
+    <string-array name="arrayProductIds">
+        <item>com.muzelink.monthly</item>
+        <item>com.muzelink.yearly</item>
+    </string-array>
+</resources>

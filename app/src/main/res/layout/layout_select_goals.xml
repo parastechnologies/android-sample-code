@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/_5sdp"
+    android:clickable="false"
+    android:background="@color/color_black_transparent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@drawable/ic_popup_bg"
+        android:layout_marginTop="@dimen/_225sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/_40sdp"
+        android:id="@+id/rlTopView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:includeFontPadding="false"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/avenir_next_demi"
+            android:text="@string/select_your_goals"
+            android:textColor="@color/color_black_100"
+            android:textSize="@dimen/_18ssp">
+
+        </TextView>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_marginTop="@dimen/_15sdp"
+        android:id="@+id/imgcloseMoreview"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/dark_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </ImageView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@+id/rlTopView"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:id="@+id/rvGoalsAll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

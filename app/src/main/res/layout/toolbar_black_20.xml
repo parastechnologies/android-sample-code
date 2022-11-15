@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="@dimen/_60sdp"
+    android:id="@+id/rlToolbarBackGround"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/backPresstoolbar"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:neumorph_backgroundColor="@color/color_191a1d"
+        app:neumorph_shadowColorDark="@color/color_black_20"
+        app:neumorph_shadowColorLight="@color/color_white_15"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearanceUploadAudio"
+        app:neumorph_shapeType="flat"
+        app:neumorph_strokeWidth="0dp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:tint="@color/color_white_100"
+            android:layout_width="@dimen/_18sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/ic_back" />
+    </soup.neumorphism.NeumorphCardView>
+    <TextView
+        android:id="@+id/tvHeading"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/avenir_next_demi"
+        android:includeFontPadding="false"
+        android:src="@drawable/ic_dashboard"
+        android:text="@string/settings"
+        android:textColor="@color/color_black_100"
+        android:textSize="@dimen/_18ssp" />
+</RelativeLayout>

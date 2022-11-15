@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/llCategory"
+        android:gravity="center"
+        android:background="@drawable/selector_project"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_60sdp">
+
+        <TextView
+            android:id="@+id/tvCategoryname"
+            android:textColor="@drawable/selector_project_text"
+            android:fontFamily="@font/avenir_next_demi"
+            android:textSize="@dimen/_13ssp"
+            android:text="@string/instrumentalist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+    </LinearLayout>
+
+</LinearLayout>

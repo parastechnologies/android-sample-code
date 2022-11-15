@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="showloader"
+            type="java.lang.Boolean"/>
+
+        <variable
+            name="audioId"
+            type="java.lang.String"/>
+
+        <import type="com.app.muselink.constants.AppConstants.FormErrors" />
+
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.bottomsheets.reportaudio.ReportaudioViewModal" />
+    </data>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:background="@color/transparent">
+
+    </View>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_upside_corners_black">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp">
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/report"
+                        android:textColor="@color/color_white_100"
+                        android:textSize="@dimen/_18ssp" />
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/dark_close" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp">
+
+                </View>
+
+
+                <soup.neumorphism.NeumorphCardView
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:neumorph_shadowColorDark="@color/color_black_20"
+                    app:neumorph_shadowColorLight="@color/color_white_15"
+                    app:neumorph_shapeAppearance="@style/CustomShapeAppearanceUploadAudio"
+                    app:neumorph_shapeType="flat"
+                    app:neumorph_strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+
+
+                        <soup.neumorphism.NeumorphCardView
+                            style="@style/Widget.Neumorph.Button"
+                            android:layout_width="match_parent"
+                            app:neumorph_strokeColor="@color/color_white_100"
+                            android:layout_height="wrap_content"
+                            app:neumorph_shadowColorDark="@color/color_black_20"
+                            app:neumorph_shadowColorLight="@color/color_white_20"
+                            app:neumorph_shapeAppearance="@style/CustomShapeAppearanceUploadAudio"
+                            app:neumorph_shapeType="basin"
+                            app:neumorph_strokeWidth="1dp">
+
+
+
+                            <androidx.appcompat.widget.AppCompatEditText
+                                app:validation='@{(vm.formErrors.contains(FormErrors.MISSING_MESSAGE) ? @string/please_enter_message : "" )}'
+                                android:layout_margin="@dimen/_5sdp"
+                                android:id="@+id/edtMessage"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_150sdp"
+                                android:background="@null"
+                                android:fontFamily="@font/avenir_next_regular"
+                                android:gravity="top"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@={vm.message}"
+                                android:hint="@string/write_message_here"
+                                android:textColor="@color/color_white_100"
+                                android:textColorHint="@color/color_white_100"
+                                android:textSize="@dimen/_13ssp" />
+
+
+                        </soup.neumorphism.NeumorphCardView>
+
+
+
+                    </LinearLayout>
+
+
+                </soup.neumorphism.NeumorphCardView>
+
+
+                <soup.neumorphism.NeumorphCardView
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:id="@+id/btnContinueForgotPass"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:text="@string/continue_click"
+                    android:textAllCaps="false"
+                    app:neumorph_strokeColor="@color/colorPink"
+                    app:neumorph_strokeWidth="1dp"
+                    app:neumorph_shadowElevation="3dp"
+                    android:textSize="@dimen/_18ssp"
+                    android:onClick="@{() -> vm.callApiReport(audioId)}"
+                    android:includeFontPadding="false"
+                    app:neumorph_shadowColorLight="@color/color_white_25"
+                    app:neumorph_shadowColorDark="@color/color_black_100"
+                    app:neumorph_backgroundColor="@color/transparent"
+                    android:background="@color/color_purple_100"
+                    android:fontFamily="@font/avenir_next_demi"
+                    android:textColor="@color/color_white_100">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_centerInParent="true"
+                            android:includeFontPadding="false"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/avenir_next_demi"
+                            android:textAllCaps="false"
+                            android:textColor="@color/color_white_100"
+                            android:textSize="@dimen/_18ssp"
+                            android:text="@string/submit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </androidx.appcompat.widget.AppCompatTextView>
+                        <ProgressBar
+                            android:visibility='@{showloader ? View.VISIBLE : View.GONE}'
+                            android:indeterminateTint="@color/colorAccent"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </ProgressBar>
+
+
+                    </RelativeLayout>
+
+                </soup.neumorphism.NeumorphCardView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>
+
+</layout>

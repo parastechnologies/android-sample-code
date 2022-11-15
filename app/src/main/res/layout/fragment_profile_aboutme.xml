@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listFound"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="showLoaderInterest"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="listFoundGoal"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="showLoaderGoals"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="listFoundBio"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="showLoaderBio"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.fragments.profile.aboutme.AboutMeViewModal" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/avenir_medium"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/personal_interests"
+                        android:textColor="@color/color_black_100"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/npmPersonalInterest"
+                        style="@style/Widget.Neumorph.CardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:onClick="@{() -> vm.onClickEditInterest()}"
+                        app:neumorph_strokeColor="@color/color_white_100"
+                        app:neumorph_strokeWidth="3dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorRedButton"
+                            android:fontFamily="@font/avenir_medium"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:text="@string/edit"
+                            android:textColor="@color/color_white_100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/arrow1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:src="@drawable/up_arrow"
+                        android:visibility='@{listFound ? View.GONE : View.VISIBLE}' />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/arrow1"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:gravity="center"
+                        android:text="Add interests to connect with our community on a more personal level"
+                        android:textColor="@color/color_black_100"
+                        android:textSize="@dimen/_14ssp"
+                        android:visibility='@{listFound ? View.GONE : View.VISIBLE}'>
+
+                    </TextView>
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility='@{showLoaderInterest ? View.VISIBLE : View.GONE}'/>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclePersonalInterest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/personalintrest_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:fontFamily="@font/avenir_medium"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:text="@string/crrer_goals"
+                            android:textColor="@color/color_black_100"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/npmCarrerGoals"
+                            style="@style/Widget.Neumorph.CardView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:onClick="@{() -> vm.onClickEditGoals()}"
+                            app:neumorph_strokeColor="@color/color_white_100"
+                            app:neumorph_strokeWidth="3dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:background="@color/colorRedButton"
+                                android:fontFamily="@font/avenir_medium"
+                                android:includeFontPadding="false"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:paddingRight="@dimen/_10sdp"
+                                android:text="@string/edit"
+                                android:textColor="@color/color_white_100"
+                                android:textSize="@dimen/_12ssp" />
+
+                        </soup.neumorphism.NeumorphCardView>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/arrow2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:src="@drawable/up_arrow"
+                            android:visibility='@{listFoundGoal ? View.GONE : View.VISIBLE}' />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/arrow2"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:gravity="center"
+                            android:text="Set and showcase your\n music career goals"
+                            android:textColor="@color/color_black_100"
+                            android:textSize="@dimen/_14ssp"
+                            android:visibility='@{listFoundGoal ? View.GONE : View.VISIBLE}'>
+
+                        </TextView>
+
+                        <ProgressBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility='@{showLoaderGoals ? View.VISIBLE : View.GONE}'/>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recycleGoals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+                    <include
+                        layout="@layout/carrergoals_items"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:fontFamily="@font/avenir_medium"
+                        android:gravity="center_vertical"
+                        android:includeFontPadding="false"
+                        android:text="@string/biography"
+                        android:textColor="@color/color_black_100"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:id="@+id/npmBiography"
+                        style="@style/Widget.Neumorph.CardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="@{() -> vm.onClickEditBiography()}"
+                        app:neumorph_strokeColor="@color/color_white_100"
+                        app:neumorph_strokeWidth="3dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_horizontal"
+                            android:background="@color/colorRedButton"
+                            android:fontFamily="@font/avenir_medium"
+                            android:includeFontPadding="false"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:text="@string/edit"
+                            android:textColor="@color/color_white_100"
+                            android:textSize="@dimen/_12ssp" />
+
+                    </soup.neumorphism.NeumorphCardView>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/arrow3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:src="@drawable/up_arrow"
+                        android:visibility='@{listFoundBio ? View.GONE : View.VISIBLE}' />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/arrow3"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_15sdp"
+                        android:fontFamily="@font/avenir_medium"
+                        android:gravity="center"
+                        android:text="Mention your stage name, your influences, notable accomplishments and describe your style of music"
+                        android:textColor="@color/color_black_100"
+                        android:textSize="@dimen/_14ssp"
+                        android:visibility='@{listFoundBio ? View.GONE : View.VISIBLE}'>
+                    </TextView>
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:visibility='@{showLoaderBio ? View.VISIBLE : View.GONE}'/>
+
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_130sdp"
+                        android:padding="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:onClick="@{() -> vm.onClickEditBiography()}"
+                        android:visibility='@{vm.biographyFound ? View.VISIBLE : View.GONE}'
+                        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                        app:neumorph_shapeType="flat"
+                        app:neumorph_strokeColor="@color/color_white_100"
+                        app:neumorph_strokeWidth="1dp">
+
+                        <TextView
+                            android:id="@+id/etBiography"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:includeFontPadding="false"
+                            android:scrollbars = "vertical"
+                            android:text="@={vm.biography}"
+                            android:textColor="@color/color_black_100"
+                            android:textSize="@dimen/_12ssp" />
+                    </soup.neumorphism.NeumorphCardView>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</layout>

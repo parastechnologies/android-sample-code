@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llIntrumentalist"
+            android:gravity="center"
+            android:background="@drawable/selector_project"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp">
+
+            <TextView
+                android:id="@+id/tvInstrulist"
+                android:textColor="@drawable/selector_project_text"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/hiphop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llProducer"
+            android:gravity="center"
+            android:background="@drawable/selector_project"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:textColor="@drawable/selector_project_text"
+                android:id="@+id/tvProducer"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/vegetarrian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llVocalist"
+            android:gravity="center"
+            android:background="@drawable/selector_project"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp">
+
+            <TextView
+                android:id="@+id/tvVocalist"
+                android:textColor="@drawable/selector_project_text"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/fashion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltopLiner"
+            android:gravity="center"
+            android:background="@drawable/selector_project"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvTopLiner"
+                android:textColor="@drawable/selector_project_text"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/marketing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llSongWriter"
+            android:gravity="center"
+            android:background="@drawable/selector_project"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_60sdp">
+
+            <TextView
+                android:id="@+id/tvSongWriter"
+                android:textColor="@drawable/selector_project_text"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/mixing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llViewAll"
+            android:gravity="center"
+            android:background="@drawable/selector_project"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvViewAll"
+                android:textColor="@drawable/selector_project_text"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/pop_culture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            </TextView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

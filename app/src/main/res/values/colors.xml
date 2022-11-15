@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="color_main_grey">#ebeaf6</color>
+    <color name="color_white_100">#fff</color>
+    <color name="colorPurpleLight">#60A4A0C8</color>
+    <color name="colorTextGreen">#73CADC</color>
+    <color name="color_white_75">#8BFFFFFF</color>
+    <color name="color_white_20">#33FFFFFF</color>
+    <color name="color_white_25">#41FFFFFF</color>
+    <color name="color_white_15">#26FFFFFF</color>
+    <color name="color_white_10">#1AFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_191a1d">#191a1d</color>
+<!--    <color name="transparent">#4100D3FF</color>-->
+
+    <color name="colorSky">#73CADC</color>
+    <color name="colorSkyShadow">#CC73CADC</color>
+    <color name="colorPink">#EF729E</color>
+    <color name="colorTextGrey">#9E9E9E</color>
+    <color name="colorTextGrey_90">#E69E9E9E</color>
+
+    <color name="color_grey_75">#BFB0B0B0</color>
+    <color name="color_grey_hint">#BF9E9E9E</color>
+    <color name="color_grey_setdark">#E3E1EC</color>
+    <color name="color_greyset">#ECEAF7</color>
+    <color name="color_greycardview">#E9E7F2</color>
+     <color name="color_grey_20">#34D5D4D4</color>
+
+    <color name="color_black_100">#000000</color>
+    <color name="color_black_70">#B3000000</color>
+    <color name="color_black_50">#80000000</color>
+    <color name="color_black_80">#CC000000</color>
+    <color name="color_black_25">#41000000</color>
+    <color name="color_black_20">#33000000</color>
+
+    <color name="color_black_5">#0D000000</color>
+    <color name="color_black_23">#3B000000</color>
+
+    <color name="color_black_15">#26000000</color>
+    <color name="color_black_30">#66000000</color>
+    <color name="color_black_transparent">#CC000000</color>
+    <color name="color_white_transparent">#CCFFFFFF</color>
+    <color name="colorBackgroundBlack">#1A1A1A</color>
+    <color name="color_black_light">#1A1A1A</color>
+    <color name="colorBlackLightText">#464646</color>
+    <color name="color_purple_100">#c401ff</color>
+    <color name="color_pink_100">#C247A7</color>
+    <color name="progressBackground">#EBEAF6</color>
+    <color name="progressShadowColor">#B7B9BC</color>
+    <color name="progressShadowColor1">#B4B7B9BC</color>
+    <color name="color_watermelon">#f7475f</color>
+    <color name="color_red">#E2506A</color>
+    <color name="color_pale_gray">#ebeaf6</color>
+    <color name="color_pale_gray_shadow">#ebeaf6</color>
+    <color name="color_pale_black">#43000000</color>
+    <color name="color_dark_gray">#1a1a1a</color>
+    <color name="color_icon_grey">#9e9e9e</color>
+    <color name="color_backgrounddark">#1a1a1a</color>
+    <color name="color_lightshadow">#262626</color>
+    <color name="color_313131">#313131</color>
+    <color name="color_lightshadowblur">#2E2E2E</color>
+    <color name="color_darkshadow">#131313</color>
+    <color name="color_lightgreen">#73CADC</color>
+    <color name="colorGreen">#02CC17</color>
+    <color name="colorGreenSwitch">#6BD65C</color>
+    <color name="colorRed">#F30E0E</color>
+    <color name="colorYellow">#EFB000</color>
+    <color name="colorGreyButton">#A4A0C8</color>
+    <color name="colorGreyText">#A4A0C8</color>
+    <color name="colorDividerLine">#DDDBF1</color>
+    <color name="colorRedButton">#F7475E</color>
+    <color name="colorBackgroundUpload">#212121</color>
+    <color name="colorBackgroundUploadStroke">#0C0C0C</color>
+
+    <color name="colorGrayAlpha">#80000000</color>
+    <color name="colorBlue">#0e1f2f</color>
+    <color name="colorTextGray">#ADADAD</color>
+    <color name="colorBg">#3be3e3</color>
+    <color name="colorBlack">#000</color>
+    <color name="colorGridLine">#00ed1b24</color>
+    <color name="colorSelectionBorder">#F747D0</color>
+    <color name="colorSelectionBox">#4F0067</color>
+    <color name="colorSelectionSong">#73CADC</color>
+    <color name="colorBottomUpload">#81A4A0C8</color>
+    <color name="colorSelectionTopSky">#4D00D3FF</color>
+    <color name="colorWaveformBg">#253571</color>
+    <color name="colorPlaybackIndicator">#b2253571</color>
+    <color name="colorTimeCode">#dd253571</color>
+    <color name="colorTimeCodeShadow">#aa253571</color>
+    <color name="waveformSelected">#adb5cc</color>
+    <color name="white">#FFFFFF</color>
+    <color name="waveformUnselected">#adb5cc</color>
+    <color name="waveformUnselectedBackground">#e8e6e7</color>
+
+    <color name="colorSkyPlayer">#4BE7E4</color>
+    <color name="colorBluePlayer">#2A43FF</color>
+    <color name="colorPinkPlayer">#E900F8</color>
+    <color name="colorGreyProfile">#99CECECE</color>
+
+
+    <color name="list_header_item">#4468a3</color>
+    <color name="list_header_item_text">#FFFFFF</color>
+
+    <color name="list_item">#80FFFFFF</color>
+    <color name="list_item_text">#000000</color>
+
+</resources>

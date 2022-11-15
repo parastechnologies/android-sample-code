@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/tools"
+    android:background="@color/color_pale_gray"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp">
+        </View>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/cardInsidee"
+            style="@style/Widget.Neumorph.FloatingActionButton"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_gravity="center_horizontal"
+            app:neumorph_shadowElevation="4dp"
+            app:neumorph_strokeColor="@color/color_white_100"
+            app:neumorph_strokeWidth="1.5dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.app.muselink.visualizersmooth.CircleBarVisualizerSmooth
+                    android:layout_width="match_parent"
+                    android:id="@+id/circleVisualizer"
+                    custom:avColor="@color/color_lightgreen"
+                    custom:avDensity="0.5"
+                    custom:avSpeed="medium"
+                    custom:avType="fill"
+                    android:layout_height="match_parent"/>
+
+
+                <LinearLayout
+                    android:id="@+id/llPausePlay"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:background="@drawable/circle_with_gradient"
+                    android:layout_centerInParent="true"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_60sdp">
+
+                    <ImageView
+                        android:id="@+id/imgPausePlay"
+                        android:src="@drawable/play_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </ImageView>
+
+
+                </LinearLayout>
+
+
+
+
+
+            </RelativeLayout>
+
+
+        </soup.neumorphism.NeumorphCardView>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

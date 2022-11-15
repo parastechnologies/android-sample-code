@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="listFoundGoal"
+            type="java.lang.Boolean" />
+        <import type="com.app.muselink.constants.AppConstants.FormErrors" />
+        <variable
+            name="showLoaderGoals"
+            type="java.lang.Boolean" />
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.activities.profile.editgoals.EditGoalsViewModal" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_greyset"
+        android:orientation="vertical"
+        tools:context=".ui.activities.profile.editinterest.EditInterestActivity">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/layout_toolbar_with_back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_grey_75"
+            app:layout_constraintTop_toBottomOf="@+id/include" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleGoals"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view8" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/avenir_medium"
+            android:text="@string/no_interests_found"
+            android:textColor="@color/color_black_100"
+            android:textSize="@dimen/_14ssp"
+            android:visibility='@{listFoundGoal ? View.GONE : View.VISIBLE}'
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar2">
+
+        </TextView>
+
+        <ProgressBar
+            android:id="@+id/progressBar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility='@{showLoaderGoals ? View.VISIBLE : View.GONE}'
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/include"
+            app:layout_constraintVertical_bias="0.39" />
+
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/button"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_purple_100"
+                android:enabled='@{vm.enableButton ? true : false}'
+                android:fontFamily="@font/avenir_next_demi"
+                android:onClick="@{() -> vm.callApiUpdateGoals()}"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white_100"
+                android:textSize="@dimen/_18ssp"
+                app:errorText='@{(vm.formErrors.contains(FormErrors.MISSING_GOALS) ? @string/please_select_goals : "" )}'
+                app:neumorph_backgroundColor="@color/color_purple_100"
+                app:neumorph_strokeColor="@color/color_white_100"
+                app:neumorph_strokeWidth="2dp"
+                android:focusable="true" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:indeterminateTint="@color/colorAccent"
+                android:visibility='@{vm.showLoader ? View.VISIBLE : View.GONE}' />
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

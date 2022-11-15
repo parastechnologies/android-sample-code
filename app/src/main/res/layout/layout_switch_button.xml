@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/card1"
+        style="@style/CustomShapeAppearance"
+        android:layout_width="@dimen/_38sdp"
+        android:layout_height="@dimen/_38sdp"
+        android:layout_gravity="center"
+        android:clickable="false"
+        app:neumorph_shadowColorDark="@color/color_grey_75"
+        app:neumorph_shadowColorLight="@color/color_white_75"
+        app:neumorph_shadowElevation="@dimen/_3sdp"
+        app:neumorph_strokeColor="@color/color_watermelon"
+        app:neumorph_strokeWidth="@dimen/_1sdp">
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image1"
+            android:layout_width="@dimen/_8sdp"
+            android:layout_height="@dimen/_8sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/drawable_circle_purple" />
+    </soup.neumorphism.NeumorphCardView>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avenir_medium"
+        android:includeFontPadding="false"
+        android:text="@string/everyone"
+        android:textColor="@color/color_black_light"
+        android:textSize="@dimen/_14ssp">
+
+    </com.google.android.material.textview.MaterialTextView>
+
+
+</LinearLayout>

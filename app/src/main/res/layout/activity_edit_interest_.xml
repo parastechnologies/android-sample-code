@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listFound"
+            type="java.lang.Boolean" />
+
+        <import type="com.app.muselink.constants.AppConstants.FormErrors" />
+
+        <variable
+            name="showLoaderInterest"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.activities.profile.editinterest.EditInterestViewModal" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_greyset"
+        android:orientation="vertical"
+        tools:context=".ui.activities.profile.editinterest.EditInterestActivity">
+
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/layout_toolbar_with_back_button" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/colorDividerLine" />
+
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="@dimen/_10sdp"
+             android:layout_marginTop="@dimen/_15sdp"
+             android:layout_marginRight="@dimen/_10sdp"
+             android:gravity="center_vertical"
+             android:orientation="horizontal">
+             <TextView
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_gravity="center_horizontal"
+                 android:fontFamily="@font/avenir_medium"
+                 android:gravity="center_vertical"
+                 android:includeFontPadding="false"
+                 android:text="@string/interest"
+                 android:textColor="@color/color_black_100"
+                 android:textSize="@dimen/_16ssp" />
+         </LinearLayout>
+ -->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/buttonSave"
+            android:layout_below="@+id/line">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/avenir_medium"
+                android:text="@string/no_interests_found"
+                android:textColor="@color/color_black_100"
+                android:textSize="@dimen/_14ssp"
+                android:visibility='@{listFound ? View.GONE : View.VISIBLE}' />
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility='@{showLoaderInterest ? View.VISIBLE : View.GONE}' />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleCategoryInterest"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/buttonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:clickable="false">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/button"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_purple_100"
+                android:enabled='@{vm.enableButton ? true : false}'
+                android:fontFamily="@font/avenir_next_demi"
+                android:onClick="@{() -> vm.callApiUpdateInterests()}"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/color_white_100"
+                android:textSize="@dimen/_18ssp"
+                app:errorText='@{(vm.formErrors.contains(FormErrors.MISSING_INTERESTS) ? @string/please_select_interests : "" )}'
+                app:neumorph_backgroundColor="@color/color_purple_100"
+                app:neumorph_strokeColor="@color/color_white_100"
+                app:neumorph_strokeWidth="2dp" />
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:indeterminateTint="@color/colorAccent"
+                android:visibility='@{vm.showLoader ? View.VISIBLE : View.GONE}'></ProgressBar>
+        </RelativeLayout>
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.activities.profile.camera.CamerActivityViewModel" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundBlack"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/imageProfile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_270sdp">
+
+
+            <com.lyft.android.scissors2.CropView
+                android:id="@+id/crop_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cropviewViewportRatio="1" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/userImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gittarboy"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+                />
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.5"
+                    android:background="@android:color/transparent">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginTop="-100dp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardCornerRadius="100dp"
+                        app:cardElevation="@dimen/_5sdp"
+                        app:strokeColor="@color/color_lightgreen"
+                        app:strokeWidth="@dimen/_7sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/galleryLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageProfile"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/gallery"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:neumorph_shadowColorDark="@color/colorBlack"
+                app:neumorph_shadowColorLight="@color/color_313131"
+                app:neumorph_shadowElevation="@dimen/_4sdp"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="basin"
+                app:neumorph_strokeColor="@color/colorBlack"
+                app:neumorph_strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Gallery"
+                        android:textColor="@color/color_white_100"
+                        android:textSize="@dimen/_15ssp" />
+
+                    <View
+                        android:id="@+id/viewGallery"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="1.5dp"
+                        android:background="@color/white" />
+
+                </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/camera"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                app:neumorph_shadowColorDark="@color/colorBlack"
+                app:neumorph_shadowColorLight="@color/color_313131"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat"
+                app:neumorph_strokeColor="@color/colorBlack"
+                app:neumorph_strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="Camera"
+                        android:textColor="@color/color_white_100"
+                        android:textSize="@dimen/_14ssp" />
+
+                    <View
+                        android:id="@+id/viewCamera"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="1.5dp"
+                        android:background="@color/white"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewImages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomView"
+            android:layout_below="@+id/galleryLayout"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp" />
+
+        <LinearLayout
+            android:id="@+id/bottomView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/tvCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/cancel"
+                android:textColor="@color/colorGreyButton"
+                android:textSize="@dimen/_15ssp" />
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="@string/save"
+                android:textColor="@color/colorSelectionBorder"
+                android:textSize="@dimen/_15ssp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</layout>

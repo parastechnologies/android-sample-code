@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "731009644032",
+    "project_id": "muselink-9fcc7",
+    "storage_bucket": "muselink-9fcc7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731009644032:android:6209f8049b5c0bea024ae5",
+        "android_client_info": {
+          "package_name": "com.app.muselink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731009644032-s7etmaf1d39hu0t1ko21nriledt98sbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByALFiQHF5HWaWtsYKPFq17NwXRaAfVA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731009644032-s7etmaf1d39hu0t1ko21nriledt98sbh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "731009644032-kfknijocalnkdi40p10m0bsinf377d8r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Muselink"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:731009644032:android:14de73c3fe2c5191024ae5",
+        "android_client_info": {
+          "package_name": "com.paras.muselink"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "731009644032-s7etmaf1d39hu0t1ko21nriledt98sbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByALFiQHF5HWaWtsYKPFq17NwXRaAfVA0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "731009644032-s7etmaf1d39hu0t1ko21nriledt98sbh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "731009644032-kfknijocalnkdi40p10m0bsinf377d8r.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Muselink"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

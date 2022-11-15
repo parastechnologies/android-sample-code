@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/imgShape3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/step_shape3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nmcOkStep4"
+        android:layout_below="@+id/imgShape3">
+
+        <LinearLayout
+            android:id="@+id/llTopView"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tv1"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/avenir_medium"
+                android:textColor="@color/color_white_100"
+                android:text="@string/project_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/tv2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/color_white_100"
+                android:text="@string/describe_the_sound_file_you_can_use_hastag_and_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@id/llTopView"
+            android:layout_above="@+id/llBottomView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/imgStep4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="1dp"
+                android:layout_marginBottom="-2dp"
+                android:src="@drawable/step_shape4">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llBottomView"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv3"
+                android:visibility="invisible"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_18ssp"
+                android:fontFamily="@font/avenir_medium"
+                android:textColor="@color/color_white_100"
+                android:text="@string/project_goals"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/tv4"
+                android:visibility="invisible"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_16ssp"
+                android:fontFamily="@font/avenir_next_regular"
+                android:textColor="@color/color_white_100"
+                android:text="@string/what_goals_do_you_have_for_this_sound_file"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </TextView>
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+    <soup.neumorphism.NeumorphButton
+        android:visibility="invisible"
+        android:id="@+id/nmcOkStep4"
+        style="@style/Widget.Neumorph.Button"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:fontFamily="@font/avenir_medium"
+        android:gravity="center"
+        android:text="@string/ok"
+        android:textColor="@color/color_white_100"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:neumorph_backgroundColor="@color/colorBackgroundBlack"
+        app:neumorph_shadowColorDark="@color/color_black_100"
+        app:neumorph_shadowColorLight="@color/color_white_75"
+        app:neumorph_shadowElevation="@dimen/_3sdp"
+        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+        app:neumorph_shapeType="flat"
+        app:neumorph_strokeColor="@color/color_purple_100"
+        app:neumorph_strokeWidth="2dp">
+
+
+    </soup.neumorphism.NeumorphButton>
+
+
+</RelativeLayout>

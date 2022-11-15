@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_40sdp"
+        android:fontFamily="@font/avenir_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="@string/discover_sound_files"
+        android:textColor="@color/color_black_100"
+        android:textSize="@dimen/_17ssp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView6"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_170sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/big_circle"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.394" />
+
+    <Space
+        android:id="@+id/space"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView7"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/museplayer_icon_second"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/space"
+        app:layout_constraintVertical_bias="0.11" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView10"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/museplayer_icon_second"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView7"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView7"
+        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView13"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/muse_file_second"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView10"
+        app:layout_constraintStart_toEndOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView10" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView14"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/muse_file_second"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView7"
+        app:layout_constraintStart_toEndOf="@+id/view1"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView7"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/arrow1_second"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView7"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView7" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/arrow1_second"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView7"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView10" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/arrow4_second"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView13"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView13"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView13"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView14" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/view2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:background="@drawable/arrow2_second"
+        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView7"
+        app:layout_constraintStart_toStartOf="@+id/appCompatImageView7"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView7" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView3"
+        android:layout_width="@dimen/_180sdp"
+        android:layout_height="@dimen/_190sdp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/background_second"
+        app:layout_constraintBottom_toTopOf="@+id/spacetwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.775" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/img_walk_top_second"
+        app:layout_constraintBottom_toTopOf="@+id/guideline1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.142" />
+<Space
+    android:id="@+id/spacetwo"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_20sdp"
+    app:layout_constraintBottom_toTopOf="@+id/appCompatImageView2">
+
+</Space>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/img_walk_btm_second"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.79" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/appCompatImageView2"
+        app:layout_constraintTop_toBottomOf="@+id/appCompatImageView3"
+        app:layout_constraintVertical_bias="0.75"
+        tools:layout_editor_absoluteX="13dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/avenir_next_demi"
+            android:gravity="center"
+            android:text="@string/direct_cross"
+            android:textColor="@color/color_black_100"
+            android:textSize="@dimen/_18ssp" />
+
+        <TextView
+            android:id="@+id/mTvAuthor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:fontFamily="@font/avenir_next_regular"
+            android:gravity="center"
+            android:text="@string/match_sonically_or_based_upon_personal_interests"
+            android:textColor="@color/color_black_100"
+            android:textSize="@dimen/_17ssp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

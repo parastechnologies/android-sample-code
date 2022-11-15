@@ -1,0 +1,12 @@
+R_DEF: Internal format may change without notice
+local
+attr? cropviewMaxScale
+attr? cropviewMinScale
+attr? cropviewShape
+attr? cropviewViewportOverlayColor
+attr? cropviewViewportOverlayPadding
+attr? cropviewViewportRatio
+color colorGreyProfile
+id oval
+id rectangle
+styleable CropView cropviewViewportRatio cropviewViewportOverlayColor cropviewViewportOverlayPadding cropviewMaxScale cropviewMinScale cropviewShape

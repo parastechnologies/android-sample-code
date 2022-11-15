@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    tools:context=".ui.activities.signupLogin.PhoneEmailSignupActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_upside_corners_black"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp">
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_10sdp" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/muse_round_icon" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/avenir_next_demi"
+                    android:text="@string/thank_you_for_the_support"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_16ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/unlimited_likes"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/unlimited_swipes"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/unlimited_rewinds"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/access_the_search_library"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/five_daily_direct_messages"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/double_upload_limit"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/hear_full_sound_file"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/done_tick"
+                    android:fontFamily="@font/avenir_next_regular"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/biography_pro"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_13ssp" />
+
+                <soup.neumorphism.NeumorphButton
+                    android:id="@+id/btnContinue"
+                    style="@style/Widget.Neumorph.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:background="@color/color_purple_100"
+                    android:fontFamily="@font/avenir_next_demi"
+                    android:includeFontPadding="false"
+                    android:text="@string/continue_click"
+                    android:textAllCaps="false"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_18ssp"
+                    app:neumorph_backgroundColor="@color/transparent"
+                    app:neumorph_shadowColorDark="@color/color_black_100"
+                    app:neumorph_shadowColorLight="@color/color_white_25"
+                    app:neumorph_shadowElevation="3dp"
+                    app:neumorph_strokeColor="@color/colorPink"
+                    app:neumorph_strokeWidth="1dp" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

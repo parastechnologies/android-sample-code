@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llSoundFileParentView"
+    android:layout_width="match_parent"
+    android:background="@color/color_pale_gray"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+              android:id="@+id/containerSoundFile"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_marginTop="@dimen/_25sdp"
+              android:visibility="visible">
+          </FrameLayout>
+        <LinearLayout
+            android:id="@+id/llParent"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_55sdp"
+            android:orientation="horizontal">
+            <!--Button Sound File-->
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/btnSoundFile"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/avenir_next_bold"
+                android:gravity="center"
+                android:visibility="gone"
+                app:neumorph_shadowColorDark="@color/color_grey_75"
+                app:neumorph_shadowColorLight="@color/color_white_75"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat"
+                app:neumorph_strokeColor="@color/color_white_100"
+                app:neumorph_strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_medium"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/ic_dashboard"
+                        android:text="@string/soundfile"
+                        android:textColor="@color/color_black_100"
+                        android:textSize="@dimen/_13ssp">
+
+                    </TextView>
+
+                    <View
+                        android:id="@+id/viewSound"
+                        android:layout_width="match_parent"
+                        android:layout_height="1.5dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/color_black_100"
+                        android:visibility="gone">
+
+                    </View>
+
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+            <!--Button description Button-->
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/btnDescription"
+                style="@style/Widget.Neumorph.Button"
+                 android:layout_width="match_parent"
+                android:layout_height="@dimen/_55sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center"
+                android:textSize="@dimen/_15sdp"
+                app:neumorph_shadowColorDark="@color/colorTextGrey_90"
+                app:neumorph_shadowColorLight="@color/white"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat"
+                app:neumorph_strokeColor="@color/colorSelectionBorder"
+                app:neumorph_strokeWidth="@dimen/_1sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/avenir_medium"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/ic_dashboard"
+                        android:text="@string/description"
+                        android:textColor="@color/color_black_100"
+                        android:textSize="@dimen/_13ssp" />
+                    <!-- <View
+                         android:id="@+id/viewDescription"
+                         android:layout_width="match_parent"
+                         android:layout_height="1.5dp"
+                         android:layout_marginTop="1dp"
+                         android:background="@color/color_black_100"
+                         android:visibility="gone">
+                     </View>-->
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/audioDetailRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

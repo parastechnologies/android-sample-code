@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/avenir_next_bold</item>
+        <item>@font/avenir_next_regular</item>
+        <item>@font/avenir_black</item>
+        <item>@font/avenir_medium</item>
+        <item>@font/avenir_next_demi</item>
+    </array>
+</resources>

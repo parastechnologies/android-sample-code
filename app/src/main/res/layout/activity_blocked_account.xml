@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listFound"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.activities.settings.blockaccount.BlockAccountViewmodel" />
+
+    </data>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_pale_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar_with_back_button" />
+
+    <TextView
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/avenir_medium"
+        android:includeFontPadding="false"
+        android:src="@drawable/ic_dashboard"
+        android:text="@string/blocked_accounts"
+        android:textColor="@color/color_black_100"
+        android:textSize="@dimen/_18ssp" />
+
+    <RelativeLayout
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:visibility='@{listFound ? View.GONE : View.VISIBLE}'
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/_15ssp"
+            android:layout_centerInParent="true"
+            android:text="@string/no_data_found"
+            android:fontFamily="@font/avenir_next_demi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvBlockedAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
+
+</layout>

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vmSignUp"
+            type="com.app.muselink.ui.bottomsheets.signup.SignupViewModel" />
+
+        <variable
+            name="showloader"
+            type="java.lang.Boolean"/>
+
+        <variable
+            name="showloaderPhone"
+            type="java.lang.Boolean"/>
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_upside_corners_black">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp">
+                </View>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imgClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/dark_close" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/signup"
+                        android:textColor="@color/color_white_100"
+                        android:textSize="@dimen/_18ssp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+
+                    <soup.neumorphism.NeumorphCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_65sdp"
+                        app:neumorph_shadowColorDark="@color/color_black_100"
+                        app:neumorph_shadowColorLight="@color/color_grey_75"
+                        app:neumorph_shadowElevation="@dimen/_2sdp"
+                        app:neumorph_shapeAppearance="@style/ShapeAppearance"
+                        app:neumorph_shapeType="pressed"
+                        app:neumorph_strokeColor="@color/colorBlackLightText"
+                        app:neumorph_strokeWidth="@dimen/_2sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <soup.neumorphism.NeumorphCardView
+                                    android:id="@+id/npmPhone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:clickable="false"
+                                    app:neumorph_backgroundColor="@color/colorSky"
+                                    app:neumorph_inset="0dp"
+                                    app:neumorph_shadowColorDark="@color/transparent"
+                                    app:neumorph_shadowColorLight="@color/transparent"
+                                    app:neumorph_shadowElevation="0dp"
+                                    app:neumorph_shapeAppearance="@style/ShapeAppearance"
+                                    app:neumorph_strokeColor="@color/transparent"
+                                    app:neumorph_strokeWidth="0dp">
+
+                                    <TextView
+                                        android:id="@+id/tvPhone"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/avenir_medium"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/phone"
+                                        android:textColor="@drawable/selector_default_white_with_black_text"
+                                        android:textSize="@dimen/_14ssp">
+
+                                    </TextView>
+
+                                </soup.neumorphism.NeumorphCardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <soup.neumorphism.NeumorphCardView
+                                    android:id="@+id/npmEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    app:neumorph_backgroundColor="@color/transparent"
+                                    app:neumorph_inset="0dp"
+                                    app:neumorph_shadowColorDark="@color/transparent"
+                                    app:neumorph_shadowColorLight="@color/transparent"
+                                    app:neumorph_shadowElevation="0dp"
+                                    app:neumorph_shapeAppearance="@style/ShapeAppearance"
+                                    app:neumorph_strokeColor="@android:color/transparent"
+                                    app:neumorph_strokeWidth="0dp">
+
+                                    <TextView
+                                        android:id="@+id/tvEmail"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:fontFamily="@font/avenir_medium"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/email"
+                                        android:textColor="@drawable/selector_default_white_with_black_text"
+                                        android:textSize="@dimen/_14ssp">
+
+                                    </TextView>
+
+                                </soup.neumorphism.NeumorphCardView>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                    </soup.neumorphism.NeumorphCardView>
+
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp">
+
+                    <include
+                        bind:showloader="@{showloaderPhone}"
+                        bind:vmPhone="@{vmSignUp}"
+                        android:id="@+id/llPhoneNumber"
+                        layout="@layout/layout_phone_number_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </include>
+
+                    <include
+                        bind:showloader="@{showloader}"
+                        bind:vmSignUp="@{vmSignUp}"
+                        android:id="@+id/llEmail"
+                        layout="@layout/layout_email_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                    </include>
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>

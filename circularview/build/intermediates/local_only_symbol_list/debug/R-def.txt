@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+attr? arcBorderColor
+attr? arcColor
+attr? arcHasBorder
+attr? arcWidth
+attr? clockwise
+attr? enabled
+attr? hasIndicator
+attr? indicatorColor
+attr? indicatorRadius
+attr? progressBarSquared
+attr? progressColor
+attr? progressCurrentValue
+attr? progressMaximumValue
+attr? progressMinimumValue
+attr? progressStepAsInteger
+attr? progressStepValue
+attr? progressWidth
+attr? suffixEnabled
+attr? suffixValue
+attr? textColor
+attr? textDecimalPlaces
+attr? textEnabled
+attr? textFont
+attr? textSize
+color color_arc
+color color_arc_border
+color color_indicator
+color color_progress
+color color_text
+string app_name
+styleable CircleView progressCurrentValue progressMaximumValue progressMinimumValue progressStepValue progressStepAsInteger progressWidth progressColor progressBarSquared hasIndicator indicatorColor indicatorRadius arcWidth arcColor arcHasBorder arcBorderColor textEnabled textSize textColor textDecimalPlaces textFont suffixEnabled suffixValue clockwise enabled

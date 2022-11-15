@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="vmSignUp"
+            type="com.app.muselink.ui.bottomsheets.signuptypes.SignupTypesViewModel" />
+
+        <variable
+            name="showloader"
+            type="java.lang.Boolean"/>
+
+        <variable
+            name="bottomSheetDialog"
+            type="com.google.android.material.bottomsheet.BottomSheetDialogFragment"/>
+
+
+    </data>
+
+
+<LinearLayout
+    android:id="@+id/bottom_sheetsignup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:background="@drawable/rectangle_upside_corners_black"
+        android:elevation="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/dark_close" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/signup"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_18ssp" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/signup_detail"
+                android:textColor="@color/color_white_100"
+                android:textSize="@dimen/_14ssp" />
+
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:id="@+id/npmSignupWithEmail"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_shadowColorLight="@color/color_white_25"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:background="#1a1a1a"
+                    android:orientation="horizontal"
+                   >
+
+                    <ImageView
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:id="@+id/iv"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/mobile_mail" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.01"
+                        android:background="@color/color_white_75" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="3.8"
+                        android:paddingLeft="@dimen/_15sdp"
+                        android:gravity="left|center_vertical"
+                        android:text="@string/mail_signup"
+                        android:textColor="@color/color_white_100"
+                        android:textSize="@dimen/_14ssp" />
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+            <!--Tik Tok-->
+
+            <soup.neumorphism.NeumorphCardView
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shadowElevation="3dp"
+                android:visibility="gone"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_shadowColorLight="@color/color_white_25"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/email" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/color_white_75" />
+
+                <TextView
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3.8"
+                    android:gravity="left|center_vertical"
+                    android:text="@string/tiktok_signup"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
+
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--Facebook-->
+
+            <soup.neumorphism.NeumorphCardView
+                android:onClick="@{() -> vmSignUp.callFacebookLogin(bottomSheetDialog)}"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_shadowColorLight="@color/color_white_25"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:orientation="horizontal"
+               >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/facebook" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/color_white_75" />
+
+                <TextView
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3.8"
+                    android:gravity="left|center"
+                    android:text="@string/facebook_signup"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--Instagram-->
+
+            <soup.neumorphism.NeumorphCardView
+                android:onClick="@{() -> vmSignUp.callInstagramLogin(bottomSheetDialog)}"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_shadowColorLight="@color/color_white_25"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:orientation="horizontal"
+                >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/instagram" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/color_white_75" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3.8"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:gravity="left|center"
+                    android:text="@string/Instagram_signup"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <!--Sound cloud-->
+
+            <soup.neumorphism.NeumorphCardView
+                android:onClick="@{() -> vmSignUp.callDropboxLogin(bottomSheetDialog)}"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_shadowColorLight="@color/color_white_25"
+                app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                app:neumorph_shapeType="flat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:orientation="horizontal"
+               >
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:layout_marginLeft="@dimen/_8sdp"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_dropbox" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.01"
+                    android:background="@color/color_white_75" />
+
+                <TextView
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="3.8"
+                    android:gravity="left|center"
+                    android:text="@string/soundcloud_signup"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_14ssp" />
+            </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+            <TextView
+                android:id="@+id/termCondition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_25sdp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_25sdp"
+                android:gravity="center"
+                android:text="@string/termsof_use"
+                android:textColor="@color/color_white_100"
+                android:textSize="@dimen/_11ssp" />
+
+            <LinearLayout
+                android:id="@+id/ll_sign_in_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/_10sdp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/alreadyacc"
+                    android:textColor="@color/color_purple_100"
+                    android:textSize="@dimen/_12ssp" />
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:text="@string/login"
+                    android:textColor="@color/colorTextGreen"
+                    android:textSize="@dimen/_12ssp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+
+
+</layout>

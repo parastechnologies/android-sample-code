@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="listFound"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="listFoundGoal"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="bioFound"
+            type="java.lang.Boolean" />
+
+    </data>
+
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgUser"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/boyset">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+
+            <TextView
+                android:id="@+id/tvUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="Ankit Mishra"
+                android:textColor="@color/color_black_100"
+                android:textSize="@dimen/_14ssp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tvInterest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/avenir_medium"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/interests"
+                    android:textColor="@color/color_black_100"
+                    android:textSize="@dimen/_18ssp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recyclePersonalInterest"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/tvGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/avenir_medium"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/goals"
+                    android:textColor="@color/color_black_100"
+                    android:textSize="@dimen/_18ssp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/recycleGoals"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/tvBiography"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_horizontal"
+                    android:fontFamily="@font/avenir_medium"
+                    android:gravity="center_vertical"
+                    android:includeFontPadding="false"
+                    android:text="@string/biography"
+                    android:textColor="@color/color_black_100"
+                    android:textSize="@dimen/_18ssp" />
+
+
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/Widget.Neumorph.Button"
+                        android:id="@+id/ncvBiography"
+                        app:neumorph_shapeAppearance="@style/CustomShapeAppearance"
+                        app:neumorph_shapeType="flat"
+                        app:neumorph_strokeColor="@color/color_white_100"
+                        app:neumorph_strokeWidth="1dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:visibility='@{bioFound ? View.VISIBLE : View.GONE}'>
+                        <TextView
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:id="@+id/tvBio"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:fontFamily="@font/avenir_medium"
+                            android:includeFontPadding="false"
+                            android:text=""
+                            android:textColor="@color/color_black_100"
+                            android:textSize="@dimen/_14ssp" />
+                    </soup.neumorphism.NeumorphCardView>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

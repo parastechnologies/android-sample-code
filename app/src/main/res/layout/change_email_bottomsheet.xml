@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="showloader"
+            type="java.lang.Boolean"/>
+
+        <import type="com.app.muselink.constants.AppConstants.FormErrors" />
+
+        <variable
+            name="vm"
+            type="com.app.muselink.ui.bottomsheets.changeEmail.ChangeEmailViewModel" />
+    </data>
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_upside_corners_black">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp">
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imgClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/dark_close" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="@string/change_email"
+                    android:textColor="@color/color_white_100"
+                    android:textSize="@dimen/_18ssp" />
+            </RelativeLayout>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_next_regular"
+                android:gravity="center"
+                android:visibility="gone"
+                android:text="@string/just_enter_the_email_address"
+                android:textColor="@color/color_white_100"
+                android:textSize="@dimen/_14ssp">
+            </TextView>
+            <soup.neumorphism.NeumorphCardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_65sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_shadowColorLight="@color/color_grey_75"
+                app:neumorph_shadowElevation="3dp"
+                app:neumorph_shapeAppearance="@style/ShapeAppearance"
+                app:neumorph_shapeType="pressed"
+                app:neumorph_strokeColor="@color/colorBlackLightText"
+                app:neumorph_strokeWidth="1dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:src="@drawable/ic_email"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                        </androidx.appcompat.widget.AppCompatImageView>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:background="@color/color_grey_hint">
+
+                    </View>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="4">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            app:validation='@{(vm.formErrors.contains(FormErrors.INVALID_EMAIL) ? @string/please_enter_valid_email : "" )}'
+                            app:errorText='@{(vm.formErrors.contains(FormErrors.MISSING_EMAIL) ? @string/please_enter_email : "" )}'
+                            android:inputType="textEmailAddress"
+                            android:id="@+id/edtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            android:background="@null"
+                            android:importantForAutofill="no"
+                            android:fontFamily="@font/avenir_next_demi"
+                            android:gravity="center_vertical"
+                            android:hint="@string/email"
+                            android:text="@={vm.email}"
+                            android:textColorHint="@color/color_grey_hint"
+                            android:includeFontPadding="false"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textColor="@color/color_white_100"
+                            android:textSize="@dimen/_13ssp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+            <soup.neumorphism.NeumorphCardView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:id="@+id/btnContinueForgotPass"
+                style="@style/Widget.Neumorph.Button"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:text="@string/continue_click"
+                android:textAllCaps="false"
+                app:neumorph_strokeColor="@color/colorPink"
+                app:neumorph_strokeWidth="1dp"
+                app:neumorph_shadowElevation="3dp"
+                android:textSize="@dimen/_18ssp"
+                android:onClick="@{() -> vm.callApiChangeEmail()}"
+                android:includeFontPadding="false"
+                app:neumorph_shadowColorLight="@color/color_white_25"
+                app:neumorph_shadowColorDark="@color/color_black_100"
+                app:neumorph_backgroundColor="@color/transparent"
+                android:background="@color/color_purple_100"
+                android:fontFamily="@font/avenir_next_demi"
+                android:textColor="@color/color_white_100">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_centerInParent="true"
+                        android:includeFontPadding="false"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/avenir_next_demi"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_white_100"
+                        android:textSize="@dimen/_18ssp"
+                        android:text="@string/save"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                    </androidx.appcompat.widget.AppCompatTextView>
+                    <ProgressBar
+                        android:visibility='@{showloader ? View.VISIBLE : View.GONE}'
+                        android:indeterminateTint="@color/colorAccent"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </ProgressBar>
+
+
+                </RelativeLayout>
+
+            </soup.neumorphism.NeumorphCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</layout>

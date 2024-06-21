@@ -1,7 +1,0 @@
-ru/astrocode/shrv/library/SHRVItemType.java
- ru.astrocode.shrv.library.SHRVItemType
-ru/astrocode/shrv/library/BuildConfig.java
- ru.astrocode.shrv.library.BuildConfig
-ru/astrocode/shrv/library/SHRVLinearLayoutManager.java
- ru.astrocode.shrv.library.SHRVLinearLayoutManager
- ru.astrocode.shrv.library.SHRVLinearLayoutManager$SHRVLinearSmoothScroller

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_minus30sdp"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        tools:context=".view.activity.notification.NotificationActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_home"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/customTool"
+                layout="@layout/layout_base_tool_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_17sdp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_100sdp">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_26sdp">
+
+                        <!--
+                                                upLoadImage="@{vm.uoloadImage}"
+                        -->
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivProfile"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:scaleType="centerCrop"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            app:srcCompat="@drawable/ic_placeholder"
+
+                            />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/editProfileIV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginStart="@dimen/_minus24sdp"
+                            android:layout_marginEnd="@dimen/_minus10sdp"
+                            app:srcCompat="@drawable/ic_edit_pr" />
+
+                    </RelativeLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="@string/first_name"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:background="@drawable/edt_text_back"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_13sdp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_profile_drawable" />
+
+                        <EditText
+                            android:id="@+id/etFirstName"
+                            style="@style/brandon_medium_edit_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:hint="@string/enter_your_first_name"
+                            android:maxLength="25"
+                            android:textSize="@dimen/_13ssp" />
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="@string/last_name"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:background="@drawable/edt_text_back"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_13sdp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_profile_drawable" />
+
+                        <EditText
+                            android:id="@+id/etLastName"
+                            style="@style/brandon_medium_edit_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:hint="@string/enter_your_last_name"
+                            android:maxLength="25"
+                            android:textSize="@dimen/_13ssp" />
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="@string/emial"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:background="@drawable/edt_text_back"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_13sdp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/sms" />
+
+                        <EditText
+                            android:id="@+id/etEmail"
+                            style="@style/brandon_medium_edit_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:alpha="0.4"
+                            android:focusable="false"
+                            android:text="alexj@email.com"
+                            android:textSize="@dimen/_13ssp" />
+
+
+                    </LinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_13sdp"
+                        android:text="@string/language"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_13ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:background="@drawable/edt_text_back"
+                        android:clipToPadding="false"
+                        android:gravity="center_vertical"
+
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_13sdp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            app:srcCompat="@drawable/ic_translate" />
+
+                        <EditText
+                            android:id="@+id/etLanguage"
+                            style="@style/brandon_medium_edit_text_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_7sdp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:text="English"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivDropDown"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_minus6sdp"
+                            app:srcCompat="@drawable/arrow_down" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            style="@style/brandon_bold_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="@string/save_changes" />
+
+    </RelativeLayout>
+</layout>

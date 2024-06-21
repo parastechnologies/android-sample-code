@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_back_sc"
+        tools:context=".view.activity.forgotOtpVerification.ForgotOtpVerificationActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_minus30sdp"
+            android:fitsSystemWindows="true"
+            tools:context=".view.activity.forgotOtpVerification.ForgotOtpVerificationActivity">
+
+            <include
+                android:id="@+id/customTool"
+                layout="@layout/cutom_toolbar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/welComeTV"
+                style="@style/brandon_bold_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/email_verification"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/_19ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customTool" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contentTV"
+                style="@style/brandon_bold_text_regular_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:text="@string/enter_the_code_sent_to_your_registered_email"
+                android:textColor="@color/bg_color_2"
+                android:textSize="@dimen/_13ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welComeTV" />
+
+
+            <LinearLayout
+                android:id="@+id/llOtpContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_24sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/contentTV">
+
+                <com.highenergymind.utils.CutCopyPasteEditText
+                    android:id="@+id/et1"
+                    style="@style/brandon_medium_edit_text_style"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+
+                    android:background="@drawable/drawable_auto_otp_selector"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="@dimen/_16ssp"
+                    tools:text="4" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_weight="1" />
+
+                <com.highenergymind.utils.CutCopyPasteEditText
+                    android:id="@+id/et2"
+                    style="@style/brandon_medium_edit_text_style"
+                    android:layout_width="@dimen/_50sdp"
+
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/drawable_auto_otp_selector"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="@dimen/_16ssp"
+                    tools:text="4" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_weight="1" />
+
+                <com.highenergymind.utils.CutCopyPasteEditText
+                    android:id="@+id/et3"
+                    style="@style/brandon_medium_edit_text_style"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/drawable_auto_otp_selector"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="@dimen/_16ssp"
+                    tools:text="4" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_weight="1" />
+
+                <com.highenergymind.utils.CutCopyPasteEditText
+                    android:id="@+id/et4"
+                    style="@style/brandon_medium_edit_text_style"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:background="@drawable/drawable_auto_otp_selector"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:textSize="@dimen/_16ssp"
+                    tools:text="4" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llOtpContainer">
+
+                <com.google.android.material.textview.MaterialTextView
+                    style="@style/brandon_text_medium_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.6"
+                    android:text="@string/didn_t_received_the_otp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12ssp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvResend"
+                    style="@style/brandon_bold_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:text="@string/resend_otp"
+                    android:textColor="@color/bg_color_1"
+                    android:textSize="@dimen/_12ssp" />
+
+
+            </LinearLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/verifyBtn"
+                style="@style/brandon_bold_button_style"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:text="@string/verify"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

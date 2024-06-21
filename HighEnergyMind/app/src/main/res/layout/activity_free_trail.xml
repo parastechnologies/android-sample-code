@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent"
+        android:background="@drawable/login_back_sc"
+        tools:context=".view.activity.FreeTrialActivity">
+
+        <RelativeLayout
+            android:id="@+id/rlContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+
+            app:layout_constraintEnd_toEndOf="parent"
+
+            app:layout_constraintStart_toStartOf="parent"
+
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_18sdp"
+                app:srcCompat="@drawable/arrow_back" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="@dimen/_154sdp"
+                android:layout_height="@dimen/_6sdp"
+                android:layout_centerInParent="true"
+                app:cardCornerRadius="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/progress"
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="match_parent"
+
+                        app:cardBackgroundColor="@color/bg_color_1" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/_minus4sdp"
+                        android:layout_weight="1"
+
+                        android:background="@color/bg_color_13" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_14sdp"
+                app:srcCompat="@drawable/cross_congs" />
+        </RelativeLayout>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+            android:layout_marginTop="@dimen/_14sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rlContainer">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                >
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/welComeTV"
+                    style="@style/brandon_bold_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:lineSpacingExtra="@dimen/_minus7sdp"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/how_your_free_trial_nworks"
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/congaImageIV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_14sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/monthlyPlanCL"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/welComeTV">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivLock"
+                            android:layout_width="@dimen/_42sdp"
+                            android:layout_height="@dimen/_42sdp"
+                            android:layout_marginTop="@dimen/_4sdp"
+                            app:srcCompat="@drawable/ic_lock_trial" />
+
+                        <View
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@id/centerview"
+                            android:layout_below="@id/ivLock"
+                            android:layout_centerHorizontal="true"
+                            android:background="@color/bg_color_1" />
+
+                        <View
+                            android:id="@+id/centerview"
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_centerInParent="true" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_4sdp"
+                            android:layout_height="@dimen/_4sdp"
+                            android:layout_above="@id/ivStar"
+                            android:layout_below="@id/centerview"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                app:cardBackgroundColor="@color/bg_color_15"
+                                app:cardCornerRadius="@dimen/_16sdp"
+                                app:cardElevation="0dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+
+                                android:layout_weight="2"
+                                app:cardBackgroundColor="@color/bg_color_15"
+                                app:cardCornerRadius="@dimen/_16sdp"
+                                app:cardElevation="0dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+
+                                android:layout_weight="2"
+                                app:cardBackgroundColor="@color/bg_color_15"
+                                app:cardCornerRadius="@dimen/_16sdp"
+                                app:cardElevation="0dp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="1" />
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+
+                                android:layout_weight="2"
+                                app:cardBackgroundColor="@color/bg_color_15"
+                                app:cardCornerRadius="@dimen/_16sdp"
+                                app:cardElevation="0dp" />
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivBell"
+                            android:layout_width="@dimen/_42sdp"
+                            android:layout_height="@dimen/_42sdp"
+                            android:layout_above="@id/ivStar"
+                            android:layout_below="@id/ivLock"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            app:srcCompat="@drawable/ic_bell_trial" />
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivStar"
+                            android:layout_width="@dimen/_42sdp"
+                            android:layout_height="@dimen/_42sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            app:srcCompat="@drawable/ic_star_trial" />
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_7sdp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/today"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="@string/get_full_access_to_all_pro_features"
+                                android:textColor="@color/bg_color_2"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/_42sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:text="@string/day_5"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/we_ll_remind_you_with_an_email_or_notification_that_your_trial_is_ending"
+                                android:textColor="@color/bg_color_2"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_42sdp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/day_7"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvCancelAt"
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="@string/you_ll_be_charged_on_january_29_cancel_anytime_before"
+                                android:textColor="@color/bg_color_2"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!--                <androidx.appcompat.widget.AppCompatImageView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginStart="@dimen/_12sdp"-->
+                <!--                    android:layout_marginTop="@dimen/_8sdp"-->
+                <!--                    android:layout_marginEnd="@dimen/_20sdp"-->
+
+                <!--                    android:padding="5dp"-->
+                <!--                    android:src="@drawable/group_trial_ic"-->
+                <!--                   />-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMonthly"
+                    style="@style/brandon_bold_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="-12dp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_22sdp"
+                    android:background="@drawable/drawable_un_checked_small"
+                    android:elevation="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="@string/monthly"
+                    android:textColor="@color/bg_color_1"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/monthlyPlanCL"
+                    app:layout_constraintStart_toStartOf="@+id/monthlyPlanCL"
+                    app:layout_constraintTop_toTopOf="@+id/monthlyPlanCL" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/monthlyPlanCL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:background="@drawable/drawable_un_checked_plan"
+                    android:paddingStart="@dimen/_14sdp"
+                    android:paddingEnd="@dimen/_14sdp"
+                    app:layout_constraintEnd_toStartOf="@+id/yearlyPlanCL"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/congaImageIV">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/monthlyPlanTV"
+                        style="@style/brandon_bold_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_2sdp"
+                        android:text="@string/_7_day_free_trial_nthen_9_99_month"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/group_divider"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:constraint_referenced_ids="tvYear,tvMonthly,monthlyPlanCL,yearlyPlanCL,monthlyPlanTV,yearlyPlanTV,startTrailBtn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvYear"
+                    style="@style/brandon_bold_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="-12dp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_22sdp"
+                    android:background="@drawable/drawable_checked_small"
+                    android:elevation="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:paddingHorizontal="@dimen/_18sdp"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:text="@string/year"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/yearlyPlanCL"
+                    app:layout_constraintStart_toStartOf="@+id/yearlyPlanCL"
+                    app:layout_constraintTop_toTopOf="@+id/yearlyPlanCL" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/yearlyPlanCL"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_7sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/drawable_checked_plan"
+                    android:paddingStart="@dimen/_14sdp"
+
+                    android:paddingEnd="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="spread"
+                    app:layout_constraintStart_toEndOf="@id/monthlyPlanCL"
+                    app:layout_constraintTop_toBottomOf="@+id/congaImageIV"
+
+                    >
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/yearlyPlanTV"
+                        style="@style/brandon_bold_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:gravity="center"
+                        android:padding="@dimen/_2sdp"
+                        android:text="@string/_7_day_free_trial_n_then_79_99_year"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/startTrailBtn"
+                    style="@style/brandon_bold_button_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:text="@string/start_my_7_day_free_trial"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/monthlyPlanCL" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/redemCodeTV"
+                    style="@style/brandon_bold_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:gravity="center"
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/redeem_code_c"
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/startTrailBtn" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/contentTV"
+                    style="@style/brandon_bold_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_14sdp"
+                    android:layout_marginEnd="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_12sdp"
+                    android:gravity="center"
+
+                    android:padding="@dimen/_2sdp"
+                    android:text="@string/terms_and_conditions_privacy_policy_ndisclaimer_restore_purchase"
+                    android:textColor="@color/bg_color_1"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/redemCodeTV" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

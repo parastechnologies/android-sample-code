@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/menu_item_home"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.home.HomeActivity">
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/cvBottomNav"
+            android:layout_marginBottom="@dimen/_minus10sdp"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/home_nav_graph" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_minus10sdp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="@dimen/_4sdp">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                app:backgroundTint="@color/white"
+                app:elevation="0dp"
+                app:itemBackground="@null"
+                app:itemIconTint="@color/bottom_nav_color"
+                app:itemPaddingBottom="@dimen/_5sdp"
+                app:itemRippleColor="@null"
+                app:itemTextAppearanceActive="@style/BottomNavigationViewTextStyle"
+                app:itemTextAppearanceInactive="@style/BottomNavigationViewTextStyle"
+                app:itemTextColor="@color/bottom_nav_color"
+                app:labelVisibilityMode="labeled"
+                app:menu="@menu/bottom_nav_menu" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivPremium"
+            android:layout_width="@dimen/_68sdp"
+            android:layout_height="@dimen/_76sdp"
+            android:layout_above="@id/cvBottomNav"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_minus56sdp"
+            android:elevation="@dimen/_4sdp"
+            android:outlineAmbientShadowColor="@android:color/transparent"
+            android:outlineSpotShadowColor="@android:color/transparent"
+            android:shadowColor="@android:color/transparent"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+            app:srcCompat="@drawable/ic_purchased_home" />
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:id="@+id/rlView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_minus4sdp"
+                    android:background="@drawable/bg_home"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/bg_un_lock_all_feature" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAffirmationText"
+                        style="@style/brandon_bold_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/_24sdp"
+                        android:layout_marginVertical="@dimen/_100sdp"
+                        android:gravity="center"
+                        android:text="@string/i_am_thankful_and_grateful_for_the_good_in_my_life"
+                        android:textSize="@dimen/_20ssp" />
+
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_above="@id/tvHemApp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:elevation="@dimen/_20sdp"
+                        android:padding="@dimen/_1sdp"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                        app:srcCompat="@drawable/ic_share_app_logo"
+                        app:strokeColor="@color/white"
+                        app:strokeWidth="@dimen/_1sdp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvHemApp"
+                        style="@style/brandon_bold_text_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:text="@string/highenergymind_app"
+                        android:textSize="@dimen/_12ssp" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </FrameLayout>
+
+</layout>

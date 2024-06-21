@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.activity.notification.NotificationActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_home"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/customTool"
+                layout="@layout/layout_base_tool_bar" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_17sdp"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_100sdp">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:layout_gravity="center_horizontal"
+
+
+                        android:layout_marginTop="@dimen/_26sdp">
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivProfile"
+                            android:layout_width="match_parent"
+                            android:scaleType="centerCrop"
+                            android:layout_height="match_parent"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            app:srcCompat="@drawable/ic_placeholder" />
+
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:alpha="0.5"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/brandon_bold_text_medium_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:text="@string/first_name"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:background="@drawable/edt_text_back"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_13sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_profile_drawable" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvFirstName"
+                                style="@style/brandon_medium_edit_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:text="Alex"
+                                android:textSize="@dimen/_13ssp" />
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/brandon_bold_text_medium_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:id="@+id/tvTitleLastName"
+                            android:text="@string/last_name"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/llLastName"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:background="@drawable/edt_text_back"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_13sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_profile_drawable" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvLastName"
+                                style="@style/brandon_medium_edit_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:text="Jones"
+                                android:textSize="@dimen/_13ssp" />
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/brandon_bold_text_medium_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:text="@string/emial"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:background="@drawable/edt_text_back"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_13sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/sms" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvUserEmail"
+                                style="@style/brandon_medium_edit_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:text="alexj@email.com"
+                                android:textSize="@dimen/_13ssp" />
+
+
+                        </LinearLayout>
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/brandon_bold_text_medium_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_13sdp"
+                            android:text="@string/language"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:background="@drawable/edt_text_back"
+                            android:clipToPadding="false"
+                            android:gravity="center_vertical"
+
+                            android:orientation="horizontal"
+                            android:paddingHorizontal="@dimen/_13sdp">
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/ic_translate" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvLanguage"
+                                style="@style/brandon_medium_edit_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_7sdp"
+                                android:layout_weight="1"
+                                android:text="English"
+                                android:textSize="@dimen/_13ssp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnEdit"
+            style="@style/brandon_bold_material_button_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="@string/edit_profile"
+            app:icon="@drawable/ic_edit_pencil"
+            app:iconGravity="textStart"
+            app:iconPadding="@dimen/_3sdp" />
+
+    </RelativeLayout>
+</layout>

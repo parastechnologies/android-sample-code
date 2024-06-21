@@ -1,0 +1,153 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HighMindEnergy" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <!-- Customize your light theme here. -->
+
+    </style>
+
+    <style name="Theme.HighMindEnergy" parent="Base.Theme.HighMindEnergy" />
+
+    <style name="brandon_bold_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/brandontext_bold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="brandon_bold_edt_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/brandontext_bold</item>
+        <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="brandon_12_bold_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/brandontext_bold</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="brandon_bold_text_regular_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/brandontext_regular</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="CustomBottomSheetDialogTheme" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+
+    </style>
+
+
+    <style name="brandon_bold_text_medium_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/brandontext_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="brandon_text_medium_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/brandontext_medium</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="montserrat_medium_text_style" parent="Widget.MaterialComponents.TextView">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textSize">@dimen/_11ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/bg_color_1</item>
+    </style>
+
+    <style name="brandon_medium_edit_text_style" parent="Widget.AppCompat.EditText">
+        <item name="android:fontFamily">@font/brandontext_medium</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/content_color</item>
+        <item name="android:textColorHint">@color/content_color_40</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingVertical">@dimen/_10sdp</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="brandon_bold_button_style" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/brandontext_bold</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/roundcorner_back</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">@dimen/_11sdp</item>
+        <item name="android:paddingBottom">@dimen/_11sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+    </style>
+
+    <style name="brandon_bold_material_button_style">
+        <item name="android:fontFamily">@font/brandontext_bold</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">@dimen/_11sdp</item>
+        <item name="android:paddingBottom">@dimen/_11sdp</item>
+        <item name="backgroundTint">@color/bg_color_1</item>
+        <item name="cornerRadius">@dimen/_9sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+
+    <style name="brandon_bold_material_light_gray_button_style">
+        <item name="android:fontFamily">@font/brandontext_bold</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingTop">@dimen/_11sdp</item>
+        <item name="android:paddingBottom">@dimen/_11sdp</item>
+        <item name="backgroundTint">@color/edit_back_color</item>
+        <item name="cornerRadius">@dimen/_9sdp</item>
+        <item name="android:layout_marginStart">@dimen/_16sdp</item>
+        <item name="android:layout_marginEnd">@dimen/_16sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_10sdp</item>
+        <item name="android:letterSpacing">0</item>
+    </style>
+    <style name="BottomNavigationViewTextStyle">
+        ...
+        <item name="android:fontFamily">@font/brandontext_medium</item>
+        <item name="android:textSize">@dimen/_9ssp</item>
+        ...
+    </style>
+
+
+    <style name="custom_selected_tab_style" parent="TextAppearance.Design.Tab">
+            <item name="android:textSize">@dimen/_13ssp</item>
+            <item name="fontFamily">@font/brandontext_bold</item>
+            <item name="android:textAllCaps">false</item>
+            <item name="textAllCaps">false</item>
+        <item name="android:letterSpacing">0.009</item>
+    </style>
+
+    <style name="custom_unselected_tab_style" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="fontFamily">@font/brandontext_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/bg_color_1</item>
+        <item name="android:letterSpacing">0.009</item>
+
+    </style>
+
+    <style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@drawable/rounded_corner</item>
+
+    </style>
+</resources>

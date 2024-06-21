@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_10">#1AFFFFFF</color>
+    <color name="white_23">#3BFFFFFF</color>
+    <color name="edit_back_color">#EBEFF0</color>
+    <color name="unselcted_color">#EBEFF0</color>
+    <color name="main_back_color">#093848</color>
+    <color name="bg_color_1">#1A6785</color>
+    <color name="bg_color_2">#5B96A8</color>
+    <color name="bg_color_3">#66585866</color>
+    <color name="bg_color_4">#E8F0F5</color>
+    <color name="bg_color_5">#D2DEE1</color>
+    <color name="bg_color_6">#EBEBEB</color>
+    <color name="bg_color_7">#EAF7FC</color>
+    <color name="bg_color_8_28">#47C1E2ED</color>
+    <color name="bg_color_9_42">#6BD1ECF2</color>
+    <color name="bg_color_10">#FCFEFF</color>
+    <color name="bg_color_11">#0C3949</color>
+    <color name="bg_color_12">#EAEFF0</color>
+    <color name="bg_color_13">#BAE9FC</color>
+    <color name="bg_color_14">#99151515</color>
+    <color name="bg_color_15">#DAE7EB</color>
+    <color name="bg_color_16">#177CDAFF</color>
+    <color name="bt_blue">#009bde</color>
+    <color name="gray_text_color">#666666</color>
+    <color name="stro_back_color">#458398</color>
+    <color name="login_back">#A0C4D0</color>
+    <color name="content_color">#053343</color>
+    <color name="content_color_8">#14053343</color>
+    <color name="content_color_40">#66053343</color>
+    <color name="text_color">#8FA4AB</color>
+    <color name="hint_color">#66053343</color>
+    <color name="gender_img_color">#6A7476</color>
+    <color name="card_text_color">#50707B</color>
+    <color name="card_img_color">#9BADB4</color>
+    <color name="unselected_text_color">#46626B</color>
+    <color name="unselected_plan_color">#EBF7FA</color>
+    <color name="selected_plan">#EBF7FA</color>
+    <color name="yearly_top">#1C6886</color>
+    <color name="yearly_bottom">#5994A7</color>
+    <color name="redeem_code">#5B818D</color>
+    <color name="followus_color">#E6EBEC</color>
+    <color name="faq_text_color">#5B96A8</color>
+    <color name="faq_back_color">#ABFFFFFF</color>
+    <color name="red">#E11D1D</color>
+    <color name="reqular_loream_textcolor">#375C69</color>
+    <color name="theme_textcolor">#E6EBED</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="radio_shadow">#D1D1D1</color>
+    <color name="shimmerColor">#A0C4D0</color>
+
+
+</resources>

@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.fragment.home. HomeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_home"
+            android:orientation="vertical">
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipeToRefresh"
+                android:layout_width="match_parent"
+
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/nsView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clipToPadding="false"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/_36sdp"
+                        android:paddingBottom="@dimen/_30sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvName"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Welcome, Alex"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_19ssp" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/ivNotification"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:paddingHorizontal="@dimen/_4sdp"
+                                app:srcCompat="@drawable/ic_nottification" />
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/cvImage"
+                                android:layout_width="@dimen/_34sdp"
+                                android:layout_height="@dimen/_34sdp"
+                                android:layout_marginStart="@dimen/_5sdp"
+                                app:cardCornerRadius="@dimen/_17sdp"
+
+                                app:cardElevation="0dp"
+                                app:strokeColor="@color/content_color"
+                                app:strokeWidth="1.5dp"
+
+                                >
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/ivImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="1.5dp"
+                                    android:padding="@dimen/_1sdp"
+                                    android:scaleType="centerCrop"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                                    app:srcCompat="@drawable/ic_placeholder"
+                                    app:strokeColor="@color/white"
+                                    app:strokeWidth="2dp" />
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerTopAff"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clipToPadding="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shimmer_duration="2000"
+                            tools:visibility="gone">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clipToPadding="false"
+                                android:orientation="vertical">
+
+                                <include layout="@layout/item_home_affirmation_shimmer_top" />
+
+                            </LinearLayout>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvAffirmation"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_230sdp"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_11sdp"
+                            app:cardBackgroundColor="@color/black"
+                            app:cardCornerRadius="@dimen/_7sdp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/ivAffirmationImage"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    app:srcCompat="@drawable/home_image" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    android:id="@+id/tvAffirmationText"
+                                    style="@style/brandon_bold_text_style"
+
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="@dimen/_24sdp"
+                                    android:layout_marginVertical="@dimen/_34sdp"
+                                    android:gravity="center"
+                                    android:text="I am thankful and grateful for the good in my life."
+                                    android:textSize="@dimen/_20ssp" />
+
+                                <LinearLayout
+                                    android:id="@+id/llAffirmToolBar"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginHorizontal="@dimen/_11sdp"
+                                    android:layout_marginVertical="@dimen/_9sdp"
+                                    android:orientation="horizontal">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_style"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:text="@string/affirmation_of_the_day"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvAffDayDate"
+                                        style="@style/brandon_bold_text_style"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="12 January"
+                                        android:textSize="@dimen/_12ssp" />
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_below="@id/llAffirmToolBar"
+                                    android:alpha="0.2"
+                                    android:background="@color/white" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:background="@drawable/drawable_white_alpha_0_1"
+                                    android:gravity="center"
+                                    android:orientation="horizontal"
+                                    android:paddingVertical="@dimen/_7sdp">
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/ivExpand"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingHorizontal="@dimen/_4sdp"
+                                        android:paddingVertical="@dimen/_2sdp"
+                                        app:srcCompat="@drawable/ic_maximize_home" />
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/ivShare"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginHorizontal="@dimen/_32sdp"
+                                        android:paddingHorizontal="@dimen/_4sdp"
+                                        android:paddingVertical="@dimen/_2sdp"
+                                        app:srcCompat="@drawable/ic_export" />
+
+                                    <com.google.android.material.imageview.ShapeableImageView
+                                        android:id="@+id/ivFavAffirmation"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:paddingHorizontal="@dimen/_4sdp"
+
+                                        android:paddingVertical="@dimen/_2sdp"
+                                        app:srcCompat="@drawable/ic_un_fill_heart" />
+
+                                </LinearLayout>
+
+
+                            </RelativeLayout>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                            android:id="@+id/llLastPlayed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvLastTrack"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/last_played"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvSeeAllLastTrack"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerLastPlayed"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shimmer_duration="2000"
+                            tools:visibility="gone">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+
+                                    android:orientation="horizontal"
+
+                                    android:paddingStart="@dimen/_14sdp">
+
+                                    <include layout="@layout/item_home_affirmation_shimmer" />
+
+
+                                </LinearLayout>
+                            </ScrollView>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvLastTracks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_14sdp"
+                            android:paddingEnd="0dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="7"
+                            tools:listitem="@layout/item_home_affirmation" />
+
+                        <LinearLayout
+                            android:id="@+id/llRecommendation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvRecommendation"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/recommendation"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvSeeAllRecommendation"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerRecommendation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shimmer_duration="2000"
+                            tools:visibility="gone">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+
+                                    android:orientation="horizontal"
+
+                                    android:paddingStart="@dimen/_14sdp">
+
+                                    <include layout="@layout/item_home_affirmation_shimmer" />
+
+
+                                </LinearLayout>
+                            </ScrollView>
+
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvRecommendation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_14sdp"
+                            android:paddingEnd="0dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="7"
+                            tools:listitem="@layout/item_home_affirmation" />
+
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/cvBooks"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            app:cardBackgroundColor="@color/bg_color_2"
+
+                            app:cardCornerRadius="@dimen/_7sdp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_12sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/books"
+                                        android:textSize="@dimen/_14ssp" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_regular_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/lorem_ipsum_is_simply_dummy_text_of_the_printing_and_typesetting_industry"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                </LinearLayout>
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginTop="@dimen/_28sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    app:srcCompat="@drawable/ic_reading_book" />
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                            android:id="@+id/llPlayList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPlayListMonth"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/playlist_of_the_month"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvSeeAllPlaylistOfMonth"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:text="@string/see_all"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerMonth"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shimmer_duration="2000"
+                            tools:visibility="gone">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+
+                                    android:orientation="horizontal"
+
+                                    android:paddingStart="@dimen/_14sdp">
+
+                                    <include layout="@layout/item_home_affirmation_shimmer" />
+
+
+                                </LinearLayout>
+                            </ScrollView>
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPlayListMonth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_14sdp"
+                            android:paddingEnd="0dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="7"
+                            tools:listitem="@layout/item_home_affirmation" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            app:cardBackgroundColor="@color/bg_color_2"
+
+                            app:cardCornerRadius="@dimen/_7sdp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginVertical="@dimen/_16sdp"
+                                    android:layout_marginStart="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/share_the_app"
+
+                                        android:textSize="@dimen/_14ssp" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_regular_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/share_the_app_with_friends_and_spread_happiness"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                </LinearLayout>
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:scaleType="center"
+                                    app:srcCompat="@drawable/ic_sharing_app" />
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                            android:id="@+id/llPopular"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPopularTrack"
+                                style="@style/brandon_bold_text_style"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/popular_tracks"
+                                android:textColor="@color/content_color"
+                                android:textSize="@dimen/_16ssp" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvSeeAllPopular"
+                                style="@style/brandon_bold_text_style"
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/see_all"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_13ssp" />
+                        </LinearLayout>
+
+                        <com.facebook.shimmer.ShimmerFrameLayout
+                            android:id="@+id/shimmerPopular"
+                            android:layout_width="match_parent"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+                            android:clipToPadding="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:shimmer_duration="2000"
+                            tools:visibility="gone">
+
+                            <ScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:clipToPadding="false"
+
+                                    android:orientation="horizontal"
+
+                                    android:paddingStart="@dimen/_14sdp">
+
+                                    <include layout="@layout/item_home_affirmation_shimmer" />
+
+
+                                </LinearLayout>
+                            </ScrollView>
+
+
+                        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPopularTrack"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_7sdp"
+
+                            android:clipToPadding="false"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/_14sdp"
+                            android:paddingEnd="0dp"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            tools:itemCount="7"
+                            tools:listitem="@layout/item_home_affirmation" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            app:cardBackgroundColor="@color/bg_color_2"
+
+                            app:cardCornerRadius="@dimen/_7sdp"
+                            app:cardElevation="0dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginVertical="@dimen/_24sdp"
+                                    android:layout_marginStart="@dimen/_12sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/review_the_app"
+
+                                        android:textSize="@dimen/_14ssp" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        style="@style/brandon_bold_text_regular_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:text="@string/please_take_a_moment_to_rate_our_app_in_the_app_store"
+                                        android:textSize="@dimen/_11ssp" />
+
+                                </LinearLayout>
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="bottom"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    app:srcCompat="@drawable/ic_review_app" />
+
+                            </LinearLayout>
+
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </LinearLayout>
+                </androidx.core.widget.NestedScrollView>
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

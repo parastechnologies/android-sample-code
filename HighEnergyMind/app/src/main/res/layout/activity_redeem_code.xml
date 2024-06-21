@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@drawable/login_back_sc"
+
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_marginTop="@dimen/_minus30sdp"
+        android:layout_height="wrap_content"
+        tools:context=".view.activity.redemcode.RedeemCodeActivity">
+
+        <include
+            android:id="@+id/customtool"
+
+             layout="@layout/cutom_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/congaImageIV"
+            android:layout_width="@dimen/_85sdp"
+            android:layout_height="@dimen/_85sdp"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:src="@drawable/redem_code_ic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customtool" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cateTV"
+            style="@style/brandon_bold_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/redeem_code"
+            android:textColor="@color/content_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/congaImageIV" />
+
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/codeEdt"
+            style="@style/brandon_medium_edit_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:inputType="textCapCharacters"
+            android:paddingHorizontal="@dimen/_12sdp"
+            android:background="@drawable/edt_text_back"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:textStyle="bold"
+            android:textColorHint="@color/content_color"
+            android:hint="@string/enter_the_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cateTV" /> />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/redemCodeBtn"
+            android:layout_width="match_parent"
+            style="@style/brandon_bold_button_style"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:text="@string/redeem_code"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/codeEdt"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dontHaveCodeTV"
+            style="@style/brandon_bold_text_medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_16sdp"
+            android:gravity="center"
+            android:text="@string/don_t_have_a_discount_code"
+            android:textColor="@color/content_color"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/contentTV1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/redemCodeBtn"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/contentTV1"
+            style="@style/brandon_bold_text_regular_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:gravity="center"
+            android:textSize="@dimen/_12ssp"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/recommend_highenergymind_to_your_friends_nand_we_will_gift_you_both_7_days_highenergymind"
+            android:textColor="@color/bg_color_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/premiumAccessTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/premiumAccessTV"
+            style="@style/brandon_text_medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_20sdp"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/_14sdp"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/premium_access_for_free"
+            android:textColor="@color/bg_color_1"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/invitefriendTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/invitefriendTV"
+            style="@style/brandon_bold_text_medium_text_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/stroke_back"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp"
+            android:text="@string/invite_friend_now"
+            android:textColor="@color/bg_color_1"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

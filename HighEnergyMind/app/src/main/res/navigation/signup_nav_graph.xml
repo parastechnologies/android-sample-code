@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/signup_nav_graph"
+    app:startDestination="@id/continueExploreFragment">
+
+    <fragment
+        android:id="@+id/continueExploreFragment"
+        android:name="com.highenergymind.view.fragment.continuesexplore.ContinueExploreFragment"
+        android:label="ContinueExploreFragment"
+        tools:layout="@layout/fragment_continue_explore">
+        <action
+            android:id="@+id/action_continueExploreFragment_to_personalDetailsFragment"
+            app:destination="@id/personalDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        tools:layout="@layout/fragment_sign_up"
+        android:name="com.highenergymind.view.fragment.signup.SignUpFragment"
+        android:label="SignUpFragment">
+        <action
+            android:id="@+id/action_signUp_to_emailVerification"
+            app:destination="@id/emailVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalDetailsFragment"
+        tools:layout="@layout/fragment_personal_details"
+        android:name="com.highenergymind.view.fragment.personaldetails.PersonalDetailsFragment"
+        android:label="PersonalDetailsFragment">
+        <action
+            android:id="@+id/action_personal_to_empoweringAffirmation"
+            app:destination="@id/empoweringAffirmationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/empoweringAffirmationFragment"
+        tools:layout="@layout/fragment_empowering_affirmation"
+        android:name="com.highenergymind.view.fragment.empoweraffirmation.CategoriesFragment"
+        android:label="EmpoweringAffirmationFragment">
+        <action
+            android:id="@+id/action_empowering_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailVerificationFragment"
+        tools:layout="@layout/fragment_email_verification"
+        android:name="com.highenergymind.view.fragment.emailverification.EmailVerificationFragment"
+        android:label="EmailVerificationFragment">
+
+    </fragment>
+
+
+
+</navigation>

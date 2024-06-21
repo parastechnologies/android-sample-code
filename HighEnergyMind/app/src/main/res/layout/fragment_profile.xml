@@ -1,0 +1,847 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".view.fragment.home. HomeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_home"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_36sdp"
+                    android:paddingBottom="@dimen/_30sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/brandon_bold_text_style"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/account"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_19ssp" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_19sdp"
+
+                        app:cardCornerRadius="@dimen/_15sdp"
+
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingVertical="@dimen/_10sdp">
+
+                            <LinearLayout
+                                android:id="@+id/llProfile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_12sdp"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:id="@+id/ivUserImage"
+                                    android:scaleType="centerCrop"
+                                    android:layout_width="@dimen/_48sdp"
+                                    android:layout_height="@dimen/_48sdp"
+                                    app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                                    app:srcCompat="@drawable/ic_placeholder" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginStart="@dimen/_11sdp"
+                                    android:orientation="vertical">
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvUserName"
+                                        style="@style/brandon_bold_text_medium_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        tools:text="Alex Jones"
+                                        android:textColor="@color/content_color"
+                                        android:textSize="@dimen/_14ssp" />
+
+                                    <com.google.android.material.textview.MaterialTextView
+                                        android:id="@+id/tvUserEmail"
+                                        style="@style/brandon_bold_text_regular_text_style"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        tools:text="alexj@email.com"
+                                        android:textColor="@color/bg_color_2"
+                                        android:textSize="@dimen/_12ssp" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/premiumLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_crown" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/go_premium"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/llSubscriptionPlan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_dollar" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/subscription_plan"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/llFavorite"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_12sdp"
+                                android:paddingBottom="@dimen/_2sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:tint="@color/bg_color_1"
+                                    app:srcCompat="@drawable/ic_heart" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/favorite"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+
+                        app:cardCornerRadius="@dimen/_15sdp"
+
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_14sdp"
+                            android:paddingBottom="@dimen/_12sdp">
+
+
+                            <LinearLayout
+                                android:id="@+id/inviteFriendLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_invite_friend" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/invite_your_friends"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/redeemCodeLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_redeem_code" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/redeem_code"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:tint="@color/bg_color_1"
+                                    app:srcCompat="@drawable/ic_heart" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/rate_us_in_app_store"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_14sdp"
+                            android:paddingBottom="@dimen/_9sdp">
+
+
+                            <LinearLayout
+                                android:id="@+id/reminderLL"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_notification_bing" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/reminders"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/manageCategoriesll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_category_manage" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/manage_categories"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/audioSettingll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_12sdp"
+                                android:paddingBottom="@dimen/_2sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:tint="@color/bg_color_1"
+                                    app:srcCompat="@drawable/ic_audio_setting" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/audio_settings"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+
+                        app:cardCornerRadius="@dimen/_15sdp"
+
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_14sdp"
+                            android:paddingBottom="@dimen/_9sdp">
+
+
+                            <LinearLayout
+                                android:id="@+id/faqll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_faq" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/faqs"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/aboutUsll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_info_round" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/about_us"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/supportll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_feedback_support" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/feedback_support"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/suggestAffirll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_12sdp"
+                                android:paddingBottom="@dimen/_2sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:tint="@color/bg_color_1"
+                                    app:srcCompat="@drawable/pencil_circle" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/suggest_an_affirmation"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:id="@+id/followUsll"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_14sdp"
+                            android:paddingBottom="@dimen/_12sdp">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_feedback_support_like" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/follow_us"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_14sdp"
+                            android:paddingBottom="@dimen/_9sdp">
+
+
+                            <LinearLayout
+                                android:id="@+id/termsCondionll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_imprint" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/terms_and_conditions"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/privacyPolicyll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_privacy_pol" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/privacy_policy"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/disclamerll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingVertical="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_disclaimer" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/disclaimer"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/imPrintll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_12sdp"
+                                android:paddingBottom="@dimen/_2sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:tint="@color/bg_color_1"
+                                    app:srcCompat="@drawable/ic_imprint" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/imprint"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_11sdp"
+                        app:cardCornerRadius="@dimen/_15sdp"
+                        app:cardElevation="1dp"
+                        app:strokeColor="@color/white_10"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:background="@color/white_50"
+                            android:orientation="vertical"
+                            android:paddingHorizontal="@dimen/_12sdp"
+                            android:paddingTop="@dimen/_14sdp"
+                            android:paddingBottom="@dimen/_9sdp">
+
+
+                            <LinearLayout
+                                android:id="@+id/changePasswordll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_lock" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/change_password"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:id="@+id/vDividerPassword"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_marginBottom="@dimen/_12sdp"
+
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/logOutll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingBottom="@dimen/_12sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    app:srcCompat="@drawable/ic_logout" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/logout"
+                                    android:textColor="@color/red"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:background="@color/bg_color_4" />
+
+                            <LinearLayout
+                                android:id="@+id/deleteAccountll"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal"
+                                android:paddingTop="@dimen/_12sdp"
+                                android:paddingBottom="@dimen/_2sdp">
+
+                                <com.google.android.material.imageview.ShapeableImageView
+                                    android:layout_width="21dp"
+                                    android:layout_height="21dp"
+                                    android:tint="@color/bg_color_1"
+                                    app:srcCompat="@drawable/ic_user_del" />
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_medium_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_10sdp"
+                                    android:text="@string/delete_account"
+                                    android:textColor="@color/content_color"
+                                    android:textSize="@dimen/_13ssp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

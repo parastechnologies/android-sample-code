@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/select_category">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cateTV"
+            style="@style/brandon_bold_text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:gravity="center"
+            android:text="@string/settings"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/crossIV"
+            android:layout_width="@dimen/_19sdp"
+            android:layout_height="@dimen/_19sdp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="@dimen/_13sdp"
+            android:src="@drawable/cross_congs"
+            app:layout_constraintBottom_toBottomOf="@+id/cateTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/cateTV" />
+
+
+        <worker8.com.github.radiogroupplus.RadioGroupPlus
+
+            android:id="@+id/radio_group"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_3sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/crossIV"
+            app:layout_constraintStart_toStartOf="@+id/cateTV"
+            app:layout_constraintTop_toBottomOf="@+id/crossIV">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctlSpokenAffirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_13sdp"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/affirmationTV"
+                    style="@style/brandon_bold_text_regular_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+
+                    android:text="@string/spoken_affirmations"
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rbSpoken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:button="@drawable/radio_btn_back"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ctlSilentAff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:paddingVertical="@dimen/_10sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/musicTV"
+                    style="@style/brandon_bold_text_regular_text_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/only_silent_affirmations"
+                    android:textColor="@color/content_color"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <RadioButton
+                    android:id="@+id/rbSilent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_btn_back"
+
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </worker8.com.github.radiogroupplus.RadioGroupPlus>
+
+        <View
+            android:id="@+id/v1Divider"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/bg_color_6"
+            app:layout_constraintEnd_toEndOf="@id/radio_group"
+            app:layout_constraintStart_toStartOf="@id/radio_group"
+
+            app:layout_constraintTop_toBottomOf="@id/radio_group" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/speakerCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/v1Divider">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/speakerTV"
+                style="@style/brandon_bold_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_19sdp"
+                android:gravity="center"
+                android:text="@string/speaker"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/speakrRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_23sdp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/speakerTV"
+                tools:listitem="@layout/items_speakers_layout" />
+
+            <View
+                android:id="@+id/v2Divider"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@color/bg_color_6"
+                app:layout_constraintEnd_toEndOf="@id/radio_group"
+                app:layout_constraintStart_toStartOf="@id/radio_group"
+                app:layout_constraintTop_toBottomOf="@id/speakrRV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customizeSessionCL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            app:layout_constraintTop_toBottomOf="@+id/speakerCL">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/customizeSessionTV"
+                style="@style/brandon_bold_text_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center"
+                android:text="@string/customize_your_session"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:id="@+id/llCustomize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/customizeSessionTV">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/affirmation_delay"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivDelayMin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_min" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvDelayValue"
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:gravity="center"
+                        android:text="@string/_5s"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivDelayPlus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_max" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/customize_affirmation_length"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivMinAff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_min" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvAffValue"
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="@string/_00_00"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivPlusAff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_max" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/_16sdp">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/customize_music_length"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivMinusMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_min" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvMusicValue"
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:text="@string/_00_00"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_12ssp"
+                        tools:ignore="HardcodedText" />
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivPlusMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_max" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAdd"
+                style="@style/brandon_bold_material_button_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/save_changes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llCustomize"
+
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

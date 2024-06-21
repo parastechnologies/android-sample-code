@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.activity.trackDetail.TrackDetailActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_340sdp">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivTrackImage"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/drawable_affimr_detail_shadow"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                      />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="@dimen/_16sdp"
+                        android:paddingTop="@dimen/_42sdp"
+                        android:paddingBottom="@dimen/_10sdp">
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:tint="@color/white"
+                            app:srcCompat="@drawable/arrow_back" />
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_1sdp"
+                            android:layout_weight="1" />
+
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivShare"
+                            android:layout_width="@dimen/_27sdp"
+                            android:layout_height="@dimen/_27sdp"
+                            android:background="@color/white_23"
+                            android:padding="@dimen/_2sdp"
+                            app:contentPadding="@dimen/_4sdp"
+                            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                            app:srcCompat="@drawable/ic_export" />
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivFav"
+                            android:layout_width="@dimen/_26sdp"
+
+                            android:layout_height="@dimen/_26sdp"
+                            android:layout_marginStart="@dimen/_7sdp"
+
+                            app:contentPadding="@dimen/_1sdp"
+
+                            app:srcCompat="@drawable/ic_un_fill_heart_bg" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/affirplayBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_play_affirm" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_80sdp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/drawable_affimr_detail_shadow"
+                        android:elevation="0dp" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_minus2sdp"
+                    android:background="@color/content_color"
+                    android:elevation="0dp"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="@dimen/_20sdp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="@color/bg_color_3"
+                            app:cardCornerRadius="@dimen/_8sdp"
+
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvTrackCategory"
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="wrap_content"
+
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_14sdp"
+                                android:layout_marginVertical="@dimen/_7sdp"
+                                android:drawablePadding="@dimen/_6sdp"
+                                tools:text="@string/self_love"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp"
+                                app:drawableStartCompat="@drawable/ic_user_heart" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="wrap_content"
+                            android:visibility="gone"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            app:cardBackgroundColor="@color/bg_color_3"
+                            app:cardCornerRadius="@dimen/_8sdp"
+
+                            app:cardElevation="0dp"
+                            app:strokeWidth="0dp">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvTrackDuration"
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/_14sdp"
+                                android:layout_marginVertical="@dimen/_7sdp"
+                                android:drawablePadding="@dimen/_6sdp"
+                                tools:text="12 mins"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10ssp"
+                                app:drawableStartCompat="@drawable/ic_clock" />
+
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTrackTitle"
+                        style="@style/brandon_bold_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        tools:text="I am deserving of happiness and fulfillment." />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvTrackDesc"
+                        style="@style/brandon_bold_text_medium_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged"
+                        android:textSize="@dimen/_12ssp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        style="@style/brandon_bold_text_style"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:text="@string/affirmations_in_this_track" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvTrack"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/item_track_affirmation" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

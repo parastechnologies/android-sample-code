@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contaibnerCL"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_12sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/drawable_un_checked_category_affirmation">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/ageTV"
+            style="@style/brandon_bold_text_style"
+            android:layout_width="wrap_content"
+            android:layout_marginVertical="@dimen/_11sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/happiness"
+            android:textColor="@color/content_color"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/login_back_sc"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus30sdp"
+            android:fitsSystemWindows="true"
+            tools:context=".view.activity.invite.InviteActivity">
+
+            <include
+                android:id="@+id/customTool"
+                layout="@layout/cutom_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/customTool"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_32sdp"
+                    tools:context=".view.activity.invite.InviteActivity">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/titleTV"
+                        style="@style/brandon_bold_text_regular_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:padding="@dimen/_3sdp"
+                        android:text="@string/give_away_7_days_of"
+                        android:textColor="@color/bg_color_1"
+                        android:textSize="@dimen/_11ssp"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <LinearLayout
+                        android:id="@+id/logoIMG"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_14sdp"
+                        android:orientation="vertical"
+                        android:src="@drawable/how_works_ic"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/titleTV">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            style="@style/brandon_bold_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/how_it_works"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_15ssp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/_11sdp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                app:cardCornerRadius="@dimen/_13sdp"
+                                app:strokeColor="@color/bg_color_1"
+                                app:strokeWidth="@dimen/_1sdp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="1"
+                                    android:textColor="@color/bg_color_1"
+                                    android:textSize="@dimen/_15ssp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_9sdp"
+                                android:text="@string/send_your_code_to_a_friend"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/_11sdp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                app:cardCornerRadius="@dimen/_13sdp"
+                                app:strokeColor="@color/bg_color_1"
+                                app:strokeWidth="@dimen/_1sdp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="2"
+                                    android:textColor="@color/bg_color_1"
+                                    android:textSize="@dimen/_15ssp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_9sdp"
+                                android:text="@string/your_friend_redeems_the_code_in_the_highenergymind_app"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:layout_marginTop="@dimen/_11sdp"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                app:cardCornerRadius="@dimen/_13sdp"
+                                app:strokeColor="@color/bg_color_1"
+                                app:strokeWidth="@dimen/_1sdp">
+
+                                <com.google.android.material.textview.MaterialTextView
+                                    style="@style/brandon_bold_text_style"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="3"
+                                    android:textColor="@color/bg_color_1"
+                                    android:textSize="@dimen/_15ssp" />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                style="@style/brandon_bold_text_regular_text_style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginStart="@dimen/_9sdp"
+                                android:text="@string/you_and_your_friend_will_both_receive_7_days_of_highenergymind_premium_for_free_for_each_additional_friend_you_will_receive_an_additional_7_days_up_to_5_friends_possible"
+                                android:textColor="@color/bg_color_1"
+                                android:textSize="@dimen/_12ssp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/codeCL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:background="@drawable/edt_text_back"
+                        android:drawableStart="@drawable/lock"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/logoIMG">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvInviteCode"
+                            style="@style/brandon_bold_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/_2sdp"
+                            android:paddingStart="@dimen/_10ssp"
+                            android:text="@string/u5hgsa"
+                            android:textColor="@color/content_color"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/conPaslockk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_4sdp"
+                            android:src="@drawable/copy_code_ic"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/shareCodeBtn"
+                        style="@style/brandon_bold_button_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_22sdp"
+                        android:text="@string/share_code"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/codeCL" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_16sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:background="@drawable/discount_code_ic_back"
+                        android:padding="@dimen/_5sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/shareCodeBtn"
+
+
+                        >
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/welComeTV"
+                            style="@style/brandon_bold_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:text="@string/have_you_received_a_discount_code"
+                            android:textColor="@color/content_color"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+
+                            />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/redeemCode"
+                            style="@style/brandon_text_medium_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:text="@string/you_can_redeem_your_code_here"
+                            android:textColor="@color/redeem_code"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/welComeTV"
+
+                            />
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/enterCode"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginStart="@dimen/_10ssp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10ssp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:background="@drawable/invite_items_back"
+                            android:hint="@string/enter_your_discount_code_now"
+                            android:imeOptions="actionDone"
+                            android:inputType="textCapCharacters"
+                            android:paddingStart="@dimen/_10sdp"
+                            android:textColor="@color/content_color"
+                            android:textColorHint="@color/card_img_color"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/redeemCode"
+                            tools:ignore="RtlSymmetry" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/statisticsTV"
+
+                        style="@style/brandon_bold_text_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/statistics"
+                        android:textColor="@color/content_color"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_32sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/statisticsTV">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invitaionsTV"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/number_of_accepted_invitations"
+                            android:textColor="@color/bg_color_1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/invitaionsCountTV"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/_2"
+                            android:textColor="@color/bg_color_1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/premiumDaysTV"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/total_number_of_highenergymind_premium_days"
+                            android:textColor="@color/bg_color_1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/invitaionsTV" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/premiumDaysCountTV"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/_2"
+                            android:textColor="@color/bg_color_1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/invitaionsTV" />
+
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/leftPremiumDaysTV"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/how_many_free_premium_days_you_have_left"
+                            android:textColor="@color/bg_color_1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/premiumDaysTV" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/leftPremiumDaysCountTV"
+                            style="@style/brandon_bold_text_regular_text_style"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:text="@string/_2"
+                            android:textColor="@color/bg_color_1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/premiumDaysTV" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

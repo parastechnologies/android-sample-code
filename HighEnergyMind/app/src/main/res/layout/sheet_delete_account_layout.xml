@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <data>
+
+        </data>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/select_category"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/crossIV"
+                android:layout_width="@dimen/_19sdp"
+                android:layout_height="@dimen/_19sdp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@drawable/cross_congs" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/editIV"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:elevation="@dimen/_12sdp"
+                android:src="@drawable/edit_profile_ic"
+                android:layout_marginEnd="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="@+id/ivImage"
+                app:layout_constraintTop_toTopOf="@+id/ivImage" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/_96sdp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
+                android:layout_height="@dimen/_96sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_profile_ic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/crossIV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cateTV"
+                style="@style/brandon_bold_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:textSize="@dimen/_18ssp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:text="@string/delete_account"
+                android:textColor="@color/content_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivImage"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/contentTV"
+                style="@style/brandon_bold_text_regular_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:textSize="@dimen/_13ssp"
+                android:text="@string/are_your_sure_you_want_to_delete_nyour_account"
+                android:textColor="@color/bg_color_1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cateTV" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/deleteButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/brandon_bold_button_style"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:text="@string/delete_account"
+                android:backgroundTint="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/contentTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/cancelTV"
+                style="@style/brandon_text_medium_text_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:gravity="center"
+                android:paddingVertical="@dimen/_4sdp"
+                android:text="@string/cancel"
+                android:textColor="@color/content_color"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deleteButton"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </layout>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.auth.stepThree.StepThreeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        tools:context=".ui.activity.splash.stepThree.StepThreeActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_60sdp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvStepThree"
+            style="@style/text_Style_roboto_medium_pink_color"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/step_three"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvWhatShouldWeCallYou"
+            style="@style/text_Style_roboto_medium_dark_purple_color"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/what_should_we_call_you"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvStepThree" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEnterNameBeginJourney"
+            style="@style/text_Style_roboto_regular_dark_purple_2_color"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/enter_your_name_and_let_s_begin_your_journey_to_self_discovery"
+            android:textAlignment="textStart"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvWhatShouldWeCallYou" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etName"
+            style="@style/editText_dark_purple_regular"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_8sdp"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            android:text="@={data.name}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvEnterNameBeginJourney" />
+
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/tvSpinner"-->
+<!--            style="@style/editText_dark_purple_regular"-->
+<!--            android:layout_marginHorizontal="@dimen/_16sdp"-->
+<!--            android:layout_marginTop="@dimen/_28sdp"-->
+<!--            android:paddingTop="@dimen/_14sdp"-->
+<!--            android:drawablePadding="@dimen/_8sdp"-->
+<!--            android:text="@string/select_country"-->
+<!--            android:inputType="text"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/etName" />-->
+
+
+        <Spinner
+            android:id="@+id/spSpinner"
+            style="@style/editText_dark_purple_regular"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_4sdp"
+            android:inputType="text"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etName" />
+
+
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNameCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:src="@drawable/ic_cross_circle"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/etName"
+            app:layout_constraintEnd_toEndOf="@+id/etName"
+            app:layout_constraintTop_toTopOf="@+id/etName" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/blue_button_style"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/continue_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

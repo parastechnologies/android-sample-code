@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.fragment.meditationTracker.dashboard.DashboardVM" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            tools:context=".ui.activity.home.fragment.meditationTracker.dashboard.DashboardFragment">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHorizontalCalendar"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:spanCount="7"
+                tools:listitem="@layout/calender_horizontal_card" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_16sdp"
+                android:text="@string/your_streaks"
+                android:textColor="@color/black_202020"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rvHorizontalCalendar" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clCurrentStreak"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                app:layout_constraintEnd_toStartOf="@id/clTotalEntries"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCurrentStreakBg"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/ic_streak_red_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvCurrentStreak"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:src="@drawable/ic_small_streak"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCurrentStreakBg"
+                    app:layout_constraintEnd_toEndOf="@id/ivCurrentStreakBg"
+                    app:layout_constraintStart_toStartOf="@id/ivCurrentStreakBg"
+                    app:layout_constraintTop_toTopOf="@id/ivCurrentStreakBg" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrentStreak"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/current_streak"
+                    android:textColor="@color/inactive_purple_7168A6"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toTopOf="@id/tvCurrentStreakDays"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivCurrentStreakBg"
+                    app:layout_constraintTop_toTopOf="@id/ivCurrentStreakBg"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCurrentStreakDays"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@={data.currentStreak}"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCurrentStreakBg"
+                    app:layout_constraintEnd_toEndOf="@id/tvCurrentStreak"
+                    app:layout_constraintStart_toStartOf="@id/tvCurrentStreak"
+                    app:layout_constraintTop_toBottomOf="@id/tvCurrentStreak" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/viewLine"
+                android:layout_width="0.5dp"
+                android:layout_height="0dp"
+                android:background="@color/grey_E0E0E0"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="@id/clTotalEntries"
+                app:layout_constraintEnd_toEndOf="@id/clCurrentStreak"
+                app:layout_constraintStart_toStartOf="@id/clTotalEntries"
+                app:layout_constraintTop_toTopOf="@id/clTotalEntries" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTotalEntries"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_6sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                app:layout_constraintBottom_toBottomOf="@id/clCurrentStreak"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/clCurrentStreak"
+                app:layout_constraintTop_toTopOf="@id/clCurrentStreak">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTotalEntries"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/ic_streak_purple_bg"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvTotalEntries"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/yellow_FFFAEB" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:src="@drawable/ic_total_entries"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTotalEntries"
+                    app:layout_constraintEnd_toEndOf="@id/ivTotalEntries"
+                    app:layout_constraintStart_toStartOf="@id/ivTotalEntries"
+                    app:layout_constraintTop_toTopOf="@id/ivTotalEntries" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalEntries"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/total_entries"
+                    android:textColor="@color/inactive_purple_7168A6"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toTopOf="@id/tvTotalEntriesDays"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivTotalEntries"
+                    app:layout_constraintTop_toTopOf="@id/ivTotalEntries"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTotalEntriesDays"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@={data.totalEntries}"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTotalEntries"
+                    app:layout_constraintEnd_toEndOf="@id/tvTotalEntries"
+                    app:layout_constraintStart_toStartOf="@id/tvTotalEntries"
+                    app:layout_constraintTop_toBottomOf="@id/tvTotalEntries" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTotalTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_12sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clCurrentStreak">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivLongestWeek"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:src="@drawable/blue_background"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/tvLongestWeek"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:src="@drawable/ic_meditation_2"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLongestWeek"
+                    app:layout_constraintEnd_toEndOf="@id/ivLongestWeek"
+                    app:layout_constraintStart_toStartOf="@id/ivLongestWeek"
+                    app:layout_constraintTop_toTopOf="@id/ivLongestWeek" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLongestWeek"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@string/total_meditation_time"
+                    android:textColor="@color/dark_purple_12046A"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toTopOf="@id/tvLongestWeekDays"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toEndOf="@id/ivLongestWeek"
+                    app:layout_constraintTop_toTopOf="@id/ivLongestWeek"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvLongestWeekDays"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:text="@={data.totalMeditationTime}"
+                    android:textSize="@dimen/_16ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivLongestWeek"
+                    app:layout_constraintEnd_toEndOf="@id/tvLongestWeek"
+                    app:layout_constraintStart_toStartOf="@id/tvLongestWeek"
+                    app:layout_constraintTop_toBottomOf="@id/tvLongestWeek" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnStartMeditation"
+                style="@style/blue_button_style"
+                android:layout_margin="@dimen/_16sdp"
+                android:text="@string/start_meditation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clTotalTime" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleAverage"
+                style="@style/text_Style_roboto_regular_dark_purple_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/daily_meditation_average"
+                android:textColor="@color/inactive_purple_7168A6"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnStartMeditation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoDatFound"
+                style="@style/text_Style_roboto_regular_dark_purple_color"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:text="@string/no_graph_data"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_50sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleAverage"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAverageTime"
+                style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@={data.meditationAverage}"
+                android:textSize="@dimen/_16ssp"
+                app:layout_constraintStart_toStartOf="@id/tvTitleAverage"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleAverage"
+                tools:text="1h 23min." />
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:layout_marginHorizontal="@dimen/_18sdp"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:strokeWidth="@dimen/_2sdp"
+                android:elevation="@dimen/_2sdp"
+                android:strokeColor="@color/color_DBD9E9"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingBottom="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                app:layout_constraintTop_toBottomOf="@id/tvAverageTime"
+                app:layout_constraintStart_toStartOf="@id/tvAverageTime"
+                app:layout_constraintEnd_toEndOf="@id/tvAverageTime">
+
+                <com.github.mikephil.charting.charts.BarChart
+                    android:id="@+id/idBarChart"
+                    android:layout_width="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@android:color/transparent"
+                    android:layout_marginHorizontal="@dimen/_8sdp"
+                    android:layout_marginBottom="@dimen/_6sdp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="@dimen/_160sdp" />
+
+            </com.google.android.material.card.MaterialCardView>
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/tvAverageTime"-->
+<!--                app:layout_constraintStart_toStartOf="@id/tvAverageTime"-->
+<!--                app:layout_constraintEnd_toEndOf="@id/tvAverageTime"-->
+<!--                android:text="No Chart Data Available"-->
+<!--                />-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
+

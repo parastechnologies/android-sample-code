@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "205437574755",
+    "project_id": "in2bliss-59326",
+    "storage_bucket": "in2bliss-59326.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:205437574755:android:9c59656a0524994972a256",
+        "android_client_info": {
+          "package_name": "com.in2bliss"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "205437574755-071bgoka0lidd2kqivqi0a0pm9h3eho5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.in2bliss",
+            "certificate_hash": "752afe60cee519a4e185f8b05bcc1bc6f8894798"
+          }
+        },
+        {
+          "client_id": "205437574755-9mbe3uvvgp1fa83vo7dvfcr9dt0t996b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAHyCNZOSU_NRcpMQqDMGRE97J3F2cPmJE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "205437574755-9mbe3uvvgp1fa83vo7dvfcr9dt0t996b.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,193 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+
+    // Add the Google services Gradle plugin
+    id("com.google.gms.google-services")
+    id 'kotlin-parcelize'
+    id("com.google.devtools.ksp")
+}
+
+android {
+    namespace 'com.in2bliss'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.in2bliss"
+        minSdk 26
+        targetSdk 34
+        versionCode 13
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'BASE_URL', "BASE_URL"
+        buildConfigField 'String', 'IMAGE_BASE_URL', "IMAGE_BASE_URL"
+        buildConfigField 'String', 'AFFIRMATION_BASE_URL', "AFFIRMATION_BASE_URL"
+        buildConfigField 'String', 'MEDITATION_BASE_URL', "MEDITATION_BASE_URL"
+        buildConfigField 'String', 'AFFIRMATION_BASE_URL', "AFFIRMATION_BASE_URL"
+        buildConfigField 'String', 'JOURNAL_BASE_URL', "JOURNAL_BASE_URL"
+        buildConfigField 'String', 'MUSIC_BASE_URL', "MUSIC_BASE_URL"
+        buildConfigField 'String', 'QUOTE_BASE_URL', "QUOTE_BASE_URL"
+        buildConfigField 'String', 'WISDOM_BASE_URL', "WISDOM_BASE_URL"
+        buildConfigField 'String', 'YEARLY_PRODUCT_ID', "YEARLY_PRODUCT_ID"
+        buildConfigField 'String', 'MONTHLY_PRODUCT_ID', "MONTHLY_PRODUCT_ID"
+        buildConfigField 'String', 'PROFILE_BASE_URL', "MONTHLY_PRODUCT_ID"
+        buildConfigField 'String', 'PRODUCT_ID', "PRODUCT_ID"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        buildConfig = true
+        dataBinding = true
+    }
+}
+
+dependencies {
+
+    /** Kotlin core  */
+    implementation 'androidx.core:core-ktx:1.10.1'
+
+    /** Appcompat UI dependency */
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+
+    /** Material design */
+    implementation 'com.google.android.material:material:1.9.0'
+
+    /** Constraint layout  */
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    /** Android unit testing library */
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    /** Glide */
+    implementation 'com.github.bumptech.glide:glide:4.14.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.14.2'
+
+    /** Hilt */
+    implementation 'com.google.dagger:hilt-android:2.48'
+    kapt("com.google.dagger:dagger-compiler:2.48")
+    kapt("com.google.dagger:hilt-compiler:2.48")
+
+    //Scalable dp and sp
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    /** Flex layout */
+    implementation 'com.google.android.flexbox:flexbox:3.0.0'
+
+    /** Lifecycle and live data */
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.1'
+    implementation 'androidx.core:core-ktx:1.10.1'
+
+    /** Fragment and lifecycle extension */
+    implementation 'androidx.fragment:fragment-ktx:1.6.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    /** Gson library */
+    implementation 'com.google.code.gson:gson:2.10'
+
+    /** Navigation */
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.6.0'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.6.0'
+
+    /** Media */
+    implementation "androidx.media:media:1.6.0"
+
+    /** Clock */
+//    implementation 'com.github.a1573595:ClockSlider:1.0.0'
+    implementation("nl.joery.timerangepicker:timerangepicker:1.0.0")
+
+    // Networking
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.7'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.7'
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+
+    /** Chucker interceptor */
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+    // For media playback using ExoPlayer
+    implementation("androidx.media3:media3-exoplayer:1.3.0")
+
+    // For exposing and controlling media sessions
+    implementation("androidx.media3:media3-session:1.3.0")
+    implementation "androidx.media3:media3-exoplayer-dash:1.3.0"
+    implementation("androidx.media3:media3-exoplayer-hls:1.3.0")
+
+    implementation("androidx.media3:media3-ui:1.3.0")
+
+    // image compressor
+    implementation 'id.zelory:compressor:3.0.1'
+
+    // Firebase
+    // Import the Firebase BoM
+    implementation(platform("com.google.firebase:firebase-bom:32.2.3"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-auth-ktx")
+    implementation("com.google.firebase:firebase-firestore-ktx")
+    implementation("com.google.android.gms:play-services-auth:20.7.0")
+    implementation 'com.google.firebase:firebase-messaging:23.3.1'
+
+    // Pagination paging 3
+    implementation "androidx.paging:paging-runtime-ktx:3.2.1"
+
+    //svg image load
+    implementation("io.coil-kt:coil:1.2.0")
+    implementation("io.coil-kt:coil-svg:1.2.0")
+
+    // Room data base
+    implementation("androidx.room:room-runtime:2.6.0")
+    implementation("androidx.room:room-ktx:2.6.0")
+    ksp("androidx.room:room-compiler:2.6.0")
+
+    implementation("com.google.devtools.ksp:symbol-processing-api:1.9.10-1.0.13")
+
+    // Work manager
+    implementation 'androidx.work:work-runtime-ktx:2.8.1'
+    implementation("androidx.hilt:hilt-work:1.1.0")
+
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+
+    //For PickVisualMedia contract
+    implementation 'androidx.activity:activity-ktx:1.8.1'
+
+    // Google play billing
+    implementation("com.android.billingclient:billing-ktx:6.1.0")
+
+    // Ffmpeg for audio conversion
+    implementation 'com.arthenica:mobile-ffmpeg-audio:4.4'
+
+
+    implementation 'com.google.android.play:review-ktx:2.0.1'
+    implementation 'com.github.zladnrms:RoundableLayout:1.1.4'
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.2.0-alpha01"
+
+}
+

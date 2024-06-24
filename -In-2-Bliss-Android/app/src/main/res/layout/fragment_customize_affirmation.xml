@@ -1,0 +1,618 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/bottom_sheet_bg"
+            android:paddingBottom="@dimen/_10sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:src="@drawable/ic_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:text="@string/filter"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view6"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_52sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:fillViewport="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view6">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="@dimen/_70sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCustomizeYourSession"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/customize_affirmation_length"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toStartOf="@id/clCustomizeYourSession"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clCustomizeYourSession"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:background="@drawable/light_blue_stroke_bg_16"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvCustomizeYourSession"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvCustomizeYourSession">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivClock"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_clock"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvcustomizeYourSessionTime"
+                            style="@style/text_Style_roboto_regular_dark_purple_color"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/ivClock"
+                            app:layout_constraintStart_toEndOf="@id/ivClock"
+                            app:layout_constraintTop_toTopOf="@id/ivClock" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTimePicker"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:background="@drawable/light_blue_stroke_bg_16"
+                        android:paddingVertical="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCustomizeYourSession">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            app:cardBackgroundColor="@color/blue_dfeefd"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/hourPicker"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/numberPicker"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/view"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHour"
+                            style="@style/text_Style_roboto_medium_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/hour"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/hourPicker"
+                            app:layout_constraintStart_toEndOf="@id/hourPicker"
+                            app:layout_constraintTop_toTopOf="@id/hourPicker" />
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="1sp"
+                            android:layout_height="@dimen/_1sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/MinutePicker"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_66sdp"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/numberPicker"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/view"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMinute"
+                            style="@style/text_Style_roboto_medium_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/min"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/MinutePicker"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toEndOf="@id/MinutePicker"
+                            app:layout_constraintTop_toTopOf="@id/MinutePicker" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCustomizeMusicLength"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="@string/customise_music_length"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toStartOf="@id/clCustomizeYourSession"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clTimePicker" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clTimePickerMusic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:background="@drawable/light_blue_stroke_bg_16"
+                        android:paddingVertical="@dimen/_16sdp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCustomizeMusicLength">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginHorizontal="@dimen/_6sdp"
+                            app:cardBackgroundColor="@color/blue_dfeefd"
+                            app:cardCornerRadius="@dimen/_12sdp"
+                            app:cardElevation="0dp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/hourPickerMusic"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/numberPicker"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/viewMusic"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvHourMusic"
+                            style="@style/text_Style_roboto_medium_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/hour"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/hourPickerMusic"
+                            app:layout_constraintStart_toEndOf="@id/hourPickerMusic"
+                            app:layout_constraintTop_toTopOf="@id/hourPickerMusic" />
+
+                        <View
+                            android:id="@+id/viewMusic"
+                            android:layout_width="1sp"
+                            android:layout_height="@dimen/_1sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <NumberPicker
+                            android:id="@+id/minutePickerMusic"
+                            android:layout_width="@dimen/_40sdp"
+                            android:layout_height="@dimen/_100sdp"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_66sdp"
+                            android:descendantFocusability="blocksDescendants"
+                            android:theme="@style/numberPicker"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/viewMusic"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMinuteMusic"
+                            style="@style/text_Style_roboto_medium_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="@string/min"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/minutePickerMusic"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toEndOf="@id/minutePickerMusic"
+                            app:layout_constraintTop_toTopOf="@id/minutePickerMusic" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDarkMode"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/display_black"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clTimePickerMusic" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchNightMode"
+                        android:layout_width="@dimen/_37sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clTimePickerMusic"
+                        app:track="@drawable/switch_track" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvDefaultMusic"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/return_to_original_music"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDarkMode" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/defaultMusicMode"
+                        android:layout_width="@dimen/_37sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvDarkMode"
+                        app:track="@drawable/switch_track" />
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMusicLength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:background="@drawable/light_blue_stroke_bg_16"
+                        android:paddingHorizontal="@dimen/_8sdp"
+                        android:paddingVertical="@dimen/_6sdp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvCustomizeMusicLength"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvCustomizeMusicLength">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivClockMusicLength"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:src="@drawable/ic_clock"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvCustomizeMusicLengthTime"
+                            style="@style/text_Style_roboto_regular_dark_purple_color"
+                            android:layout_width="0dp"
+                            android:layout_marginStart="@dimen/_4sdp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textAlignment="textStart"
+                            android:textSize="@dimen/_14ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/ivClockMusicLength"
+                            app:layout_constraintStart_toEndOf="@id/ivClockMusicLength"
+                            app:layout_constraintTop_toTopOf="@id/ivClockMusicLength" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/clMusicDuringAffirmation"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_90sdp"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:background="@drawable/light_blue_stroke_bg"
+                        android:backgroundTint="@color/blue_dfeefd"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clTimePickerMusic">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/clIncludingMusicDuringAffirmation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/light_blue_stroke_bg"
+                            android:paddingVertical="@dimen/_12sdp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                style="@style/text_Style_roboto_regular_dark_purple_color"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="@string/include_music_during_affirmation"
+                                android:textSize="@dimen/_12ssp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.switchmaterial.SwitchMaterial
+                                android:id="@+id/switchMusicEnabled"
+                                android:layout_width="@dimen/_37sdp"
+                                android:layout_height="@dimen/_10sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                android:scaleX="0.8"
+                                android:scaleY="0.8"
+                                android:thumb="@drawable/switch_thumb"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:track="@drawable/switch_track" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                        <com.google.android.material.imageview.ShapeableImageView
+                            android:id="@+id/ivBackgroundImage"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_marginVertical="@dimen/_16sdp"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_error_place_holder"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/clIncludingMusicDuringAffirmation"
+                            app:shapeAppearanceOverlay="@style/circularImage" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvBackgroundMusicTitle"
+                            style="@style/text_Style_roboto_regular_dark_purple_color"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:layout_marginEnd="@dimen/_26sdp"
+                            android:layout_marginBottom="@dimen/_4sdp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:textSize="@dimen/_11ssp"
+                            app:layout_constraintBottom_toBottomOf="@id/ivBackgroundImage"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivBackgroundImage"
+                            app:layout_constraintTop_toTopOf="@id/ivBackgroundImage" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_8sdp"
+                            android:src="@drawable/ic_arrow_right"
+                            app:layout_constraintBottom_toBottomOf="@id/ivBackgroundImage"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@id/ivBackgroundImage" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNoBackgroundMusicSelected"
+                            style="@style/text_Style_roboto_regular_dark_purple_color"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_marginHorizontal="@dimen/_8sdp"
+                            android:layout_marginTop="@dimen/_3sdp"
+                            android:drawableEnd="@drawable/ic_arrow_right"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:maxLines="1"
+                            android:text="@string/select_background_music"
+                            android:textSize="@dimen/_11ssp"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@id/ivBackgroundImage"
+                            app:layout_constraintTop_toBottomOf="@id/clIncludingMusicDuringAffirmation" />
+
+                        <androidx.constraintlayout.widget.Group
+                            android:id="@+id/backgroundMusic"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            app:constraint_referenced_ids="ivBackgroundImage,tvBackgroundMusicTitle" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_marginHorizontal="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:background="@color/inactive_purple_277168A6"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/clMusicDuringAffirmation" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSaveForNextTime"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_16sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:text="@string/save_for_next_time"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view2" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/switchNextTime"
+                        android:layout_width="@dimen/_37sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_26sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        android:thumb="@drawable/switch_thumb"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/view2"
+                        app:track="@drawable/switch_track" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/guidedAffirmation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="clMusicDuringAffirmation,tvSaveForNextTime,switchNextTime,view2,clMusicDuringAffirmation" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/customiseBackgroundMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:constraint_referenced_ids="tvCustomizeMusicLength,clMusicLength,clTimePickerMusic" />
+
+                    <androidx.constraintlayout.widget.Group
+                        android:id="@+id/darkMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        app:constraint_referenced_ids="tvDarkMode,switchNightMode" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSelectTime"
+                style="@style/blue_button_style"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:text="@string/select_time"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnStartSession"
+                style="@style/blue_button_style"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:text="@string/start_session"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>

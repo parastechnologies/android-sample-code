@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.affirmation.addAffirmation.AddAffirmationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        tools:context=".ui.activity.home.affirmation.affirmationList.AffirmationListActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/btnContinue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtAffirmation"
+                    style="@style/editText_dark_purple_regular"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:background="@drawable/purple_corner_bg"
+                    android:gravity="top|start"
+                    android:maxLength="100"
+                    android:maxLines="5"
+                    android:imeOptions="actionNext"
+                    android:padding="@dimen/_16ssp"
+                    android:text="@={data.affirmation}"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clJournal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp"
+                    android:layout_marginHorizontal="@dimen/_16ssp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:background="@drawable/purple_corner_bg"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtTitleJournal"
+                        style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_16sdp"
+                        android:background="@null"
+                        android:gravity="start"
+                        android:hint="@string/enter_journal_title"
+                        android:textColor="@color/dark_purple_12046A"
+                        android:textColorHint="@color/inactive_purple_7168A6"
+                        android:textSize="@dimen/_14ssp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtDescriptionJournal"
+                        style="@style/editText_dark_purple_regular"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_16sdp"
+                        android:background="@null"
+                        android:gravity="top|start"
+                        android:imeOptions="actionNext"
+                        android:maxLines="13"
+                        android:overScrollMode="always"
+                        android:paddingStart="@dimen/_16sdp"
+                        android:paddingEnd="@dimen/_16sdp"
+                        android:scrollbars="vertical"
+                        android:text="@={data.journalDescription}"
+                        android:textColor="@color/dark_purple_12046A"
+                        android:textColorHint="@color/inactive_purple_7168A6"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/edtTitleJournal" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/sivUploadImage"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="@id/edtAffirmation"
+                    app:layout_constraintStart_toStartOf="@id/edtAffirmation"
+                    app:layout_constraintTop_toBottomOf="@id/edtAffirmation"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtAffirmation" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="@id/sivUploadImage"
+                    app:layout_constraintStart_toStartOf="@id/sivUploadImage"
+                    app:layout_constraintTop_toBottomOf="@id/view"
+                    app:strokeColor="@color/blue_d9e9fd"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_gallery"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/pick_image"
+                        android:textColor="@color/blue_0d99ff"
+                        android:textSize="@dimen/_16ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/chooseBackGround"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="@id/sivUploadImage"
+                    app:layout_constraintStart_toStartOf="@id/sivUploadImage"
+                    app:layout_constraintTop_toBottomOf="@id/cvGallery"
+                    app:strokeColor="@color/blue_d9e9fd"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_gallery"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/pick_a_background"
+                        android:textColor="@color/blue_0d99ff"
+                        android:textSize="@dimen/_16ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/sivUploadImageJournal"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintEnd_toEndOf="@id/clJournal"
+                    app:layout_constraintStart_toStartOf="@id/clJournal"
+                    app:layout_constraintTop_toBottomOf="@id/clJournal"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+                <View
+                    android:id="@+id/viewJournal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_150sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clJournal" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvGalleryJournal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="@id/sivUploadImageJournal"
+                    app:layout_constraintStart_toStartOf="@id/sivUploadImageJournal"
+                    app:layout_constraintTop_toBottomOf="@id/viewJournal"
+                    app:strokeColor="@color/blue_d9e9fd"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_gallery"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/pick_a_background"
+                        android:textColor="@color/blue_0d99ff"
+                        android:textSize="@dimen/_16ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvAttachImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="@id/sivUploadImageJournal"
+                    app:layout_constraintStart_toStartOf="@id/sivUploadImageJournal"
+                    app:layout_constraintTop_toBottomOf="@id/cvGalleryJournal"
+                    app:strokeColor="@color/blue_d9e9fd"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_gallery"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/attach_an_image"
+                        android:textColor="@color/blue_0d99ff"
+                        android:textSize="@dimen/_16ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvWordsCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus6sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/off_white"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtAffirmation"
+                    app:layout_constraintTop_toTopOf="@id/edtAffirmation">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:background="@android:color/white"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:text="@={data.textCount}"
+                        android:textSize="@dimen/_10ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etTranscriptTitle"
+                    style="@style/editText_dark_purple_regular"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_28sdp"
+                    android:background="@drawable/editext_dark_bg"
+                    android:drawableStart="@drawable/ic_add_affirmation_title"
+                    android:drawablePadding="@dimen/_8sdp"
+                    android:hint="@string/give_your_affirmation_a_title"
+                    android:inputType="text"
+                    android:text="@={data.title}"
+                    android:maxLength="149"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTitleCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:src="@drawable/ic_cross_circle"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@+id/etTranscriptTitle"
+                    app:layout_constraintEnd_toEndOf="@+id/etTranscriptTitle"
+                    app:layout_constraintTop_toTopOf="@+id/etTranscriptTitle" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtCreateAffirmation"
+                    style="@style/editText_dark_purple_regular"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:background="@drawable/editext_dark_bg"
+                    android:gravity="top|start"
+                    android:hint="@string/share_a_few_details_about_your_affirmation"
+                    android:maxLength="1000"
+                    android:maxLines="8"
+                    android:imeOptions="actionNext"
+                    android:scrollbars="vertical"
+                    android:paddingVertical="@dimen/_16ssp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@={data.createAffirmation}"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etTranscriptTitle" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvCreateAffirmationWordCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus6sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/off_white"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtCreateAffirmation"
+                    app:layout_constraintTop_toTopOf="@id/edtCreateAffirmation">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:background="@color/white"
+                        android:hint="@string/max_1000_words"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:text="@={data.createAffirmationCount}"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtTranscript"
+                    style="@style/editText_dark_purple_regular"
+                    android:layout_height="@dimen/_140sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:background="@drawable/editext_dark_bg"
+                    android:gravity="top|start"
+                    android:hint="@string/this_transcript_will_be_displayed_while_recording_your_voice"
+                    android:maxLines="6"
+                    android:imeOptions="actionNext"
+                    android:scrollbars="vertical"
+                    android:paddingVertical="@dimen/_16ssp"
+                    android:paddingStart="@dimen/_16sdp"
+                    android:paddingEnd="@dimen/_16sdp"
+                    android:text="@={data.transcript}"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etTranscriptTitle" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvTranscriptCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_minus6sdp"
+                    android:layout_marginEnd="@dimen/_24sdp"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/off_white"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edtTranscript"
+                    app:layout_constraintTop_toTopOf="@id/edtTranscript">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:background="@color/white"
+                        android:hint="@string/max_1000_words"
+                        android:paddingHorizontal="@dimen/_7sdp"
+                        android:text="@={data.transcriptCount}"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/_10ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/addAffirmation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    app:constraint_referenced_ids="cvWordsCount,edtAffirmation,
+            sivUploadImage,cvGallery,chooseBackGround" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/journal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="clJournal,sivUploadImageJournal,cvGalleryJournal,cvAttachImage" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/createAffirmation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="etTranscriptTitle,
+            edtCreateAffirmation,cvCreateAffirmationWordCount" />
+
+                <androidx.constraintlayout.widget.Group
+                    android:id="@+id/transcript"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:constraint_referenced_ids="cvTranscriptCount,edtTranscript" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/blue_button_style"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/continue_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

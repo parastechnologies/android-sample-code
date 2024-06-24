@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/clContainer"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivMusicCategory"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_temp_music_category"
+                app:layout_constraintEnd_toStartOf="@id/checkbox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/shape_15" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_blur_image_gradient"
+                app:layout_constraintEnd_toStartOf="@id/checkbox"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/shape_15" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/configure_music"
+                android:textAlignment="textStart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                app:layout_constraintEnd_toEndOf="@id/ivMusicCategory"
+                app:layout_constraintBottom_toBottomOf="@id/ivMusicCategory"
+                app:layout_constraintStart_toStartOf="@id/ivMusicCategory"
+                app:layout_constraintTop_toTopOf="@id/ivMusicCategory" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:background="@android:color/transparent"
+                android:button="@drawable/check_box_button"
+                app:layout_constraintBottom_toBottomOf="@id/ivMusicCategory"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/ivMusicCategory" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>

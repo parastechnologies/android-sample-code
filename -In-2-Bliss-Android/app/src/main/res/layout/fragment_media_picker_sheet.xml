@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/bottom_sheet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/mcvCardContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_16sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_color"
+                        android:orientation="vertical"
+                        android:paddingTop="@dimen/_20sdp"
+                        android:paddingBottom="@dimen/_20sdp">
+
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvHeading"
+                            style="@style/text_Style_roboto_medium_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:fontFamily="@font/poppin_medium"
+                            android:text="@string/choose_option"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_16ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_camera"
+                            android:layout_width="match_parent"
+                            style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/round_4"
+                            android:gravity="center"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/camera"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tv_gallery"
+                            style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_15sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginEnd="@dimen/_15sdp"
+                            android:background="@drawable/round_4"
+                            android:gravity="center"
+                            android:paddingVertical="@dimen/_10sdp"
+                            android:text="@string/gallery"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13ssp"
+                            app:layout_constraintTop_toBottomOf="@id/tvHeading" />
+
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</layout>

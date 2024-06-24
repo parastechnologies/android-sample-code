@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.home.profileManagement.manageNotification.ManageNotificationActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clJournal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivManageNotification"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/journal_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/gratitude_journal"
+                app:layout_constraintBottom_toTopOf="@id/tvDescription"
+                app:layout_constraintEnd_toStartOf="@id/ivNext"
+                app:layout_constraintStart_toEndOf="@id/ivManageNotification"
+                app:layout_constraintTop_toTopOf="@id/ivManageNotification" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescription"
+                style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/notification_3_times_a_day"
+                android:textColor="@color/purple_6e68a2"
+                app:layout_constraintBottom_toBottomOf="@id/ivManageNotification"
+                app:layout_constraintEnd_toStartOf="@id/ivNext"
+                app:layout_constraintStart_toStartOf="@id/tvTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNext"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_next"
+                android:tint="@color/inactive_purple_7168A6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#D7D5DF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAffirmation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clJournal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivManageAffirmation"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/journal_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleAffirmation"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/affirmation"
+                app:layout_constraintBottom_toTopOf="@id/tvDescriptionAffirmation"
+                app:layout_constraintEnd_toStartOf="@id/ivNextAffirmation"
+                app:layout_constraintStart_toEndOf="@id/ivManageAffirmation"
+                app:layout_constraintTop_toTopOf="@id/ivManageAffirmation" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionAffirmation"
+                style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/notification_3_times_a_day"
+                android:textColor="@color/purple_6e68a2"
+                app:layout_constraintBottom_toBottomOf="@id/ivManageAffirmation"
+                app:layout_constraintEnd_toStartOf="@id/ivNextAffirmation"
+                app:layout_constraintStart_toStartOf="@id/tvTitleAffirmation"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleAffirmation" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNextAffirmation"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_next"
+                android:tint="@color/inactive_purple_7168A6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#D7D5DF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionAffirmation" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clQuotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_13sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/clAffirmation">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivManageQuotes"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/journal_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleQuotes"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/quotes"
+                app:layout_constraintBottom_toTopOf="@id/tvDescriptionQuotes"
+                app:layout_constraintEnd_toStartOf="@id/ivNextQuotes"
+                app:layout_constraintStart_toEndOf="@id/ivManageQuotes"
+                app:layout_constraintTop_toTopOf="@id/ivManageQuotes" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionQuotes"
+                style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/notification_3_times_a_day"
+                android:textColor="@color/purple_6e68a2"
+                app:layout_constraintBottom_toBottomOf="@id/ivManageQuotes"
+                app:layout_constraintEnd_toStartOf="@id/ivNextQuotes"
+                app:layout_constraintStart_toStartOf="@id/tvTitleQuotes"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleQuotes" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivNextQuotes"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_next"
+                android:tint="@color/inactive_purple_7168A6"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#D7D5DF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionQuotes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clJournalOnOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@id/clQuotes">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivManageJournalOnOff"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_notification_setting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleJournalOnOff"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/journal_notification"
+                app:layout_constraintBottom_toTopOf="@id/tvDescriptionJournalOnOff"
+                app:layout_constraintStart_toEndOf="@id/ivManageJournalOnOff"
+                app:layout_constraintTop_toTopOf="@id/ivManageJournalOnOff" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionJournalOnOff"
+                style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/on_off_notification"
+                android:textColor="@color/purple_6e68a2"
+                app:layout_constraintBottom_toBottomOf="@id/ivManageJournalOnOff"
+                app:layout_constraintStart_toStartOf="@id/tvTitleJournalOnOff"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleJournalOnOff" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNextTimeJournalOnOff"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:track="@drawable/switch_track" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#D7D5DF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionJournalOnOff" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clAffirmationOnOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@id/clJournalOnOff">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivManageAffirmationOnOff"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_notification_setting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleAffirmationOnOff"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/affirmation_notification"
+                app:layout_constraintBottom_toTopOf="@id/tvDescriptionAffirmationOnOff"
+                app:layout_constraintStart_toEndOf="@id/ivManageAffirmationOnOff"
+                app:layout_constraintTop_toTopOf="@id/ivManageAffirmationOnOff" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionAffirmationOnOff"
+                style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/on_off_notification"
+                android:textColor="@color/purple_6e68a2"
+                app:layout_constraintBottom_toBottomOf="@id/ivManageAffirmationOnOff"
+                app:layout_constraintStart_toStartOf="@id/tvTitleAffirmationOnOff"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleAffirmationOnOff" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNextTimeAffirmationOnOff"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:track="@drawable/switch_track" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#D7D5DF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionAffirmationOnOff" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clQuotesOnOff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginVertical="@dimen/_13sdp"
+            app:layout_constraintTop_toBottomOf="@id/clAffirmationOnOff">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivManageQuotesOnOff"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/ic_notification_setting"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleQuotesOnOff"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:text="@string/quotes_notification"
+                app:layout_constraintBottom_toTopOf="@id/tvDescriptionQuotesOnOff"
+                app:layout_constraintStart_toEndOf="@id/ivManageQuotesOnOff"
+                app:layout_constraintTop_toTopOf="@id/ivManageQuotesOnOff" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDescriptionQuotesOnOff"
+                style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/on_off_notification"
+                android:textColor="@color/purple_6e68a2"
+                app:layout_constraintBottom_toBottomOf="@id/ivManageQuotesOnOff"
+                app:layout_constraintStart_toStartOf="@id/tvTitleQuotesOnOff"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleQuotesOnOff" />
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/switchNextTimeQuotesOnOff"
+                android:layout_width="@dimen/_37sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:thumb="@drawable/switch_thumb"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:track="@drawable/switch_track" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="#D7D5DF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescriptionQuotesOnOff" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

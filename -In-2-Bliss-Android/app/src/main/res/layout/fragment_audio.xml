@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.fragment.updateAffirmation.audio.AudioVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.home.fragment.updateAffirmation.audio.AudioFragment">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardBackgroundColor="@color/grey_FAFAFF"
+            app:cardCornerRadius="@dimen/_16sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_14sdp"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@={data.title}"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDateAndTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="@={data.dateAndTime}"
+                    android:textColor="@color/inactive_purple_7168A6"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:src="@drawable/ic_doted_menu"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDateAndTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/musicPlayerSlider"
+                    style="@style/Slider_small_thumb"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    app:layout_constraintEnd_toStartOf="@id/tvRecordEndTime"
+                    app:layout_constraintStart_toEndOf="@id/tvRecordStartTime"
+                    app:layout_constraintTop_toBottomOf="@id/tvDateAndTime"
+                    app:trackColorActive="@color/prime_purple_5F46F4"
+                    app:trackColorInactive="@color/grey_dfdfdf" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecordStartTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:text="@={data.recordingStartTime}"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/musicPlayerSlider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/musicPlayerSlider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecordEndTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:text="@={data.recordingEndTime}"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/musicPlayerSlider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/musicPlayerSlider" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlayAndPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_music_pause"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/musicPlayerSlider" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:src="@drawable/ic_back_10"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPlayAndPause"
+                    app:layout_constraintEnd_toStartOf="@id/ivPlayAndPause"
+                    app:layout_constraintTop_toTopOf="@id/ivPlayAndPause"
+                    app:tint="@color/dark_purple_80_12046A" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivForward10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:src="@drawable/ic_forwar_10"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPlayAndPause"
+                    app:layout_constraintStart_toEndOf="@id/ivPlayAndPause"
+                    app:layout_constraintTop_toTopOf="@id/ivPlayAndPause"
+                    app:tint="@color/dark_purple_80_12046A" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

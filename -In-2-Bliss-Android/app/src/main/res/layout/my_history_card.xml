@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_16sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/sivThumbnail"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_history_temp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvHistoryName"
+                style="@style/text_Style_roboto_regular_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/last_week"
+                android:textColor="@color/inactive_purple_7168A6"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toEndOf="@id/sivThumbnail"
+                app:layout_constraintTop_toTopOf="@id/sivThumbnail" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitleHistory"
+                style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:text="@string/become_at_peace"
+                android:textSize="@dimen/_12sdp"
+                app:layout_constraintStart_toStartOf="@id/tvHistoryName"
+                app:layout_constraintTop_toBottomOf="@id/tvHistoryName" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clHistoryTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/corner_white_bg"
+                android:backgroundTint="@color/yellow_F8DAC4"
+                android:paddingHorizontal="@dimen/_12sdp"
+                android:paddingVertical="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@id/sivThumbnail"
+                app:layout_constraintStart_toStartOf="@id/tvTitleHistory"
+                app:layout_constraintTop_toBottomOf="@id/tvTitleHistory">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTimeHistory"
+                    style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:text="@string/minutes_12"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toEndOf="@id/ivClock"
+                    app:layout_constraintTop_toTopOf="@id/clHistoryTime" />
+
+                <ImageView
+                    android:id="@+id/ivClock"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_time_clock"
+                    app:layout_constraintBottom_toBottomOf="@id/tvTimeHistory"
+                    app:layout_constraintEnd_toStartOf="@id/tvTimeHistory"
+                    app:layout_constraintStart_toStartOf="@id/clHistoryTime"
+                    app:layout_constraintTop_toTopOf="@id/tvTimeHistory" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/ivMore"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:padding="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_three_dot"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>
+

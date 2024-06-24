@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        tools:context=".ui.activity.auth.appStatus.AppStatusActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toTopOf="@id/cvPayment"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_in2bliss_color"
+                    app:layout_constraintBottom_toBottomOf="@id/ivBack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStepFour"
+                    style="@style/text_Style_roboto_medium_pink_color"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/step_six"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/how_your_free_trial_works"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvStepFour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="@string/start_your_7_day_free_trial_now_and_have_full_access_to_all_features_of_in2bliss"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDescription">
+
+                    <View
+                        android:layout_width="@dimen/_6sdp"
+                        android:layout_height="0dp"
+                        android:background="@color/grey_F1EEFF"
+                        app:layout_constraintBottom_toBottomOf="@id/ivTrialEnd"
+                        app:layout_constraintEnd_toEndOf="@id/ivTrialEnd"
+                        app:layout_constraintStart_toStartOf="@id/ivTrialEnd"
+                        app:layout_constraintTop_toTopOf="@id/ivAppInstalled" />
+
+                    <View
+                        android:layout_width="@dimen/_6sdp"
+                        android:layout_height="0dp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:background="@color/prime_purple_5F46F4"
+                        app:layout_constraintBottom_toBottomOf="@id/cvProgress"
+                        app:layout_constraintEnd_toEndOf="@id/ivTrialEnd"
+                        app:layout_constraintStart_toStartOf="@id/ivTrialEnd"
+                        app:layout_constraintTop_toTopOf="@id/ivAppInstalled" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvProgress"
+                        android:layout_width="@dimen/_12sdp"
+                        android:layout_height="@dimen/_12sdp"
+                        app:cardBackgroundColor="@color/prime_purple_5F46F4"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/ivReminder"
+                        app:layout_constraintEnd_toEndOf="@id/ivTrialEnd"
+                        app:layout_constraintStart_toStartOf="@id/ivTrialEnd"
+                        app:layout_constraintTop_toTopOf="@id/ivTodayGetAccess" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivAppInstalled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_36sdp"
+                        android:src="@drawable/ic_checked"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTodayGetAccess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_45sdp"
+                        android:src="@drawable/ic_unlocked"
+                        app:layout_constraintEnd_toEndOf="@id/ivAppInstalled"
+                        app:layout_constraintStart_toStartOf="@id/ivAppInstalled"
+                        app:layout_constraintTop_toBottomOf="@id/ivAppInstalled" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivReminder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_45sdp"
+                        android:src="@drawable/ic_bell_"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivTodayGetAccess" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivTrialEnd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_30sdp"
+                        android:layout_marginTop="@dimen/_45sdp"
+                        android:src="@drawable/ic_star"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivReminder" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAppInstalled"
+                        style="@style/text_Style_roboto_medium_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/install_the_app"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/purple_bcb9d3"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivAppInstalled"
+                        app:layout_constraintTop_toTopOf="@id/ivAppInstalled" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/you_successfully_created_your_profile"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/purple_bcb9d3"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvAppInstalled"
+                        app:layout_constraintTop_toBottomOf="@id/tvAppInstalled" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAccess"
+                        style="@style/text_Style_roboto_medium_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/today_get_instant_access"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivTodayGetAccess"
+                        app:layout_constraintTop_toTopOf="@id/ivTodayGetAccess" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/get_access_to_the_entire_app"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvAccess"
+                        app:layout_constraintTop_toBottomOf="@id/tvAccess" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReminder"
+                        style="@style/text_Style_roboto_medium_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/day_5_trial_reminder"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivReminder"
+                        app:layout_constraintTop_toTopOf="@id/ivReminder" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/we_ll_send_you_an_email_notification_cancel_anytime_in_just_15_seconds"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvReminder"
+                        app:layout_constraintTop_toBottomOf="@id/tvReminder" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvEndTrial"
+                        style="@style/text_Style_roboto_medium_dark_purple_color"
+                        android:layout_width="0dp"
+                        android:layout_marginStart="@dimen/_15sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text="@string/day_7_trial_ends"
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/ivTrialEnd"
+                        app:layout_constraintTop_toTopOf="@id/ivTrialEnd" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvSubscriptionDate"
+                        style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                        android:layout_width="0dp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginEnd="@dimen/_16sdp"
+                        android:text=""
+                        android:textAlignment="textStart"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@id/tvEndTrial"
+                        app:layout_constraintTop_toBottomOf="@id/tvEndTrial" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_minus10sdp"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_eae8f1"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:paddingVertical="@dimen/_8sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv7DaysFreeTrial"
+                    style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:gravity="center"
+                    android:text="@string/try_free_for_7_days"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSubscriptionAmount"
+                    style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                    android:layout_width="0dp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:gravity="center"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:text="@string/_59_99_per_year_5_43_mo"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv7DaysFreeTrial" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnStartFreeTrial"
+                    style="@style/blue_button_style"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    android:text="@string/start_your_free_trial"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSubscriptionAmount" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvNoPaymentDue"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:drawablePadding="@dimen/_6sdp"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnStartFreeTrial" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

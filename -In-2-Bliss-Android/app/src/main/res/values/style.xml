@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="text_Style_roboto_medium_dark_purple_color">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_purple_12046A</item>
+    </style>
+
+    <style name="text_Style_roboto_regular_dark_purple_color">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/dark_purple_12046A</item>
+    </style>
+
+    <style name="text_Style_roboto_medium_light_purple_color">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/prime_purple_5F46F4</item>
+    </style>
+
+    <style name="text_Style_roboto_medium_dark_purple_2_color">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/purple_413688</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="text_Style_roboto_regular_dark_purple_2_color">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/purple_413688</item>
+    </style>
+
+    <style name="text_Style_roboto_bold_dark_purple_2_color">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/purple_413688</item>
+    </style>
+
+    <style name="text_Style_roboto_medium_pink_color">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/pink_F3B8E4</item>
+    </style>
+
+    <style name="blue_button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_48sdp</item>
+        <item name="android:background">@drawable/button_blue_bg</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="editText_dark_purple_regular">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:layout_height">@dimen/_44sdp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:paddingStart">@dimen/_12sdp</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:paddingEnd">@dimen/_34sdp</item>
+        <item name="android:imeOptions">actionDone</item>
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:textColorHint">@color/inactive_purple_7168A6</item>
+        <item name="android:textColor">@color/dark_purple_12046A</item>
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="circularImage">
+        <item name="cornerSize">50%</item>
+
+    </style>
+
+    <style name="shape_15">
+        <item name="cornerSize">15%</item>
+    </style>
+
+    <style name="numberPicker">
+        <item name="android:textSize">@dimen/_14ssp</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textColorPrimary">@color/dark_purple_12046A</item>
+        <item name="colorControlNormal">@android:color/transparent</item>
+    </style>
+
+    <style name="Slider_medium_thumb" parent="Widget.MaterialComponents.Slider">
+        <item name="trackHeight">@dimen/_2sdp</item>
+        <item name="thumbRadius">@dimen/_10sdp</item>
+        <item name="labelStyle">@style/My_Tooltip</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Slider</item>
+    </style>
+
+    <style name="Slider_small_thumb" parent="Widget.MaterialComponents.Slider">
+        <item name="trackHeight">@dimen/_2sdp</item>
+        <item name="thumbRadius">@dimen/_8sdp</item>
+        <item name="labelStyle">@style/My_Tooltip</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Slider</item>
+    </style>
+
+    <style name="My_Tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <!-- background color of the Tooltip -->
+        <item name="backgroundTint">@android:color/transparent</item>
+    </style>
+
+    <style name="ThemeOverlay.Slider" parent="">
+        <!-- color used by the text in the Tooltip -->
+        <item name="colorAccent">@android:color/transparent</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorOnPrimary">@android:color/transparent</item>
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize10Percent" parent="">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.10Percent" parent="">
+        <item name="cornerSize">@dimen/_10sdp</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.TopCornerSize" parent="">
+        <item name="cornerSizeTopRight">@dimen/_10sdp</item>
+        <item name="cornerFamilyTopLeft">rounded</item>
+        <item name="cornerFamilyTopRight">rounded</item>
+        <item name="cornerSizeTopLeft">@dimen/_10sdp</item>
+    </style>
+
+</resources>

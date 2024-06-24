@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFlagImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_flag"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            />
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:fontFamily="@font/roboto_regular"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:paddingVertical="@dimen/_6sdp"
+            android:layout_gravity="center"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="Select Flag"
+            android:textColor="@color/dark_purple_12046A" />
+    </LinearLayout>
+</layout>

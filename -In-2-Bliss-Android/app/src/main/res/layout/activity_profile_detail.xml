@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.profileDetail.ProfileDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.home.profileDetail.ProfileDetailActivity">
+
+        <include
+            android:id="@+id/tbToolbar"
+            layout="@layout/layout_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imageProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/_40sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tbToolbar">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivProfile"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user_placholder"
+                app:layout_constraintEnd_toEndOf="@id/imageProfile"
+                app:layout_constraintStart_toStartOf="@id/imageProfile"
+                app:layout_constraintTop_toTopOf="@id/imageProfile"
+                app:shapeAppearanceOverlay="@style/circularImage" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivUpload"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_60sdp"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/imageProfile"
+                app:layout_constraintEnd_toEndOf="@id/imageProfile"
+                app:layout_constraintStart_toStartOf="@id/imageProfile" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etName"
+            style="@style/editText_dark_purple_regular"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_28sdp"
+            android:drawableStart="@drawable/ic_user"
+            android:drawablePadding="@dimen/_8sdp"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageProfile" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnContinue"
+            style="@style/blue_button_style"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivNameCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:src="@drawable/ic_cross_circle"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@+id/etName"
+            app:layout_constraintEnd_toEndOf="@+id/etName"
+            app:layout_constraintTop_toTopOf="@+id/etName" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

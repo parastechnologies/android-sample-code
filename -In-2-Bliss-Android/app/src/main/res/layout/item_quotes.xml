@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+   <androidx.constraintlayout.widget.ConstraintLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/blue_1c92f1">
+
+
+       <androidx.appcompat.widget.AppCompatImageView
+           android:id="@+id/ivBg"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:scaleType="centerCrop"
+           android:src="@drawable/ic_affirmation_temp_bg"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginHorizontal="@dimen/_30sdp"
+           android:background="@drawable/round_4"
+           android:paddingBottom="@dimen/_20sdp"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent">
+
+<!--           <com.google.android.material.imageview.ShapeableImageView-->
+<!--               android:id="@+id/ivImageView"-->
+<!--               android:layout_width="@dimen/_50sdp"-->
+<!--               android:layout_height="@dimen/_50sdp"-->
+<!--               android:layout_margin="@dimen/_15sdp"-->
+<!--               android:scaleType="centerCrop"-->
+<!--               android:src="@drawable/ic_affirmation_detail_bg_temp_pic"-->
+<!--               app:layout_constraintStart_toStartOf="parent"-->
+<!--               app:layout_constraintTop_toTopOf="parent"-->
+<!--               app:shapeAppearanceOverlay="@style/circularImage" />-->
+
+<!--           <androidx.appcompat.widget.AppCompatTextView-->
+<!--               android:id="@+id/tvName"-->
+<!--               style="@style/text_Style_roboto_medium_dark_purple_2_color"-->
+<!--               android:layout_width="0dp"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="@dimen/_8sdp"-->
+<!--               android:layout_marginTop="@dimen/_2sdp"-->
+<!--               android:layout_marginEnd="@dimen/_10sdp"-->
+<!--               android:text="@string/affirmation_introduction"-->
+<!--               android:textColor="@color/black"-->
+<!--               android:textSize="@dimen/_13ssp"-->
+<!--               app:layout_constraintEnd_toEndOf="parent"-->
+<!--               app:layout_constraintStart_toEndOf="@id/ivImageView"-->
+<!--               app:layout_constraintTop_toTopOf="@id/ivImageView" />-->
+
+<!--           <androidx.appcompat.widget.AppCompatTextView-->
+<!--               style="@style/text_Style_roboto_medium_dark_purple_2_color"-->
+<!--               android:layout_width="0dp"-->
+<!--               android:layout_height="wrap_content"-->
+<!--               android:layout_marginStart="@dimen/_8sdp"-->
+<!--               android:layout_marginTop="@dimen/_2sdp"-->
+<!--               android:layout_marginEnd="@dimen/_10sdp"-->
+<!--               android:text="in2Bliss@yopmail.com"-->
+<!--               android:textColor="@color/grey_BDBDBD"-->
+<!--               android:textSize="@dimen/_11sdp"-->
+<!--               app:layout_constraintEnd_toEndOf="parent"-->
+<!--               app:layout_constraintStart_toEndOf="@id/ivImageView"-->
+<!--               app:layout_constraintTop_toBottomOf="@id/tvName" />-->
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvText"
+               style="@style/text_Style_roboto_regular_dark_purple_2_color"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginHorizontal="@dimen/_30sdp"
+               android:layout_marginTop="@dimen/_20sdp"
+               android:gravity="center"
+               android:text="@string/there_will_always_be_someone_who_can_t_see_your_worth_don_t_let_it_be_you"
+               android:textColor="@color/dark_purple_12046A"
+               android:textSize="@dimen/_14ssp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+           <androidx.appcompat.widget.AppCompatTextView
+               android:id="@+id/tvAuthorName"
+               style="@style/text_Style_roboto_medium_dark_purple_2_color"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="@dimen/_8sdp"
+               android:layout_marginTop="@dimen/_15sdp"
+               android:text="@string/affirmation_introduction"
+               android:textColor="@color/dark_purple_12046A"
+               android:textSize="@dimen/_13ssp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toBottomOf="@id/tvText" />
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+   </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

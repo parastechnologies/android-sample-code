@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/corner_white_bg"
+        android:paddingBottom="@dimen/_24sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:cardBackgroundColor="@color/prime_purple_5F46F4"
+            android:id="@+id/cvCurveImage"
+            app:cardCornerRadius="@dimen/_12sdp"
+            app:cardElevation="0dp"
+            android:layout_height="@dimen/_150sdp"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_cross_"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_130sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_error_place_holder"
+            app:layout_constraintBottom_toBottomOf="@id/cvCurveImage"
+            app:layout_constraintEnd_toEndOf="@id/cvCurveImage"
+            app:layout_constraintStart_toStartOf="@id/cvCurveImage"
+            app:layout_constraintTop_toBottomOf="@id/cvCurveImage"
+            app:shapeAppearanceOverlay="@style/circularImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTitle"
+            style="@style/text_Style_roboto_medium_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="@string/profile_details"
+            android:textSize="@dimen/_14ssp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/ivProfile"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvName"
+            style="@style/text_Style_roboto_medium_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivProfile"
+            app:layout_constraintStart_toStartOf="@id/ivProfile"
+            app:layout_constraintTop_toBottomOf="@id/ivProfile"
+            tools:text="@string/kenny_jones" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmail"
+            style="@style/text_Style_roboto_medium_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/tvName"
+            app:layout_constraintStart_toStartOf="@id/tvName"
+            app:layout_constraintTop_toBottomOf="@id/tvName"
+            tools:text="@string/useremail.com" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            app:cardCornerRadius="@dimen/_8sdp"
+            app:cardBackgroundColor="#FAFAFF"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingVertical="@dimen/_14sdp"
+                android:paddingStart="@dimen/_16sdp"
+                android:paddingEnd="@dimen/_12sdp">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_14ssp"
+                    android:text=""
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:maxLines="2"
+                    app:layout_constraintEnd_toStartOf="@id/ivMenu"
+                    android:ellipsize="end"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvDateAndTime" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDateAndTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:textColor="@color/inactive_purple_7168A6"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_4sdp"
+                    android:visibility="visible"
+                    android:src="@drawable/ic_doted_menu"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDateAndTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvDateAndTime" />
+
+                <SeekBar
+                    android:id="@+id/musicPlayerSlider"
+                    style="@style/Slider_small_thumb"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:progressBackgroundTint="@color/grey_696679"
+                    android:progressTint="@color/prime_purple_5F46F4"
+                    android:thumb="@drawable/ic_player_playback_seekbar"
+                    app:layout_constraintEnd_toStartOf="@id/tvRecordEndTime"
+                    app:layout_constraintStart_toEndOf="@id/tvRecordStartTime"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecordStartTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/_10ssp"
+                    android:text="00:00"
+                    app:layout_constraintBottom_toBottomOf="@id/musicPlayerSlider"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/musicPlayerSlider" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvRecordEndTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:textSize="@dimen/_10ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/musicPlayerSlider"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/musicPlayerSlider" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivPlayAndPause"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_music_pause"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/musicPlayerSlider" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/ic_back_10"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPlayAndPause"
+                    app:layout_constraintEnd_toStartOf="@id/ivPlayAndPause"
+                    app:layout_constraintTop_toTopOf="@id/ivPlayAndPause"
+                    app:tint="@color/dark_purple_80_12046A" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivForward10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:src="@drawable/ic_forwar_10"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPlayAndPause"
+                    app:layout_constraintStart_toEndOf="@id/ivPlayAndPause"
+                    app:layout_constraintTop_toTopOf="@id/ivPlayAndPause"
+                    app:tint="@color/dark_purple_80_12046A" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toStartOf="@id/ivPlayAndPause"
+                    app:layout_constraintEnd_toEndOf="@id/ivPlayAndPause"
+                    app:layout_constraintTop_toTopOf="@id/ivPlayAndPause"
+                    android:id="@+id/ivBuffering"
+                    android:src="@drawable/ic_player_play_pause_bg"
+                    app:layout_constraintBottom_toBottomOf="@id/ivPlayAndPause"
+                    android:layout_height="wrap_content"/>
+
+                <ProgressBar
+                    app:layout_constraintStart_toStartOf="@id/ivBuffering"
+                    app:layout_constraintEnd_toEndOf="@id/ivBuffering"
+                    app:layout_constraintTop_toTopOf="@id/ivBuffering"
+                    app:layout_constraintBottom_toBottomOf="@id/ivBuffering"
+                    android:layout_width="0dp"
+                    android:padding="@dimen/_10sdp"
+                    android:id="@+id/progress"
+                    android:indeterminateTint="@color/white"
+                    android:layout_height="0dp"/>
+
+                <androidx.constraintlayout.widget.Group
+                    android:layout_width="wrap_content"
+                    android:id="@+id/buffering"
+                    app:constraint_referenced_ids="ivBuffering,progress"
+                    android:layout_height="wrap_content"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </RelativeLayout>
+</layout>

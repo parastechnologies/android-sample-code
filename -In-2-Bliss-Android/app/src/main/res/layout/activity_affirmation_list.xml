@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.affirmation.affirmationList.AffirmationListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        tools:context=".ui.activity.home.affirmation.affirmationList.AffirmationListActivity">
+
+        <include
+            android:id="@+id/toolBar"
+            layout="@layout/layout_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clSearch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/light_purple_corner_bg"
+            app:layout_constraintBottom_toBottomOf="@id/ivFilter"
+            app:layout_constraintEnd_toStartOf="@id/ivFilter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                style="@style/editText_dark_purple_regular"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/edtSearch"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_1sdp"
+                android:background="@color/off_white"
+                android:hint="@string/search_your_library"
+                android:paddingStart="@dimen/_6sdp"
+                android:inputType="text"
+                android:paddingEnd="@dimen/_10sdp"
+                android:imeOptions="actionSearch"
+                android:text="@={data.search}"
+                app:layout_constraintBottom_toBottomOf="@id/ivSearch"
+                app:layout_constraintEnd_toStartOf="@id/ivCancelSearch"
+                app:layout_constraintStart_toEndOf="@id/ivSearch"
+                app:layout_constraintTop_toTopOf="@id/ivSearch" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCancelSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:src="@drawable/ic_cross_circle"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="1px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_blue_filter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCalendar"
+            android:layout_width="@dimen/_16sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar_edit"
+            app:layout_constraintBottom_toBottomOf="@id/tvRelatedAffirmation"
+            app:layout_constraintEnd_toStartOf="@id/tvRelatedAffirmation"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvRelatedAffirmation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRelatedAffirmation"
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_6sdp"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:text="@string/written_affirmations_relating_to_anxiety"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivCalendar"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAffirmationList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_74sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:background="@color/white"
+            android:overScrollMode="never"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/pbNewData"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNoAffirmationAdded"
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_affirmation_found"
+            android:textSize="@dimen/_12ssp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/btnPracticeAllAffirmation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <ProgressBar
+            android:id="@+id/pbProgress"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:indeterminateTint="@color/prime_blue_418FF6"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/btnPracticeAllAffirmation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <ProgressBar
+            android:id="@+id/pbNewData"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:indeterminateTint="@color/prime_blue_418FF6"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@id/btnPracticeAllAffirmation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/addAffirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:src="@drawable/ic_affirmation_blue_add"
+            app:layout_constraintBottom_toTopOf="@id/btnPracticeAllAffirmation"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPracticeAllAffirmation"
+            style="@style/blue_button_style"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/practice_all_affirmations"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/affirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="clSearch,ivFilter" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivCalendar,tvRelatedAffirmation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

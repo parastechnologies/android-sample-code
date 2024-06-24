@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        tools:context=".ui.activity.splash.stepFour.StepFourActivity">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvSkip"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/_14sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:text="@string/skip"
+                    android:textColor="@color/prime_blue_418FF6"
+                    android:textSize="@dimen/_14ssp"
+                    android:visibility="visible"
+                    app:layout_constraintBottom_toBottomOf="@id/ivBack"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ivBack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvStepFour"
+                    style="@style/text_Style_roboto_medium_pink_color"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="@string/step_four"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvProfileImage"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/add_a_personal_touch_to_your_profile"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/_20ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvStepFour" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvUploadProfileImage"
+                    style="@style/text_Style_roboto_regular_dark_purple_2_color"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/upload_your_profile_picture_to_personalise_your_account"
+                    android:textAlignment="textStart"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvProfileImage" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivUpload"
+                    app:shapeAppearanceOverlay="@style/circularImage"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="@dimen/_120sdp"
+                    android:layout_marginTop="@dimen/_50sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_upload_profile"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvUploadProfileImage" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    app:cardBackgroundColor="@color/prime_blue_418FF6"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivUpload"
+                    app:strokeColor="@color/blue_d9e9fd"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_camera_"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/use_camera"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_16ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cvGallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_48sdp"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvCamera"
+                    app:strokeColor="@color/blue_d9e9fd"
+                    app:strokeWidth="@dimen/_1sdp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableStart="@drawable/ic_gallery"
+                        android:drawablePadding="@dimen/_8sdp"
+                        android:fontFamily="@font/roboto_bold"
+                        android:text="@string/upload_from_gallery"
+                        android:textColor="@color/blue_0d99ff"
+                        android:textSize="@dimen/_16ssp" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    style="@style/blue_button_style"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="@string/continue_"
+                    android:id="@+id/btnContinue"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/cvGallery" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

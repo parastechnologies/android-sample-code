@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.affirmationDetails.musciCategoryBottomSheet.MusicCateGoryViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        tools:context=".ui.activity.splash.stepFive.chooseSubCateBottomSheet.ChooseSubCatBottomSheetFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_26sdp"
+            android:background="@drawable/bottom_sheet_bg">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:src="@drawable/ic_bar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_close"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:text="@string/configure_music"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+            <androidx.constraintlayout.widget.Group
+                android:layout_width="wrap_content"
+                android:id="@+id/groupNote"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="tvNote"/>
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNote"
+                style="@style/text_Style_roboto_regular_dark_purple_color"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/note_once_music_is_chosen_please_go_to_customization_toggle_picture_the_circles_on_the_lines_so_user_can_see_the_button_they_need_to_click_on_to_choose_the_length_of_time_you_want_the_music_to_play_while_sleeping"
+                android:textSize="@dimen/_11ssp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clGradient"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/music_category_bg_gradient"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNote" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:background="@drawable/light_purple_corner_bg"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/ivFilter"
+                app:layout_constraintEnd_toStartOf="@id/ivFilter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNote">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:src="@drawable/ic_search"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/prime_blue_418FF6" />
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    style="@style/editText_dark_purple_regular"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:background="@color/off_white"
+                    android:hint="@string/search_your_library"
+                    android:paddingStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:text="@={data.search}"
+                    android:textColorHint="@color/inactive_purple_7168A6"
+                    app:layout_constraintBottom_toBottomOf="@id/ivSearch"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/ivSearch"
+                    app:layout_constraintTop_toTopOf="@id/ivSearch" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFilter"
+                android:layout_width="@dimen/_1sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_26sdp"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_blue_filter"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNote" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRecommendedMusic"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="@string/recommended_music"
+                android:textAlignment="textStart"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivFilter" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMusicCategory"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_28sdp"
+                android:overScrollMode="never"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@id/btnSaveChanges"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNote" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMusicSubCategory"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="@dimen/_11sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:overScrollMode="never"
+                app:layout_constraintBottom_toTopOf="@id/btnSaveChanges"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvNote" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSaveChanges"
+                style="@style/blue_button_style"
+                android:layout_marginHorizontal="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:text="@string/save_changes"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivSpeech"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_16sdp"
+                android:src="@drawable/ic_spech_recording"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/sliderVolume"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sliderVolume" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMusic"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_16sdp"
+                android:src="@drawable/ic_music_recording"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@id/sliderVolume"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/sliderVolume" />
+
+            <com.google.android.material.slider.RangeSlider
+                android:id="@+id/sliderVolume"
+                style="@style/Slider_medium_thumb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_16sdp"
+                android:orientation="vertical"
+                android:thumb="@drawable/music_volume_thumb_bg"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@id/btnSaveChanges"
+                app:layout_constraintEnd_toStartOf="@id/ivMusic"
+                app:layout_constraintStart_toEndOf="@id/ivSpeech"
+                app:trackColorActive="@color/prime_blue_418FF6"
+                app:trackColorInactive="@color/grey_E0E0E0" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/musicCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="rvMusicCategory,clGradient" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/musicSubCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="rvMusicSubCategory,btnSaveChanges" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoDatFound"
+                style="@style/text_Style_roboto_regular_dark_purple_color"
+                android:paddingHorizontal="@dimen/_16sdp"
+                android:text="@string/no_data_found"
+                android:textAlignment="center"
+                android:textSize="@dimen/_14ssp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</layout>

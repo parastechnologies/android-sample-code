@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.affirmation.affirmation.AffirmationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="Animation"
+        tools:context=".ui.activity.home.affirmation.affirmation.AffirmationActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationBg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_affirmation_temp_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationGradient"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_affirmation_bg_gradient"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/_20sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivBack"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ivBack">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_3sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivCategory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_user_heart"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/dark_purple_12046A" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCategory"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:paddingEnd="@dimen/_2sdp"
+                    android:text="@={data.category}"
+                    android:textColor="@color/dark_purple_12046A"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCategory"
+                    app:layout_constraintStart_toEndOf="@+id/ivCategory"
+                    app:layout_constraintTop_toTopOf="@id/ivCategory" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationShrink"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_27sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_shrink"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMountain"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_27sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_mountain"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationGallery"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_affirmation_gallery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivAffirmationShare"
+            app:layout_constraintStart_toEndOf="@+id/ivAffirmationShrink" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearchGallery"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginStart="@dimen/_27sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_affirmation_gallery"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/ivAffirmationShrink" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationShare"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_affirmation_upload"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivAffirmationFav"
+            app:layout_constraintStart_toEndOf="@id/ivAffirmationGallery" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSearchShare"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginEnd="@dimen/_35sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_affirmation_upload"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivAffirmationFav" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationFav"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginEnd="@dimen/_27sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_affirmation_fav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAffirmationRedFav"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginEnd="@dimen/_27sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_red_fav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivShare"
+            android:layout_width="@dimen/_38sdp"
+            android:layout_height="@dimen/_38sdp"
+            android:layout_marginEnd="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_35sdp"
+            android:src="@drawable/ic_share_"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivAffirmationRedFav" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivAddAffirmationAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:src="@drawable/ic_affirmation_add"
+            app:layout_constraintBottom_toTopOf="@id/ivAffirmationFav"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/minimise"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivAffirmationShrink"
+            app:layout_constraintStart_toStartOf="@id/ivAffirmationShrink"
+            app:layout_constraintTop_toBottomOf="@id/ivAffirmationShrink" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/theme"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivAffirmationGallery"
+            app:layout_constraintStart_toStartOf="@id/ivAffirmationGallery"
+            app:layout_constraintTop_toBottomOf="@id/ivAffirmationGallery" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/theme"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivSearchGallery"
+            app:layout_constraintStart_toStartOf="@id/ivSearchGallery"
+            app:layout_constraintTop_toBottomOf="@id/ivSearchGallery" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivAffirmationShare"
+            app:layout_constraintStart_toStartOf="@id/ivAffirmationShare"
+            app:layout_constraintTop_toBottomOf="@id/ivAffirmationShare" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivSearchShare"
+            app:layout_constraintStart_toStartOf="@id/ivSearchShare"
+            app:layout_constraintTop_toBottomOf="@id/ivSearchShare" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/text_Style_roboto_regular_dark_purple_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:text="@string/favourite"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintEnd_toEndOf="@id/ivAffirmationFav"
+            app:layout_constraintStart_toStartOf="@id/ivAffirmationFav"
+            app:layout_constraintTop_toBottomOf="@id/ivAffirmationFav" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="@dimen/_16sdp"
+            app:cardElevation="0dp"
+            app:layout_constraintBottom_toTopOf="@id/tvAffirmation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_30"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:paddingVertical="@dimen/_4sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDate"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:text="@={data.date}"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivDate"
+                    app:layout_constraintStart_toEndOf="@+id/ivDate"
+                    app:layout_constraintTop_toTopOf="@id/ivDate" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvAffirmation"
+            style="@style/text_Style_roboto_bold_dark_purple_2_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/_8sdp"
+            android:paddingHorizontal="@dimen/_16sdp"
+            android:text="@={data.affirmation}"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/affirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivAffirmationShrink,cvDate,ivAffirmationShare,ivAffirmationGallery,ivMenu" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivSearchGallery,ivSearchShare" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/addAndFav"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="ivAffirmationFav,ivAddAffirmationAdd" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/quotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="ivShare,ivMountain,ivAffirmationRedFav" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

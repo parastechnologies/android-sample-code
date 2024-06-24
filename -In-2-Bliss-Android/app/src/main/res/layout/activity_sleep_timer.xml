@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.sleep.SleepTimeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_bg"
+        tools:context=".ui.activity.home.sleep.SleepTimerActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toTopOf="@id/btnSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/_20sdp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_60sdp"
+                    android:src="@drawable/ic_back"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTitle"
+                    style="@style/text_Style_roboto_medium_dark_purple_color"
+                    android:layout_width="match_parent"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:text="@string/set_the_times_that_work_best_for_your_sleep_and_wake_routines"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/_17ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ivBack" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clWakeUp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:layout_marginEnd="@dimen/_8sdp"
+                    android:background="@drawable/light_grey_stroke_bg"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:layout_constraintEnd_toStartOf="@id/clBedTime"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivWakeUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sun"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWakeUp"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/wakeup"
+                        android:textColor="@color/inactive_purple_7168A6"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivWakeUp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWakeUpTime"
+                        style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@={data.wakeUpTime}"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cvWakeUp"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvWakeUp" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvWakeUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        app:cardBackgroundColor="@color/prime_purple_5F46F4"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvWakeUpTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@id/tvWakeUpTime"
+                        app:layout_constraintTop_toTopOf="@id/tvWakeUpTime">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_Style_roboto_regular_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="@={data.wakeUpAmPM}"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/cvWakeUp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvWakeUp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBedTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:background="@drawable/light_grey_stroke_bg"
+                    android:paddingVertical="@dimen/_8sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/clWakeUp"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitle">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivBedTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sun"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBedTime"
+                        style="@style/text_Style_roboto_regular_dark_purple_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:text="@string/bedtime"
+                        android:textColor="@color/inactive_purple_7168A6"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/ivBedTime" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBedTimeTime"
+                        style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="@={data.bedTime}"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/cvBedTime"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvBedTime" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cvBedTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        app:cardBackgroundColor="@color/prime_purple_5F46F4"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintBottom_toBottomOf="@id/tvBedTimeTime"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toEndOf="@id/tvBedTimeTime"
+                        app:layout_constraintTop_toTopOf="@id/tvBedTimeTime">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            style="@style/text_Style_roboto_regular_dark_purple_color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingHorizontal="@dimen/_5sdp"
+                            android:paddingVertical="@dimen/_3sdp"
+                            android:text="@={data.bedTimeAmPm}"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintEnd_toStartOf="@id/cvWakeUp"
+                            app:layout_constraintHorizontal_chainStyle="packed"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/tvWakeUp" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <nl.joery.timerangepicker.TimeRangePicker
+                    android:id="@+id/clock"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/clWakeUp"
+                    app:trp_endTime="6:30"
+                    app:trp_sliderRangeColor="@color/purple_5a52ed"
+                    app:trp_sliderWidth="@dimen/_30sdp"
+                    app:trp_startTime="00:00"
+                    app:trp_thumbIconEnd="@drawable/ic_night"
+                    app:trp_thumbIconStart="@drawable/ic_day" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white"
+                    android:padding="@dimen/_35sdp"
+                    app:layout_constraintBottom_toBottomOf="@id/clock"
+                    app:layout_constraintEnd_toEndOf="@id/clock"
+                    app:layout_constraintStart_toStartOf="@id/clock"
+                    app:layout_constraintTop_toTopOf="@id/clock"
+                    app:shapeAppearanceOverlay="@style/circularImage" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivClockBg"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:padding="@dimen/_38sdp"
+                    android:src="@drawable/ic_clock_bg"
+                    app:layout_constraintBottom_toBottomOf="@id/clock"
+                    app:layout_constraintEnd_toEndOf="@id/clock"
+                    app:layout_constraintStart_toStartOf="@id/clock"
+                    app:layout_constraintTop_toTopOf="@id/clock"
+                    app:shapeAppearanceOverlay="@style/circularImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvHour"
+                    style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@={data.selectedHour}"
+                    android:textSize="@dimen/_24ssp"
+                    app:layout_constraintBottom_toTopOf="@id/tvMinute"
+                    app:layout_constraintEnd_toEndOf="@id/ivClockBg"
+                    app:layout_constraintStart_toStartOf="@id/ivClockBg"
+                    app:layout_constraintTop_toTopOf="@id/ivClockBg"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMinute"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@={data.selectedMinute}"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_14ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivClockBg"
+                    app:layout_constraintEnd_toEndOf="@id/ivClockBg"
+                    app:layout_constraintStart_toStartOf="@id/ivClockBg"
+                    app:layout_constraintTop_toBottomOf="@id/tvHour"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            style="@style/blue_button_style"
+            android:layout_marginHorizontal="@dimen/_16sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:text="@string/save"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

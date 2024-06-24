@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:padding="@dimen/_5sdp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDay"
+        style="@style/text_Style_roboto_regular_dark_purple_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="MON"
+        android:textColor="@color/inactive_purple_7168A6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDate"
+        style="@style/text_Style_roboto_regular_dark_purple_color"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="20"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDay"
+        app:layout_constraintStart_toStartOf="@id/tvDay"
+        app:layout_constraintEnd_toEndOf="@id/tvDay"/>
+
+    <View
+        android:layout_width="@dimen/_8sdp"
+        android:layout_height="@dimen/_8sdp"
+        android:background="@drawable/circle_view"
+        android:layout_marginTop="@dimen/_2sdp"
+        app:layout_constraintTop_toBottomOf="@id/tvDate"
+        app:layout_constraintStart_toStartOf="@id/tvDate"
+        app:layout_constraintEnd_toEndOf="@id/tvDate"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</layout>

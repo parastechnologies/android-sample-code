@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.in2bliss.ui.activity.home.profileManagement.MainProfileVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.activity.home.profileManagement.ProfileFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/headerTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_230sdp"
+                        android:background="@color/prime_purple_5F46F4"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_background_header"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize10Percent" />
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_50sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_16sdp"
+                            android:src="@drawable/ic_back"
+                            android:visibility="gone"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:src="@drawable/ic_signout"
+                            android:id="@+id/ivLogout"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_13sdp"
+                        android:src="@drawable/ic_meditation_girl"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imageProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@id/headerTitle"
+                    app:layout_constraintEnd_toEndOf="@id/headerTitle"
+                    app:layout_constraintStart_toStartOf="@id/headerTitle"
+                    app:layout_constraintTop_toBottomOf="@id/headerTitle">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivProfile"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_100sdp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_user_placholder"
+                        app:layout_constraintEnd_toEndOf="@id/imageProfile"
+                        app:layout_constraintStart_toStartOf="@id/imageProfile"
+                        app:layout_constraintTop_toTopOf="@id/imageProfile"
+                        app:shapeAppearanceOverlay="@style/circularImage" />
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clNameHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintEnd_toEndOf="@id/imageProfile"
+                    app:layout_constraintStart_toStartOf="@id/imageProfile"
+                    app:layout_constraintTop_toBottomOf="@id/imageProfile">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvName"
+                        style="@style/text_Style_roboto_bold_dark_purple_2_color"
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kenny_jones"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintEnd_toStartOf="@id/ivEdit"
+                        app:layout_constraintTop_toTopOf="@id/clNameHeader" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivEdit"
+                        android:layout_width="14dp"
+                        android:layout_height="11dp"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/ic_edit_profile"
+                        app:layout_constraintBottom_toBottomOf="@id/clNameHeader"
+                        app:layout_constraintStart_toEndOf="@id/tvName"
+                        app:layout_constraintTop_toTopOf="@id/clNameHeader" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:background="@color/light_grey_F2F2F2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:visibility="visible"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintTop_toBottomOf="@id/clNameHeader"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+<!--                <View-->
+<!--                    android:id="@+id/viewLine"-->
+<!--                    android:layout_width="0.5dp"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    android:background="@color/grey_E0E0E0"-->
+<!--                    android:visibility="visible"-->
+<!--                    app:layout_constraintBottom_toBottomOf="@id/clTotalEntries"-->
+<!--                    app:layout_constraintEnd_toEndOf="@id/clCurrentStreak"-->
+<!--                    app:layout_constraintStart_toStartOf="@id/clTotalEntries"-->
+<!--                    app:layout_constraintTop_toTopOf="@id/clTotalEntries" />-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/clCurrentStreak"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_16sdp"-->
+<!--                    android:layout_marginTop="@dimen/_30sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_6sdp"-->
+<!--                    android:paddingVertical="@dimen/_12sdp"-->
+<!--                    app:layout_constraintEnd_toStartOf="@id/clTotalEntries"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/clNameHeader">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivCurrentStreakBg"-->
+<!--                        android:layout_width="@dimen/_40sdp"-->
+<!--                        android:layout_height="@dimen/_40sdp"-->
+<!--                        android:src="@drawable/ic_streak_red_bg"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toStartOf="@id/tvCurrentStreak"-->
+<!--                        app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:layout_width="@dimen/_26sdp"-->
+<!--                        android:layout_height="@dimen/_26sdp"-->
+<!--                        android:src="@drawable/ic_small_streak"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/ivCurrentStreakBg"-->
+<!--                        app:layout_constraintEnd_toEndOf="@id/ivCurrentStreakBg"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/ivCurrentStreakBg"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/ivCurrentStreakBg" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tvCurrentStreak"-->
+<!--                        style="@style/text_Style_roboto_regular_dark_purple_color"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="@dimen/_15sdp"-->
+<!--                        android:text="@string/current_streak"-->
+<!--                        android:textColor="@color/inactive_purple_7168A6"-->
+<!--                        android:textSize="@dimen/_11ssp"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/tvCurrentStreakDays"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toEndOf="@id/ivCurrentStreakBg"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/ivCurrentStreakBg"-->
+<!--                        app:layout_constraintVertical_chainStyle="packed" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tvCurrentStreakDays"-->
+<!--                        style="@style/text_Style_roboto_medium_dark_purple_color"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_4sdp"-->
+<!--                        android:text="@={data.currentStreak}"-->
+<!--                        android:textSize="@dimen/_16ssp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/ivCurrentStreakBg"-->
+<!--                        app:layout_constraintEnd_toEndOf="@id/tvCurrentStreak"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/tvCurrentStreak"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/tvCurrentStreak" />-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+<!--                -->
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/clTotalEntries"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="@dimen/_6sdp"-->
+<!--                    android:layout_marginTop="@dimen/_30sdp"-->
+<!--                    android:layout_marginEnd="@dimen/_16sdp"-->
+<!--                    android:paddingVertical="@dimen/_12sdp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toEndOf="@id/clCurrentStreak"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/clNameHeader">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivTotalEntries"-->
+<!--                        android:layout_width="@dimen/_40sdp"-->
+<!--                        android:layout_height="@dimen/_40sdp"-->
+<!--                        android:src="@drawable/ic_streak_purple_bg"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintEnd_toStartOf="@id/tvTotalEntries"-->
+<!--                        app:layout_constraintHorizontal_chainStyle="packed"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent"-->
+<!--                        app:tint="@color/yellow_FFFAEB" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:layout_width="@dimen/_26sdp"-->
+<!--                        android:layout_height="@dimen/_26sdp"-->
+<!--                        android:src="@drawable/ic_total_entries"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/ivTotalEntries"-->
+<!--                        app:layout_constraintEnd_toEndOf="@id/ivTotalEntries"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/ivTotalEntries"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/ivTotalEntries" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tvTotalEntries"-->
+<!--                        style="@style/text_Style_roboto_regular_dark_purple_color"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="@dimen/_15sdp"-->
+<!--                        android:text="@string/total_entries"-->
+<!--                        android:textColor="@color/inactive_purple_7168A6"-->
+<!--                        android:textSize="@dimen/_11ssp"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/tvTotalEntriesDays"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toEndOf="@id/ivTotalEntries"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/ivTotalEntries"-->
+<!--                        app:layout_constraintVertical_chainStyle="packed" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tvTotalEntriesDays"-->
+<!--                        style="@style/text_Style_roboto_medium_dark_purple_color"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_4sdp"-->
+<!--                        android:text="@={data.totalEntries}"-->
+<!--                        android:textSize="@dimen/_16ssp"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/ivTotalEntries"-->
+<!--                        app:layout_constraintEnd_toEndOf="@id/tvTotalEntries"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/tvTotalEntries"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/tvTotalEntries" />-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--                <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                    android:id="@+id/clCourses"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginHorizontal="@dimen/_16sdp"-->
+<!--                    android:layout_marginTop="@dimen/_14sdp"-->
+<!--                    android:paddingHorizontal="@dimen/_8sdp"-->
+<!--                    android:paddingVertical="@dimen/_12sdp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/clNameHeader">-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivLongestWeek"-->
+<!--                        android:layout_width="@dimen/_40sdp"-->
+<!--                        android:layout_height="@dimen/_40sdp"-->
+<!--                        android:src="@drawable/blue_background"-->
+<!--                        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="parent"-->
+<!--                        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatImageView-->
+<!--                        android:id="@+id/ivIn2Bliss"-->
+<!--                        android:layout_width="@dimen/_26sdp"-->
+<!--                        android:layout_height="@dimen/_26sdp"-->
+<!--                        android:src="@drawable/ic_bliss_courses"-->
+<!--                        app:layout_constraintBottom_toBottomOf="@id/ivLongestWeek"-->
+<!--                        app:layout_constraintEnd_toEndOf="@id/ivLongestWeek"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/ivLongestWeek"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/ivLongestWeek" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tvCourses"-->
+<!--                        style="@style/text_Style_roboto_medium_dark_purple_color"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginStart="@dimen/_20sdp"-->
+<!--                        android:text="@string/in2bliss_courses"-->
+<!--                        android:textSize="@dimen/_11sdp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        app:layout_constraintBottom_toTopOf="@id/tvCoursesDescription"-->
+<!--                        app:layout_constraintStart_toEndOf="@id/ivIn2Bliss"-->
+<!--                        app:layout_constraintTop_toTopOf="@id/ivIn2Bliss" />-->
+
+<!--                    <androidx.appcompat.widget.AppCompatTextView-->
+<!--                        android:id="@+id/tvCoursesDescription"-->
+<!--                        style="@style/text_Style_roboto_regular_dark_purple_color"-->
+<!--                        android:layout_width="0dp"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_6sdp"-->
+<!--                        android:text="@string/coming_soon"-->
+<!--                        app:layout_constraintEnd_toEndOf="parent"-->
+<!--                        app:layout_constraintStart_toStartOf="@id/tvCourses"-->
+<!--                        app:layout_constraintTop_toBottomOf="@id/tvCourses" />-->
+
+<!--                </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/_16sdp"
+                    android:background="@android:color/transparent"
+                    android:overScrollMode="never"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view1"
+                    tools:listitem="@layout/main_profile_card" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

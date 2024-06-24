@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvContainer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp"
+        android:layout_marginHorizontal="@dimen/_2ssp"
+        android:layout_marginTop="@dimen/_8sdp"
+        app:cardCornerRadius="@dimen/_16sdp"
+        app:cardElevation="@dimen/_1sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/off_white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/musicImage"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100sdp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFavourite"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:padding="@dimen/_6sdp"
+                android:src="@drawable/ic_blue_unlike"
+                app:layout_constraintBottom_toBottomOf="@id/musicImage"
+                app:layout_constraintEnd_toEndOf="@id/musicImage" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEditBg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:src="@drawable/ic_blue_unlike"
+                app:layout_constraintEnd_toEndOf="@id/musicImage"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_edit"
+                app:layout_constraintBottom_toBottomOf="@id/ivEditBg"
+                app:layout_constraintEnd_toEndOf="@id/ivEditBg"
+                app:layout_constraintStart_toStartOf="@id/ivEditBg"
+                app:layout_constraintTop_toTopOf="@id/ivEditBg"
+                app:tint="@color/blue_0d99ff" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:constraint_referenced_ids="ivEdit,ivEditBg" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clTimeCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cream_fcd9c5"
+                android:paddingHorizontal="@dimen/_14sdp"
+                android:paddingVertical="@dimen/_6sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/musicImage">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivCategory"
+                    android:layout_width="@dimen/_16sdp"
+                    android:layout_height="@dimen/_16sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_user_heart"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/circularImage" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCategory"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_6sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivCategory"
+                    app:layout_constraintEnd_toStartOf="@id/ivTime"
+                    app:layout_constraintStart_toEndOf="@id/ivCategory"
+                    app:layout_constraintTop_toTopOf="@id/ivCategory" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivTime"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_4sdp"
+                    android:src="@drawable/ic_clock"
+                    app:layout_constraintEnd_toStartOf="@id/tvTime"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/dark_purple_12046A" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTime"
+                    style="@style/text_Style_roboto_regular_dark_purple_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintBottom_toBottomOf="@id/ivTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/ivTime" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                style="@style/text_Style_roboto_medium_dark_purple_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:lineSpacingExtra="@dimen/_4sdp"
+                android:textSize="@dimen/_14ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/clTimeCategory" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

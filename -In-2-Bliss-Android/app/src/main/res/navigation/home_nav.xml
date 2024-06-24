@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.in2bliss.ui.activity.home.fragment.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+
+    <fragment
+        android:id="@+id/explore"
+        android:name="com.in2bliss.ui.activity.home.fragment.explore.ExploreFragment"
+        android:label="ExploreFragment"
+        tools:layout="@layout/fragment_explore" />
+
+    <fragment
+        android:id="@+id/course"
+        android:name="com.in2bliss.ui.activity.home.fragment.course.CourseFragment"
+        android:label="CourseFragment"
+        tools:layout="@layout/fragment_course" />
+
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.in2bliss.ui.activity.home.fragment.favourites.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+
+
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.in2bliss.ui.activity.home.profileManagement.ProfileFragment"
+        android:label="SettingFragment"
+        tools:layout="@layout/fragment_main_profile" />
+    <fragment
+        android:id="@+id/readFragment"
+        android:name="com.in2bliss.ui.activity.home.fragment.notification.read.ReadFragment"
+        android:label="ReadFragment" />
+    <fragment
+        android:id="@+id/unReadFragment"
+        android:name="com.in2bliss.ui.activity.home.fragment.notification.unread.UnReadFragment"
+        android:label="UnReadFragment" />
+
+
+</navigation>
